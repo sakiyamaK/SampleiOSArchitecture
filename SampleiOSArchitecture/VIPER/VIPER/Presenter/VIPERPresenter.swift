@@ -55,7 +55,6 @@ extension VIPERPresenter: VIPERPresentation {
   }
 
   func showWeb(viperEntity: VIPEREntity) {
-    //WebViewのRouterを呼び出す
-    print(viperEntity.urlStr)
+    router.showWeb(viperEntity: viperEntity)
   }
 }
