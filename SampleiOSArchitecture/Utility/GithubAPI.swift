@@ -12,7 +12,7 @@ enum GithubError: Error {
 }
 
 protocol GithubAPIProtocol: AnyObject {
-  func get(searchWord: String, isDesc: Bool, result: ((Result<[GithubModel], GithubError>) -> Void)?)
+  func get(searchWord: String, isDesc: Bool, completion: ((Result<[GithubModel], GithubError>) -> Void)?)
 }
 
 final class GithubAPI: GithubAPIProtocol {
@@ -20,9 +20,9 @@ final class GithubAPI: GithubAPIProtocol {
 
   private init() {}
 
-  func get(searchWord: String, isDesc: Bool = true, result: ((Result<[GithubModel], GithubError>) -> Void)? = nil) {
+  func get(searchWord: String, isDesc: Bool = true, completion: ((Result<[GithubModel], GithubError>) -> Void)? = nil) {
     guard searchWord.count > 0 else {
-      result?(.failure(.error))
+      completion?(.failure(.error))
       return
     }
     let url: URL = URL(string: "https://api.github.com/search/repositories?q=\(searchWord)&sort=stars&order=\(isDesc ? "desc" : "asc")")!
@@ -30,10 +30,10 @@ final class GithubAPI: GithubAPIProtocol {
       guard let data = data,
           let githubResponse = try? JSONDecoder().decode(GithubResponse.self, from: data),
           let models = githubResponse.items else {
-        result?(.failure(.error))
+        completion?(.failure(.error))
         return
       }
-      result?(.success(models))
+      completion?(.success(models))
     })
     task.resume()
   }

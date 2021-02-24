@@ -41,4 +41,8 @@ final class Router {
     show(from: from, to: UIStoryboard.mvvmViewController)
   }
 
+  static func showVIPER(from: UIViewController) {
+    let next = VIPERRouter.assembleModules()
+    show(from: from, to: next)
+  }
 }

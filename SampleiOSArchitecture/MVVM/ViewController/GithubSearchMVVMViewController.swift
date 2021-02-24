@@ -32,6 +32,10 @@ final class GithubSearchMVVMViewController: UIViewController {
 
     viewModel = GithubSearchMVVMViewModel(input: self)
     output = viewModel
+
+    self.tableView.isHidden = true
+    self.indicator.isHidden = true
+
     bindOutputStream()
   }
 
@@ -39,6 +43,13 @@ final class GithubSearchMVVMViewController: UIViewController {
     output.updateItemsObservable.bind(to: Binder(self){ (vc, _) in
       vc.tableView.reloadData()
     }).disposed(by: rx.disposeBag)
+
+    output.loadingObservable
+      .debug()
+      .bind(to: Binder(self){ (vc, loading) in
+        vc.tableView.isHidden = loading
+        vc.indicator.isHidden = !loading
+      }).disposed(by: rx.disposeBag)
   }
 }
 

@@ -12,13 +12,16 @@ class RootViewController: UIViewController {
   @IBOutlet private weak var mvcButton: UIButton!
   @IBOutlet private weak var mvpButton: UIButton!
   @IBOutlet private weak var mvvmButton: UIButton!
-  private lazy var buttons: [UIButton] = [mvcButton, mvpButton, mvvmButton]
+  @IBOutlet private weak var viperButton: UIButton!
+
+  private lazy var buttons: [UIButton] = [mvcButton, mvpButton, mvvmButton, viperButton]
 
 
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    buttons.forEach { $0.addTarget(self, action: #selector(tapButton(_:)), for: .touchUpInside)
+    buttons.forEach {
+      $0.addTarget(self, action: #selector(tapButton(_:)), for: .touchUpInside)
     }
   }
 }
@@ -32,6 +35,8 @@ private extension RootViewController {
       Router.showMVP(from: self)
     case mvvmButton:
       Router.showMVVM(from: self)
+    case viperButton:
+      Router.showVIPER(from: self)
     default:
       break
     }

@@ -27,11 +27,13 @@ final class GithubSearchMVPViewController: UIViewController {
     guard
       let searchWord = urlTextField.text, searchWord.count > 0
     else { return }
+    //何をするかはpresenterに任せる
     self.presenter.searchText(searchWord, sortType: true)
   }
 
-  private var presenter: GithubSearchPresenter!
-  func inject(presenter: GithubSearchPresenter) {
+  //VCのインスタンス作成後にPresenterInputProtocolに準拠するもの(ここではGithubSearchPresenter)を登録する
+  private var presenter: GithubSearchPresenterInput!
+  func inject(presenter: GithubSearchPresenterInput) {
     self.presenter = presenter
   }
 
@@ -62,6 +64,7 @@ extension GithubSearchMVPViewController: UITableViewDataSource {
   }
 }
 
+//presenterから送られてくる通知ごとに何をするか記載
 extension GithubSearchMVPViewController: GithubSearchPresenterOutput {
   func update(loading: Bool) {
     DispatchQueue.main.async {

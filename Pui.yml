@@ -1,0 +1,4 @@
+VIPER:
+  Target: SampleiOSArchitecture
+  TemplateDirectoryPath: ./templates/PuiTemplate/ios/VIPER
+  GenerateRootPath: ./SampleiOSArchitecture

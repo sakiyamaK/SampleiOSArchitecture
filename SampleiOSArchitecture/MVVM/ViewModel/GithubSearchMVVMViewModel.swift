@@ -46,16 +46,21 @@ final class GithubSearchMVVMViewModel: GithubSearchMVVMViewModelOutput, HasDispo
     self.items = []
 
     let searchTextObservable = input.searchTextObservable
+      .debug()
       .filterNil()
       .filter { $0.count > 0 }
       .distinctUntilChanged()
 
-    input.didSelectRelay.asObservable().subscribe(onNext: {[weak self] (index) in
+    input.didSelectRelay.asObservable()
+      .filter { $0 < self.items.count - 1 }
+      .subscribe(onNext: {[weak self] (index) in
       let item = self!.items[index]
       print(item)
     }).disposed(by: disposeBag)
 
-    searchTextObservable.flatMapLatest({ (searchWord) -> Observable<[GithubModel]> in
+    searchTextObservable
+      .debug()
+      .flatMapLatest({ (searchWord) -> Observable<[GithubModel]> in
       GithubAPI.shared.rx.get(searchWord: searchWord, isDesc: true)
     }).do(onNext: {[weak self] _ in
       self?._loading.accept(true)

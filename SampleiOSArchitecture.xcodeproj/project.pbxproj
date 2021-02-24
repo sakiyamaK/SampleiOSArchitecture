@@ -25,6 +25,12 @@
 		AB9859F5B1A3EC8B39A20800 /* GithubSearchMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB58B399890F11246E077DC /* GithubSearchMVVMViewController.swift */; };
 		B63146EA25CFF06C00C9CA6D /* GithubAPI+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63146E925CFF06C00C9CA6D /* GithubAPI+Rx.swift */; };
 		B63146EF25CFF47E00C9CA6D /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63146EE25CFF47E00C9CA6D /* UITableViewCell+.swift */; };
+		B685048D25E5FA7000C0449B /* VIPEREntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685048325E5FA7000C0449B /* VIPEREntity.swift */; };
+		B685048E25E5FA7000C0449B /* VIPERPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685048525E5FA7000C0449B /* VIPERPresenter.swift */; };
+		B685048F25E5FA7000C0449B /* VIPER.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B685048725E5FA7000C0449B /* VIPER.storyboard */; };
+		B685049025E5FA7000C0449B /* VIPERViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685048825E5FA7000C0449B /* VIPERViewController.swift */; };
+		B685049125E5FA7000C0449B /* VIPERInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685048A25E5FA7000C0449B /* VIPERInteractor.swift */; };
+		B685049225E5FA7000C0449B /* VIPERRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685048C25E5FA7000C0449B /* VIPERRouter.swift */; };
 		C48DC49E61FA28584F5860A5 /* GithubSearchMVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD7F4F3E82E235D0CC9B19B /* GithubSearchMVVMViewModel.swift */; };
 		DE7425557B6547AE5A0C8BBE /* GithubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130EBD6D0DD6EDD9324A6AA /* GithubTableViewCell.swift */; };
 		DF918CD2EBA8E9FECD62323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8126924E39401AF5F6263D0F /* LaunchScreen.storyboard */; };
@@ -47,6 +53,12 @@
 		B2E20C2E760805151F3C92E6 /* GithubSearchMVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVCViewController.swift; sourceTree = "<group>"; };
 		B63146E925CFF06C00C9CA6D /* GithubAPI+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubAPI+Rx.swift"; sourceTree = "<group>"; };
 		B63146EE25CFF47E00C9CA6D /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		B685048325E5FA7000C0449B /* VIPEREntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPEREntity.swift; sourceTree = "<group>"; };
+		B685048525E5FA7000C0449B /* VIPERPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERPresenter.swift; sourceTree = "<group>"; };
+		B685048725E5FA7000C0449B /* VIPER.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VIPER.storyboard; sourceTree = "<group>"; };
+		B685048825E5FA7000C0449B /* VIPERViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERViewController.swift; sourceTree = "<group>"; };
+		B685048A25E5FA7000C0449B /* VIPERInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERInteractor.swift; sourceTree = "<group>"; };
+		B685048C25E5FA7000C0449B /* VIPERRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERRouter.swift; sourceTree = "<group>"; };
 		B7D3089DC71B7A75E014B9B7 /* GithubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubModel.swift; sourceTree = "<group>"; };
 		C70DB2736CD9C60E21E95D4F /* GithubSearchMVVM.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVVM.storyboard; sourceTree = "<group>"; };
 		CFC5DB2040CFC9A0F027A989 /* GithubSearchMVP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVP.storyboard; sourceTree = "<group>"; };
@@ -202,23 +214,77 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		B685047E25E5FA7000C0449B /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				B685048225E5FA7000C0449B /* Entity */,
+				B685048425E5FA7000C0449B /* Presenter */,
+				B685048625E5FA7000C0449B /* ViewController */,
+				B685048925E5FA7000C0449B /* Interactor */,
+				B685048B25E5FA7000C0449B /* Router */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		B685048225E5FA7000C0449B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B685048325E5FA7000C0449B /* VIPEREntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B685048425E5FA7000C0449B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B685048525E5FA7000C0449B /* VIPERPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B685048625E5FA7000C0449B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B685048725E5FA7000C0449B /* VIPER.storyboard */,
+				B685048825E5FA7000C0449B /* VIPERViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B685048925E5FA7000C0449B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B685048A25E5FA7000C0449B /* VIPERInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B685048B25E5FA7000C0449B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B685048C25E5FA7000C0449B /* VIPERRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		CB7DCFB8975B36D69F9686F8 /* SampleiOSArchitecture */ = {
 			isa = PBXGroup;
 			children = (
 				B1B8F3310AD4859FE5B068AC /* AppDelegate.swift */,
 				88E69CE9ABE02873CAF26464 /* Assets.xcassets */,
+				F5771F94927A3C72FFF18AA1 /* Extension */,
 				875BC601700C984E092A5B1D /* Info.plist */,
 				8126924E39401AF5F6263D0F /* LaunchScreen.storyboard */,
-				6937CF30C4F3CA943302212A /* Root.storyboard */,
-				9A3BC27F8796DC7465898E0B /* RootViewController.swift */,
-				F5771F94927A3C72FFF18AA1 /* Extension */,
 				58CC90DE1758A1741168739C /* Model */,
 				05FA2DA446097B04ADC4663E /* MVC */,
 				94F9952B661C1FD544C64F39 /* MVP */,
 				062AA9AC3F6C8144FC04E71E /* MVVM */,
+				6937CF30C4F3CA943302212A /* Root.storyboard */,
+				9A3BC27F8796DC7465898E0B /* RootViewController.swift */,
 				FE37F8E622471AF2A5F6C5B4 /* Router */,
 				E83FA23361EE09E541393910 /* Utility */,
 				AB075CCBF19115E8C29397CA /* View */,
+				B685047E25E5FA7000C0449B /* VIPER */,
 			);
 			path = SampleiOSArchitecture;
 			sourceTree = "<group>";
@@ -314,6 +380,7 @@
 				A8DE08263B0CA1E846EBC5D1 /* GithubSearchMVP.storyboard in Resources */,
 				8C381A52B29884C7CFAC3DAC /* GithubTableViewCell.xib in Resources */,
 				DF918CD2EBA8E9FECD62323B /* LaunchScreen.storyboard in Resources */,
+				B685048F25E5FA7000C0449B /* VIPER.storyboard in Resources */,
 				59F6721662606AD3643C0125 /* Root.storyboard in Resources */,
 				4CE0DDA9838F29EC591E225A /* GithubSearchMVVM.storyboard in Resources */,
 			);
@@ -374,14 +441,19 @@
 				29E42C3A72D7632614E1567F /* GithubSearchMVPViewController.swift in Sources */,
 				8B4FC4038777CBFF57FD7702 /* GithubSearchPresenter.swift in Sources */,
 				A7D3CCDF1D12CA2A95FBD5AA /* GithubSearchMVCViewController.swift in Sources */,
+				B685048D25E5FA7000C0449B /* VIPEREntity.swift in Sources */,
 				DE7425557B6547AE5A0C8BBE /* GithubTableViewCell.swift in Sources */,
 				6DE5EBEF50445F1993C0F40A /* RootViewController.swift in Sources */,
 				8588E593C791BA4B5C43EA20 /* Router.swift in Sources */,
 				B63146EF25CFF47E00C9CA6D /* UITableViewCell+.swift in Sources */,
 				AB9859F5B1A3EC8B39A20800 /* GithubSearchMVVMViewController.swift in Sources */,
 				C48DC49E61FA28584F5860A5 /* GithubSearchMVVMViewModel.swift in Sources */,
+				B685048E25E5FA7000C0449B /* VIPERPresenter.swift in Sources */,
+				B685049225E5FA7000C0449B /* VIPERRouter.swift in Sources */,
 				F78C9D92608B5F7A86DA9CF1 /* Storyboard+.swift in Sources */,
+				B685049025E5FA7000C0449B /* VIPERViewController.swift in Sources */,
 				B63146EA25CFF06C00C9CA6D /* GithubAPI+Rx.swift in Sources */,
+				B685049125E5FA7000C0449B /* VIPERInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
