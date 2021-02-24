@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Entityがないためやることがないが一応用意
 protocol WebUsecase {
 }
 

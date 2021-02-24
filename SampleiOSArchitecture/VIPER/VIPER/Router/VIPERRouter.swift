@@ -37,11 +37,7 @@ final class VIPERRouter {
 extension VIPERRouter: VIPERWireframe {
   func showWeb(viperEntity: VIPEREntity){
     let next = WebRouter.assembleModules(viperEntity: viperEntity)
-    if let nav = viewController.navigationController {
-      nav.pushViewController(next, animated: true)
-    } else {
-      viewController.present(next, animated: true, completion: nil)
-    }
+    viewController.show(next: next)
   }
 }
 

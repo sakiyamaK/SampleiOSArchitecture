@@ -7,18 +7,7 @@
 
 import UIKit
 
-
-//厳密にVIPERに沿ってやるならここもProtocolにした方がいいけどまぁいいや
-
 final class Router {
-  static private func show(from: UIViewController, to: UIViewController) {
-    if let nav = from.navigationController {
-      nav.pushViewController(to, animated: true)
-    } else {
-      from.present(to, animated: true, completion: nil)
-    }
-  }
-
   static func showRoot(window: UIWindow) {
     let vc = UIStoryboard.rootViewController
     let nav = UINavigationController(rootViewController: vc)
@@ -27,22 +16,21 @@ final class Router {
   }
 
   static func showMVC(from: UIViewController) {
-    show(from: from, to: UIStoryboard.mvcViewController)
+    from.show(next: UIStoryboard.mvcViewController)
   }
 
   static func showMVP(from: UIViewController) {
     let vc = UIStoryboard.mvpViewController
     let presenter = GithubSearchPresenter(output: vc)
     vc.inject(presenter: presenter)
-    show(from: from, to: vc)
+    from.show(next: vc)
   }
 
   static func showMVVM(from: UIViewController) {
-    show(from: from, to: UIStoryboard.mvvmViewController)
+    from.show(next: UIStoryboard.mvvmViewController)
   }
 
   static func showVIPER(from: UIViewController) {
-    let next = VIPERRouter.assembleModules()
-    show(from: from, to: next)
+    from.show(next: VIPERRouter.assembleModules())
   }
 }
