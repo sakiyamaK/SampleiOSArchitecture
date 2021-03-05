@@ -38,9 +38,6 @@ final class GithubSearchVIPERViewController: UIViewController {
     self.presenter = presenter
   }
 
-  //状態をもつ ただし明確なルールではなさそう Presenter以外なら良いんじゃないか
-  private var items: [GithubSearchVIPEREntity] = []
-
   override func viewDidLoad() {
     super.viewDidLoad()
     presenter.viewDidLoad()
@@ -79,7 +76,6 @@ extension GithubSearchVIPERViewController: GithubSearchVIPERView {
 
   func reloadTable(items: [GithubSearchVIPEREntity]) {
     DispatchQueue.main.async {
-      self.items = items
       self.tableView.reloadData()
     }
   }
@@ -88,18 +84,17 @@ extension GithubSearchVIPERViewController: GithubSearchVIPERView {
 extension GithubSearchVIPERViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    let item = items[indexPath.row]
-    presenter.selectItem(githubSearchVIPEREntity: item)
+    presenter.selectItem(indexPath: indexPath)
   }
 }
 extension GithubSearchVIPERViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    items.count
+    presenter.getSearchedItems().count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: GithubTableViewCell.reuseIdentifier) as! GithubTableViewCell
-    let item = items[indexPath.row]
+    let item = presenter.getSearchedItems()[indexPath.row]
     cell.configure(githubModel: item)
     return cell
   }

@@ -11,7 +11,8 @@ import Foundation
 protocol GithubSearchVIPERPresentation: AnyObject {
   func viewDidLoad()
   func tapSearchButton(word: String)
-  func selectItem(githubSearchVIPEREntity: GithubSearchVIPEREntity)
+  func selectItem(indexPath: IndexPath)
+  func getSearchedItems() -> [GithubSearchVIPEREntity]
 }
 
 //他の部品以外は状態(パラメータ)をもたない
@@ -53,8 +54,11 @@ extension GithubSearchVIPERPresenter: GithubSearchVIPERPresentation {
     }
   }
 
-  func selectItem(githubSearchVIPEREntity: GithubSearchVIPEREntity) {
+  func selectItem(indexPath: IndexPath) {
+    let githubSearchVIPEREntity = interactor.getSearchedItems()[indexPath.row]
     let initParameters: WebVIPERUsecaseInitParameters = .init(entity: githubSearchVIPEREntity)
     router.showWeb(initParameters: initParameters)
   }
+
+  func getSearchedItems() -> [GithubSearchVIPEREntity] { interactor.getSearchedItems() }
 }
