@@ -286,7 +286,7 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		B685047E25E5FA7000C0449B /* VIPER */ = {
+		B685047E25E5FA7000C0449B /* GithubSearchVIPER */ = {
 			isa = PBXGroup;
 			children = (
 				B685048225E5FA7000C0449B /* Entity */,
@@ -295,7 +295,7 @@
 				B685048925E5FA7000C0449B /* Interactor */,
 				B685048B25E5FA7000C0449B /* Router */,
 			);
-			path = VIPER;
+			path = GithubSearchVIPER;
 			sourceTree = "<group>";
 		};
 		B685048225E5FA7000C0449B /* Entity */ = {
@@ -342,13 +342,13 @@
 		B68504A425E652D900C0449B /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
-				B68504A725E6530500C0449B /* Web */,
-				B685047E25E5FA7000C0449B /* VIPER */,
+				B68504A725E6530500C0449B /* WebVIPER */,
+				B685047E25E5FA7000C0449B /* GithubSearchVIPER */,
 			);
 			path = VIPER;
 			sourceTree = "<group>";
 		};
-		B68504A725E6530500C0449B /* Web */ = {
+		B68504A725E6530500C0449B /* WebVIPER */ = {
 			isa = PBXGroup;
 			children = (
 				B68504AA25E6530500C0449B /* Presenter */,
@@ -356,7 +356,7 @@
 				B68504AF25E6530500C0449B /* Interactor */,
 				B68504B125E6530500C0449B /* Router */,
 			);
-			path = Web;
+			path = WebVIPER;
 			sourceTree = "<group>";
 		};
 		B68504AA25E6530500C0449B /* Presenter */ = {
@@ -428,24 +428,32 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B6F6431D25F2750C002B52D8 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				B68504A425E652D900C0449B /* VIPER */,
+				05FA2DA446097B04ADC4663E /* MVC */,
+				94F9952B661C1FD544C64F39 /* MVP */,
+				062AA9AC3F6C8144FC04E71E /* MVVM */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
 		CB7DCFB8975B36D69F9686F8 /* SampleiOSArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				B6F6431D25F2750C002B52D8 /* Architecture */,
 				B1B8F3310AD4859FE5B068AC /* AppDelegate.swift */,
 				88E69CE9ABE02873CAF26464 /* Assets.xcassets */,
 				F5771F94927A3C72FFF18AA1 /* Extension */,
 				875BC601700C984E092A5B1D /* Info.plist */,
 				8126924E39401AF5F6263D0F /* LaunchScreen.storyboard */,
 				58CC90DE1758A1741168739C /* Model */,
-				05FA2DA446097B04ADC4663E /* MVC */,
-				94F9952B661C1FD544C64F39 /* MVP */,
-				062AA9AC3F6C8144FC04E71E /* MVVM */,
 				6937CF30C4F3CA943302212A /* Root.storyboard */,
 				9A3BC27F8796DC7465898E0B /* RootViewController.swift */,
 				FE37F8E622471AF2A5F6C5B4 /* Router */,
 				E83FA23361EE09E541393910 /* Utility */,
 				AB075CCBF19115E8C29397CA /* View */,
-				B68504A425E652D900C0449B /* VIPER */,
 			);
 			path = SampleiOSArchitecture;
 			sourceTree = "<group>";

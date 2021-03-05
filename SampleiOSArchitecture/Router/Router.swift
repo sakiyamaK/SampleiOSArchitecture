@@ -14,10 +14,6 @@ final class Router {
     window.rootViewController = nav
     window.makeKeyAndVisible()
   }
-
-  static func showVIPER(from: UIViewController) {
-    from.show(next: VIPERRouter.assembleModules())
-  }
 }
 
 //MVC用の遷移
@@ -49,7 +45,6 @@ extension Router {
   }
 }
 
-
 //MVVM用の遷移
 extension Router {
   static func showMVVM(from: UIViewController) {
@@ -60,5 +55,14 @@ extension Router {
   static func showWebMVVM(from: UIViewController, githubModel: GithubModel) {
     let vc = WebMVVMViewController.makeFromStoryboard(githubModel: githubModel)
     from.show(next: vc)
+  }
+}
+
+//VIPER用の遷移
+// 本来はこんな書き方しないが起動時にVIPERの記述になっていないためしかたなく
+// 逆にいうとこうして他のアーキテクチャからVIPERに切り替えることもできる
+extension Router {
+  static func showVIPER(from: UIViewController) {
+    from.show(next: VIPERRouter.assembleModules())
   }
 }
