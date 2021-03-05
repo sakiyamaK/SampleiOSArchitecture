@@ -8,6 +8,7 @@
 import UIKit
 
 protocol WebVIPERWireframe: AnyObject {
+  func showAlert(error: Error)
 }
 
 final class WebVIPERRouter {
@@ -17,24 +18,26 @@ final class WebVIPERRouter {
     self.viewController = viewController
   }
 
-  static func assembleModules(viperEntity: GithubSearchVIPEREntity) -> UIViewController {
+  static func assembleModules(initParameters: WebVIPERUsecaseInitParameters) -> UIViewController {
     let view = UIStoryboard.webVIPERViewController
-    let interactor = WebVIPERInteractor()
+    let interactor = WebVIPERInteractor(initParameters: initParameters)
     let router = WebVIPERRouter(viewController: view)
     let presenter = WebVIPERPresenter(
       view: view,
       interactor: interactor,
-      router: router,
-      viperEntity: viperEntity
-    )
+      router: router)
 
-    view.presenter = presenter
+    view.inject(presenter: presenter)
 
     return view
   }
 }
 
 extension WebVIPERRouter: WebVIPERWireframe {
+  func showAlert(error: Error) {
+    //アラート画面のRouterを呼ぶ
+    print(error.localizedDescription)
+  }
 }
 
 extension UIStoryboard {

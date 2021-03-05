@@ -11,8 +11,7 @@ import Foundation
 protocol GithubSearchVIPERPresentation: AnyObject {
   func viewDidLoad()
   func tapSearchButton(word: String)
-  func showAleart(error: Error)
-  func selectItem(GithubSearchVIPEREntity: GithubSearchVIPEREntity)
+  func selectItem(githubSearchVIPEREntity: GithubSearchVIPEREntity)
 }
 
 //他の部品以外は状態(パラメータ)をもたない
@@ -49,17 +48,13 @@ extension GithubSearchVIPERPresenter: GithubSearchVIPERPresentation {
       case .success(let items):
         self.view?.reloadTable(items: items)
       case .failure(let error):
-        self.view?.showAlert(error: error)
+        self.router.showAlert(error: error)
       }
     }
   }
 
-  func showAleart(error: Error) {
-    //AlertのRouterを呼び出す
-    print(error.localizedDescription)
-  }
-
-  func selectItem(GithubSearchVIPEREntity: GithubSearchVIPEREntity) {
-    router.showWeb(GithubSearchVIPEREntity: GithubSearchVIPEREntity)
+  func selectItem(githubSearchVIPEREntity: GithubSearchVIPEREntity) {
+    let initParameters: WebVIPERUsecaseInitParameters = .init(entity: githubSearchVIPEREntity)
+    router.showWeb(initParameters: initParameters)
   }
 }

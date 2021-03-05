@@ -7,14 +7,23 @@
 
 import Foundation
 
-//Entityがないためやることがないが一応用意
+struct WebVIPERUsecaseInitParameters {
+  var entity: GithubSearchVIPEREntity
+}
+
 protocol WebVIPERUsecase {
+  func getInitParameters() -> WebVIPERUsecaseInitParameters
 }
 
 final class WebVIPERInteractor {
-  init() {
+
+  private var initParameters: WebVIPERUsecaseInitParameters!
+
+  init(initParameters: WebVIPERUsecaseInitParameters) {
+    self.initParameters = initParameters
   }
 }
 
 extension WebVIPERInteractor: WebVIPERUsecase {
+  func getInitParameters() -> WebVIPERUsecaseInitParameters { self.initParameters }
 }

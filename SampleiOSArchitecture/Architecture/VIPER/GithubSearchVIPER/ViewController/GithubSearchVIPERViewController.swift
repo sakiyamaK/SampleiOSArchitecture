@@ -12,7 +12,6 @@ protocol GithubSearchVIPERView: AnyObject {
   func initView()
   func startLoading()
   func finishLoading()
-  func showAlert(error: Error)
   func reloadTable(items: [GithubSearchVIPEREntity])
 }
 
@@ -78,13 +77,6 @@ extension GithubSearchVIPERViewController: GithubSearchVIPERView {
     }
   }
 
-  func showAlert(error: Error) {
-    DispatchQueue.main.async {
-      //何か他にControllerで処理することがあるならここに書く
-      self.presenter.showAleart(error: error)
-    }
-  }
-
   func reloadTable(items: [GithubSearchVIPEREntity]) {
     DispatchQueue.main.async {
       self.items = items
@@ -97,7 +89,7 @@ extension GithubSearchVIPERViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     let item = items[indexPath.row]
-    presenter.selectItem(GithubSearchVIPEREntity: item)
+    presenter.selectItem(githubSearchVIPEREntity: item)
   }
 }
 extension GithubSearchVIPERViewController: UITableViewDataSource {

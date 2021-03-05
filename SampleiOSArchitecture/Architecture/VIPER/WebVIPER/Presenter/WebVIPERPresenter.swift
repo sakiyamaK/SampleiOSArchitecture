@@ -19,18 +19,18 @@ final class WebVIPERPresenter {
   init(
     view: WebVIPERView,
     interactor: WebVIPERUsecase,
-    router: WebVIPERWireframe,
-    viperEntity: GithubSearchVIPEREntity
-  ) {
+    router: WebVIPERWireframe
+    ) {
     self.view = view
     self.interactor = interactor
     self.router = router
-    self.view?.setInitParameters(viperEntity)
   }
 }
 
 extension WebVIPERPresenter: WebVIPERPresentation {
+
   func viewDidLoad() {
-    self.view?.fetch()
+    guard let url = URL(string: interactor.getInitParameters().entity.urlStr) else { return }
+    self.view?.fetch(url: url)
   }
 }

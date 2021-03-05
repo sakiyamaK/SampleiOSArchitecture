@@ -9,7 +9,8 @@ import UIKit
 
 //protocolを必ず用意
 protocol GithubSearchVIPERWireframe: AnyObject {
-  func showWeb(GithubSearchVIPEREntity: GithubSearchVIPEREntity)
+  func showWeb(initParameters: WebVIPERUsecaseInitParameters)
+  func showAlert(error: Error)
 }
 
 final class GithubSearchVIPERRouter {
@@ -50,8 +51,13 @@ final class GithubSearchVIPERRouter {
 
 //用意したprotocolに準拠させる
 extension GithubSearchVIPERRouter: GithubSearchVIPERWireframe {
-  func showWeb(GithubSearchVIPEREntity: GithubSearchVIPEREntity){
-    let next = WebVIPERRouter.assembleModules(viperEntity: GithubSearchVIPEREntity)
+  func showAlert(error: Error) {
+    //アラート画面のRouterを呼ぶ
+    print(error.localizedDescription)
+  }
+
+  func showWeb(initParameters: WebVIPERUsecaseInitParameters){
+    let next = WebVIPERRouter.assembleModules(initParameters: initParameters)
     viewController.show(next: next)
   }
 }

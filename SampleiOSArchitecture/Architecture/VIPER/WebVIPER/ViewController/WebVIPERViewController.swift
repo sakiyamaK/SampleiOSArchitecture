@@ -9,16 +9,17 @@ import UIKit
 import WebKit
 
 protocol WebVIPERView: AnyObject {
-  func setInitParameters(_ viperEntity: GithubSearchVIPEREntity)
-  func fetch()
+  func fetch(url: URL)
 }
 
 final class WebVIPERViewController: UIViewController {
 
   @IBOutlet private weak var WebVIPERView: WKWebView!
-  private var initViperEntity: GithubSearchVIPEREntity?
 
-  var presenter: WebVIPERPresentation!
+  private var presenter: WebVIPERPresentation!
+  func inject(presenter: WebVIPERPresentation) {
+    self.presenter = presenter
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,14 +28,7 @@ final class WebVIPERViewController: UIViewController {
 }
 
 extension WebVIPERViewController: WebVIPERView {
-  func setInitParameters(_ viperEntity: GithubSearchVIPEREntity){
-    initViperEntity = viperEntity
-  }
-
-  func fetch() {
-    guard
-      let viperEntity = initViperEntity,
-      let url = URL(string: viperEntity.urlStr) else { return }
+  func fetch(url: URL) {
     self.WebVIPERView.load(URLRequest(url: url))
   }
 }
