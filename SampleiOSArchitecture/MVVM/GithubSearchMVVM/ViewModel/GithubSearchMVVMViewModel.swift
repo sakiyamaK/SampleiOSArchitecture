@@ -14,36 +14,34 @@ import NSObject_Rx
 //ViewModelの入力に関するprotocol
 protocol GithubSearchMVVMViewModelInput {
   var searchTextObservable: Observable<String?> { get }
-  var didSelectRelay: BehaviorRelay<Int> { get }
+  var didSelectRelay: PublishRelay<Int> { get }
 }
 
 //ViewModelの出力に関するprotocol
 protocol GithubSearchMVVMViewModelOutput {
   var loadingObservable: Observable<Bool> { get }
-  var updateItemsObservable: Observable<[GithubModel]> { get }
-  var items: [GithubModel] { get }
+  var updateGithubModelsObservable: Observable<[GithubModel]> { get }
+  var selectGithubModelObservable: Observable<GithubModel> { get }
+  var githubModels: [GithubModel] { get }
 }
 
 //ViewModelはInputとOutputのprotocolに準拠する
 final class GithubSearchMVVMViewModel: GithubSearchMVVMViewModelOutput, HasDisposeBag {
-
   /*outputについての記述*/
-
+  //出力側の定型文的な書き方
   private let _loading: BehaviorRelay<Bool> = .init(value: false)
   lazy var loadingObservable: Observable<Bool> = _loading.asObservable()
-  //出力側の定型文的な書き方
-  private let _updateItems: BehaviorRelay<[GithubModel]> = .init(value: [])
-  lazy var updateItemsObservable = _updateItems.asObservable()
-  private(set) var items: [GithubModel]
+  private let _updateGithubModels: BehaviorRelay<[GithubModel]> = .init(value: [])
+  lazy var updateGithubModelsObservable = _updateGithubModels.asObservable()
+  private let _selectGithubModel: PublishRelay<GithubModel> = .init()
+  lazy var selectGithubModelObservable: Observable<GithubModel> = _selectGithubModel.asObservable()
 
-  private var input: GithubSearchMVVMViewModelInput!
-  private var api: GithubAPIProtocol!
+  private(set) var githubModels: [GithubModel]
 
   //初期化時にストリームを決める
   init(input: GithubSearchMVVMViewModelInput, api: GithubAPIProtocol = GithubAPI.shared) {
-    self.input = input
-    self.api = api
-    self.items = []
+
+    self.githubModels = []
 
     let searchTextObservable = input.searchTextObservable
       .debug()
@@ -52,11 +50,11 @@ final class GithubSearchMVVMViewModel: GithubSearchMVVMViewModelOutput, HasDispo
       .distinctUntilChanged()
 
     input.didSelectRelay.asObservable()
-      .filter { $0 < self.items.count - 1 }
-      .subscribe(onNext: {[weak self] (index) in
-      let item = self!.items[index]
-      print(item)
-    }).disposed(by: disposeBag)
+      .debug()
+      .filter { $0 < self.githubModels.count - 1 }
+      .map { self.githubModels[$0] }
+      .debug()
+      .bind(to: _selectGithubModel).disposed(by: disposeBag)
 
     searchTextObservable
       .debug()
@@ -64,11 +62,11 @@ final class GithubSearchMVVMViewModel: GithubSearchMVVMViewModelOutput, HasDispo
       GithubAPI.shared.rx.get(searchWord: searchWord, isDesc: true)
     }).do(onNext: {[weak self] _ in
       self?._loading.accept(true)
-    }).map {[weak self] (items) -> [GithubModel] in
+    }).map {[weak self] (githubModels) -> [GithubModel] in
       //最後に得たデータを保存
-      self?.items = items
+      self?.githubModels = githubModels
       self?._loading.accept(false)
-      return items
-    }.bind(to: _updateItems).disposed(by: disposeBag)
+      return githubModels
+    }.bind(to: _updateGithubModels).disposed(by: disposeBag)
   }
 }

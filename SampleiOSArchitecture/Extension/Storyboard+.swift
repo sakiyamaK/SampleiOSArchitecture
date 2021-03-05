@@ -5,10 +5,6 @@ extension UIStoryboard {
   static var rootViewController: RootViewController {
     UIStoryboard(name: "Root", bundle: nil).instantiateInitialViewController() as! RootViewController
   }
-
-  static var mvvmViewController: GithubSearchMVVMViewController {
-    UIStoryboard(name: "GithubSearchMVVM", bundle: nil).instantiateInitialViewController() as! GithubSearchMVVMViewController
-  }
 }
 
 //MVC用
@@ -31,5 +27,16 @@ extension UIStoryboard {
 
   static var webMVPViewController: WebMVPViewController {
     UIStoryboard(name: "WebMVP", bundle: nil).instantiateInitialViewController() as! WebMVPViewController
+  }
+}
+
+//MVVM用
+extension UIStoryboard {
+  static var githubSearchMVVMViewController: GithubSearchMVVMViewController {
+    UIStoryboard(name: "GithubSearchMVVM", bundle: nil).instantiateInitialViewController() as! GithubSearchMVVMViewController
+  }
+
+  static var webMVVMViewController: WebMVVMViewController {
+    UIStoryboard(name: "WebMVVM", bundle: nil).instantiateInitialViewController() as! WebMVVMViewController
   }
 }

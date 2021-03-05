@@ -25,31 +25,36 @@ final class GithubSearchMVVMViewController: UIViewController {
   @IBOutlet private weak var searchButton: UIButton!
 
   private var viewModel: GithubSearchMVVMViewModel!
-  private var output: GithubSearchMVVMViewModelOutput!
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    viewModel = GithubSearchMVVMViewModel(input: self)
-    output = viewModel
-
     self.tableView.isHidden = true
     self.indicator.isHidden = true
 
-    bindOutputStream()
+    self.setupViewModel()
   }
+}
 
-  private func bindOutputStream() {
-    output.updateItemsObservable.bind(to: Binder(self){ (vc, _) in
+private extension GithubSearchMVVMViewController {
+  func setupViewModel() {
+    viewModel = GithubSearchMVVMViewModel(input: self)
+
+    viewModel.updateGithubModelsObservable.bind(to: Binder(self){ (vc, _) in
       vc.tableView.reloadData()
     }).disposed(by: rx.disposeBag)
 
-    output.loadingObservable
+    viewModel.loadingObservable.skip(1)
       .debug()
       .bind(to: Binder(self){ (vc, loading) in
         vc.tableView.isHidden = loading
         vc.indicator.isHidden = !loading
       }).disposed(by: rx.disposeBag)
+
+    viewModel.selectGithubModelObservable
+      .bind(to: Binder(self){ (vc, githubModel) in
+        Router.showWebMVVM(from: vc, githubModel: githubModel)
+      }).disposed(by: rx.disposeBag)
+
   }
 }
 
@@ -57,9 +62,7 @@ extension GithubSearchMVVMViewController: GithubSearchMVVMViewModelInput {
   var searchTextObservable: Observable<String?> {
     self.searchButton.rx.tap.map { self.urlTextField.text }
   }
-  var didSelectRelay: BehaviorRelay<Int> {
-    .init(value: 0)
-  }
+  var didSelectRelay: PublishRelay<Int> { .init() }
 }
 
 extension GithubSearchMVVMViewController: UITableViewDelegate {
@@ -70,11 +73,11 @@ extension GithubSearchMVVMViewController: UITableViewDelegate {
 
 extension GithubSearchMVVMViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    output.items.count
+    viewModel.githubModels.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let githubModel = output.items[indexPath.item]
+    let githubModel = viewModel.githubModels[indexPath.item]
     let cell = tableView.dequeueReusableCell(withIdentifier: GithubTableViewCell.reuseIdentifier, for: indexPath) as! GithubTableViewCell
     cell.configure(githubModel: githubModel)
     return cell
