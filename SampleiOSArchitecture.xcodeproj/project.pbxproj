@@ -23,6 +23,11 @@
 		A7D3CCDF1D12CA2A95FBD5AA /* GithubSearchMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E20C2E760805151F3C92E6 /* GithubSearchMVCViewController.swift */; };
 		A8DE08263B0CA1E846EBC5D1 /* GithubSearchMVP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC5DB2040CFC9A0F027A989 /* GithubSearchMVP.storyboard */; };
 		AB9859F5B1A3EC8B39A20800 /* GithubSearchMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB58B399890F11246E077DC /* GithubSearchMVVMViewController.swift */; };
+		B61B423E25F25B1800F92741 /* WebMVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61B423C25F25B1800F92741 /* WebMVC.storyboard */; };
+		B61B423F25F25B1800F92741 /* WebMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B423D25F25B1800F92741 /* WebMVCViewController.swift */; };
+		B61B425225F25E3D00F92741 /* WebMVPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B424C25F25E3D00F92741 /* WebMVPPresenter.swift */; };
+		B61B425425F25E3D00F92741 /* WebMVP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61B425025F25E3D00F92741 /* WebMVP.storyboard */; };
+		B61B425525F25E3D00F92741 /* WebMVPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B425125F25E3D00F92741 /* WebMVPViewController.swift */; };
 		B63146EA25CFF06C00C9CA6D /* GithubAPI+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63146E925CFF06C00C9CA6D /* GithubAPI+Rx.swift */; };
 		B63146EF25CFF47E00C9CA6D /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63146EE25CFF47E00C9CA6D /* UITableViewCell+.swift */; };
 		B685048D25E5FA7000C0449B /* VIPEREntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685048325E5FA7000C0449B /* VIPEREntity.swift */; };
@@ -37,6 +42,9 @@
 		B68504B725E6530500C0449B /* WebInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68504B025E6530500C0449B /* WebInteractor.swift */; };
 		B68504B825E6530500C0449B /* WebRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68504B225E6530500C0449B /* WebRouter.swift */; };
 		B68504BD25E65E9200C0449B /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68504BC25E65E9200C0449B /* UIViewController+.swift */; };
+		B6F6431725F26416002B52D8 /* WebMVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F6431325F26416002B52D8 /* WebMVVMViewModel.swift */; };
+		B6F6431825F26416002B52D8 /* WebMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F6431525F26416002B52D8 /* WebMVVMViewController.swift */; };
+		B6F6431925F26416002B52D8 /* WebMVVM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F6431625F26416002B52D8 /* WebMVVM.storyboard */; };
 		C48DC49E61FA28584F5860A5 /* GithubSearchMVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD7F4F3E82E235D0CC9B19B /* GithubSearchMVVMViewModel.swift */; };
 		DE7425557B6547AE5A0C8BBE /* GithubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130EBD6D0DD6EDD9324A6AA /* GithubTableViewCell.swift */; };
 		DF918CD2EBA8E9FECD62323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8126924E39401AF5F6263D0F /* LaunchScreen.storyboard */; };
@@ -57,6 +65,11 @@
 		9E45FBED5E8286784719FE83 /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		B1B8F3310AD4859FE5B068AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E20C2E760805151F3C92E6 /* GithubSearchMVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVCViewController.swift; sourceTree = "<group>"; };
+		B61B423C25F25B1800F92741 /* WebMVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebMVC.storyboard; sourceTree = "<group>"; };
+		B61B423D25F25B1800F92741 /* WebMVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebMVCViewController.swift; sourceTree = "<group>"; };
+		B61B424C25F25E3D00F92741 /* WebMVPPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebMVPPresenter.swift; sourceTree = "<group>"; };
+		B61B425025F25E3D00F92741 /* WebMVP.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebMVP.storyboard; sourceTree = "<group>"; };
+		B61B425125F25E3D00F92741 /* WebMVPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebMVPViewController.swift; sourceTree = "<group>"; };
 		B63146E925CFF06C00C9CA6D /* GithubAPI+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubAPI+Rx.swift"; sourceTree = "<group>"; };
 		B63146EE25CFF47E00C9CA6D /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		B685048325E5FA7000C0449B /* VIPEREntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPEREntity.swift; sourceTree = "<group>"; };
@@ -71,6 +84,9 @@
 		B68504B025E6530500C0449B /* WebInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebInteractor.swift; sourceTree = "<group>"; };
 		B68504B225E6530500C0449B /* WebRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRouter.swift; sourceTree = "<group>"; };
 		B68504BC25E65E9200C0449B /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		B6F6431325F26416002B52D8 /* WebMVVMViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebMVVMViewModel.swift; sourceTree = "<group>"; };
+		B6F6431525F26416002B52D8 /* WebMVVMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebMVVMViewController.swift; sourceTree = "<group>"; };
+		B6F6431625F26416002B52D8 /* WebMVVM.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebMVVM.storyboard; sourceTree = "<group>"; };
 		B7D3089DC71B7A75E014B9B7 /* GithubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubModel.swift; sourceTree = "<group>"; };
 		C70DB2736CD9C60E21E95D4F /* GithubSearchMVVM.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVVM.storyboard; sourceTree = "<group>"; };
 		CFC5DB2040CFC9A0F027A989 /* GithubSearchMVP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVP.storyboard; sourceTree = "<group>"; };
@@ -99,7 +115,8 @@
 		05FA2DA446097B04ADC4663E /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				86D97B7B4F73D178E488BEBE /* ViewController */,
+				B61B423B25F25B1800F92741 /* WebMVC */,
+				86D97B7B4F73D178E488BEBE /* GithuSearchMVC */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -107,9 +124,8 @@
 		062AA9AC3F6C8144FC04E71E /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				B63146E825CFF05700C9CA6D /* Extension */,
-				62A90A8361C85887E55E93BB /* ViewController */,
-				3CAF0BE72A7B283EEFD55FF1 /* ViewModel */,
+				B6F6431125F26416002B52D8 /* WebMVVM */,
+				B6F6430F25F263CD002B52D8 /* GithubSearchMVVM */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -184,13 +200,13 @@
 			);
 			sourceTree = "<group>";
 		};
-		86D97B7B4F73D178E488BEBE /* ViewController */ = {
+		86D97B7B4F73D178E488BEBE /* GithuSearchMVC */ = {
 			isa = PBXGroup;
 			children = (
 				D3DE73D6E02307AE975EB85E /* GithubSearchMVC.storyboard */,
 				B2E20C2E760805151F3C92E6 /* GithubSearchMVCViewController.swift */,
 			);
-			path = ViewController;
+			path = GithuSearchMVC;
 			sourceTree = "<group>";
 		};
 		8ACD4C80957215C7CD1B4242 /* Presenter */ = {
@@ -204,8 +220,8 @@
 		94F9952B661C1FD544C64F39 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
-				8ACD4C80957215C7CD1B4242 /* Presenter */,
-				6023E25E1B8CD8CA223B0CA4 /* ViewController */,
+				B61B424A25F25E3D00F92741 /* WebMVP */,
+				B61B424825F25DBF00F92741 /* GithubSearchMVP */,
 			);
 			path = MVP;
 			sourceTree = "<group>";
@@ -216,6 +232,50 @@
 				4AE7FB6CD5F889274B999628 /* GithubTableViewCell */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B61B423B25F25B1800F92741 /* WebMVC */ = {
+			isa = PBXGroup;
+			children = (
+				B61B423C25F25B1800F92741 /* WebMVC.storyboard */,
+				B61B423D25F25B1800F92741 /* WebMVCViewController.swift */,
+			);
+			path = WebMVC;
+			sourceTree = "<group>";
+		};
+		B61B424825F25DBF00F92741 /* GithubSearchMVP */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD4C80957215C7CD1B4242 /* Presenter */,
+				6023E25E1B8CD8CA223B0CA4 /* ViewController */,
+			);
+			path = GithubSearchMVP;
+			sourceTree = "<group>";
+		};
+		B61B424A25F25E3D00F92741 /* WebMVP */ = {
+			isa = PBXGroup;
+			children = (
+				B61B424B25F25E3D00F92741 /* Presenter */,
+				B61B424F25F25E3D00F92741 /* ViewController */,
+			);
+			path = WebMVP;
+			sourceTree = "<group>";
+		};
+		B61B424B25F25E3D00F92741 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B61B424C25F25E3D00F92741 /* WebMVPPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B61B424F25F25E3D00F92741 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B61B425025F25E3D00F92741 /* WebMVP.storyboard */,
+				B61B425125F25E3D00F92741 /* WebMVPViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		B63146E825CFF05700C9CA6D /* Extension */ = {
@@ -332,6 +392,42 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		B6F6430F25F263CD002B52D8 /* GithubSearchMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				B63146E825CFF05700C9CA6D /* Extension */,
+				62A90A8361C85887E55E93BB /* ViewController */,
+				3CAF0BE72A7B283EEFD55FF1 /* ViewModel */,
+			);
+			path = GithubSearchMVVM;
+			sourceTree = "<group>";
+		};
+		B6F6431125F26416002B52D8 /* WebMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				B6F6431225F26416002B52D8 /* ViewModel */,
+				B6F6431425F26416002B52D8 /* ViewController */,
+			);
+			path = WebMVVM;
+			sourceTree = "<group>";
+		};
+		B6F6431225F26416002B52D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B6F6431325F26416002B52D8 /* WebMVVMViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B6F6431425F26416002B52D8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B6F6431525F26416002B52D8 /* WebMVVMViewController.swift */,
+				B6F6431625F26416002B52D8 /* WebMVVM.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		CB7DCFB8975B36D69F9686F8 /* SampleiOSArchitecture */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,12 +537,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61B423E25F25B1800F92741 /* WebMVC.storyboard in Resources */,
 				10179DDD9A905A12004FCAF2 /* Assets.xcassets in Resources */,
 				1E2578064DF635F0791DC2BC /* GithubSearchMVC.storyboard in Resources */,
 				A8DE08263B0CA1E846EBC5D1 /* GithubSearchMVP.storyboard in Resources */,
 				8C381A52B29884C7CFAC3DAC /* GithubTableViewCell.xib in Resources */,
+				B6F6431925F26416002B52D8 /* WebMVVM.storyboard in Resources */,
 				DF918CD2EBA8E9FECD62323B /* LaunchScreen.storyboard in Resources */,
 				B685048F25E5FA7000C0449B /* VIPER.storyboard in Resources */,
+				B61B425425F25E3D00F92741 /* WebMVP.storyboard in Resources */,
 				59F6721662606AD3643C0125 /* Root.storyboard in Resources */,
 				4CE0DDA9838F29EC591E225A /* GithubSearchMVVM.storyboard in Resources */,
 				B68504B525E6530500C0449B /* Web.storyboard in Resources */,
@@ -510,6 +609,8 @@
 				95209C9F97620D1729E91F7D /* GithubModel.swift in Sources */,
 				29E42C3A72D7632614E1567F /* GithubSearchMVPViewController.swift in Sources */,
 				8B4FC4038777CBFF57FD7702 /* GithubSearchPresenter.swift in Sources */,
+				B61B423F25F25B1800F92741 /* WebMVCViewController.swift in Sources */,
+				B6F6431725F26416002B52D8 /* WebMVVMViewModel.swift in Sources */,
 				A7D3CCDF1D12CA2A95FBD5AA /* GithubSearchMVCViewController.swift in Sources */,
 				B685048D25E5FA7000C0449B /* VIPEREntity.swift in Sources */,
 				DE7425557B6547AE5A0C8BBE /* GithubTableViewCell.swift in Sources */,
@@ -524,7 +625,10 @@
 				B685049225E5FA7000C0449B /* VIPERRouter.swift in Sources */,
 				F78C9D92608B5F7A86DA9CF1 /* Storyboard+.swift in Sources */,
 				B685049025E5FA7000C0449B /* VIPERViewController.swift in Sources */,
+				B61B425225F25E3D00F92741 /* WebMVPPresenter.swift in Sources */,
+				B61B425525F25E3D00F92741 /* WebMVPViewController.swift in Sources */,
 				B63146EA25CFF06C00C9CA6D /* GithubAPI+Rx.swift in Sources */,
+				B6F6431825F26416002B52D8 /* WebMVVMViewController.swift in Sources */,
 				B685049125E5FA7000C0449B /* VIPERInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

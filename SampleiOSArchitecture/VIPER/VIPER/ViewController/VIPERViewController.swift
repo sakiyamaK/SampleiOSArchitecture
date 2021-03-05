@@ -49,7 +49,7 @@ final class VIPERViewController: UIViewController {
 private extension VIPERViewController {
   @objc func tapSearchButton(_ sender: UIResponder) {
     guard let word = urlTextField.text else { return }
-    presenter.search(word: word)
+    presenter.tapSearchButton(word: word)
   }
 }
 
@@ -94,7 +94,7 @@ extension VIPERViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     let item = items[indexPath.row]
-    presenter.showWeb(viperEntity: item)
+    presenter.selectItem(viperEntity: item)
   }
 }
 extension VIPERViewController: UITableViewDataSource {

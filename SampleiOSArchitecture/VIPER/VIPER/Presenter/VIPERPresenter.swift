@@ -9,9 +9,9 @@ import Foundation
 
 protocol VIPERPresentation: AnyObject {
   func viewDidLoad()
-  func search(word: String)
+  func tapSearchButton(word: String)
   func showAleart(error: Error)
-  func showWeb(viperEntity: VIPEREntity)
+  func selectItem(viperEntity: VIPEREntity)
 }
 
 final class VIPERPresenter {
@@ -35,7 +35,7 @@ extension VIPERPresenter: VIPERPresentation {
     view?.initView()
   }
 
-  func search(word: String) {
+  func tapSearchButton(word: String) {
     view?.startLoading()
     interactor.get(searchWord: word, isDesc: true){[weak self] result in
       guard let self = self else { return }
@@ -54,7 +54,7 @@ extension VIPERPresenter: VIPERPresentation {
     print(error.localizedDescription)
   }
 
-  func showWeb(viperEntity: VIPEREntity) {
+  func selectItem(viperEntity: VIPEREntity) {
     router.showWeb(viperEntity: viperEntity)
   }
 }

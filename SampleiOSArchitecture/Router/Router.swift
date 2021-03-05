@@ -15,22 +15,40 @@ final class Router {
     window.makeKeyAndVisible()
   }
 
-  static func showMVC(from: UIViewController) {
-    from.show(next: UIStoryboard.mvcViewController)
-  }
-
-  static func showMVP(from: UIViewController) {
-    let vc = UIStoryboard.mvpViewController
-    let presenter = GithubSearchPresenter(output: vc)
-    vc.inject(presenter: presenter)
-    from.show(next: vc)
-  }
-
   static func showMVVM(from: UIViewController) {
     from.show(next: UIStoryboard.mvvmViewController)
   }
 
   static func showVIPER(from: UIViewController) {
     from.show(next: VIPERRouter.assembleModules())
+  }
+}
+
+//MVC用の遷移
+extension Router {
+  static func showMVC(from: UIViewController) {
+    from.show(next: UIStoryboard.githubSearchMVCViewController)
+  }
+
+  static func showWebMVC(from: UIViewController, githubModel: GithubModel) {
+    let vc = WebMVCViewController.makeFromStoryboard(githubModel: githubModel)
+    from.show(next: vc)
+  }
+}
+
+//MVC用の遷移
+extension Router {
+  static func showMVP(from: UIViewController) {
+    let vc = UIStoryboard.githubSearchMVPViewController
+    let presenter = GithubSearchPresenter(output: vc)
+    vc.inject(presenter: presenter)
+    from.show(next: vc)
+  }
+
+  static func showWebMVP(from: UIViewController, githubModel: GithubModel) {
+    let vc = UIStoryboard.webMVPViewController
+    let presenter = WebMVPPresenter(view: vc, githubModel: githubModel)
+    vc.inject(presenter: presenter)
+    from.show(next: vc)
   }
 }

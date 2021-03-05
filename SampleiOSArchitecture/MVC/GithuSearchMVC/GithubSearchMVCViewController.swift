@@ -38,7 +38,7 @@ final class GithubSearchMVCViewController: UIViewController {
     indicator.isHidden = false
     GithubAPI.shared.get(searchWord: searchWord, isDesc: true) {[weak self] (result) in
       DispatchQueue.main.async {
-        switch result{
+        switch result {
         case .success(let models):
           //APIからのデータを保存
           self?.responseData = models
@@ -61,6 +61,13 @@ final class GithubSearchMVCViewController: UIViewController {
     else { return }
     //リロード
     self.reload(searchWord: searchWord)
+  }
+}
+
+extension GithubSearchMVCViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let githubModel = responseData[indexPath.item]
+    Router.showWebMVC(from: self, githubModel: githubModel)
   }
 }
 

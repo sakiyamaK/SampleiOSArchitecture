@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wOa-SI-twv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WebMVP View Controller-->
+        <scene sceneID="ctg-4H-50b">
+            <objects>
+                <viewController id="wOa-SI-twv" customClass="WebMVPViewController" customModule="SampleiOSArchitecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UiU-xH-lu7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKI-6S-rM9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Djs-L7-zNm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pKI-6S-rM9" firstAttribute="top" secondItem="Djs-L7-zNm" secondAttribute="top" id="8ED-Ly-sMU"/>
+                            <constraint firstItem="pKI-6S-rM9" firstAttribute="leading" secondItem="Djs-L7-zNm" secondAttribute="leading" id="aj2-Xx-g5f"/>
+                            <constraint firstItem="Djs-L7-zNm" firstAttribute="trailing" secondItem="pKI-6S-rM9" secondAttribute="trailing" id="rSs-D2-vfv"/>
+                            <constraint firstItem="Djs-L7-zNm" firstAttribute="bottom" secondItem="pKI-6S-rM9" secondAttribute="bottom" id="tDA-ds-HA3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="pKI-6S-rM9" id="YLE-2r-hbz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9V-zt-kb9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="178.79464285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

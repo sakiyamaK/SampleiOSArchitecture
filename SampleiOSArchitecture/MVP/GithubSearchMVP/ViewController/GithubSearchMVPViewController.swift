@@ -73,7 +73,7 @@ extension GithubSearchMVPViewController: GithubSearchPresenterOutput {
     }
   }
 
-  func update(items: [GithubModel]) {
+  func update(githubModels: [GithubModel]) {
     DispatchQueue.main.async {
       self.tableView.reloadData()
     }
@@ -82,6 +82,12 @@ extension GithubSearchMVPViewController: GithubSearchPresenterOutput {
   func get(error: Error) {
     DispatchQueue.main.async {
       print(error.localizedDescription)
+    }
+  }
+
+  func showWeb(githubModel: GithubModel) {
+    DispatchQueue.main.async {
+      Router.showWebMVP(from: self, githubModel: githubModel)
     }
   }
 }

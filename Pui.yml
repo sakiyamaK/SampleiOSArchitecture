@@ -2,3 +2,18 @@ VIPER:
   Target: SampleiOSArchitecture
   TemplateDirectoryPath: ./templates/PuiTemplate/ios/VIPER
   GenerateRootPath: ./SampleiOSArchitecture
+
+MVC:
+  Target: SampleiOSArchitecture
+  TemplateDirectoryPath: ./templates/PuiTemplate/ios/MVC
+  GenerateRootPath: ./
+
+MVP:
+  Target: SampleiOSArchitecture
+  TemplateDirectoryPath: ./templates/PuiTemplate/ios/MVP
+  GenerateRootPath: ./
+
+MVVM:
+  Target: __TARGET__
+  TemplateDirectoryPath: ./templates/PuiTemplate/ios/MVVM
+  GenerateRootPath: ./

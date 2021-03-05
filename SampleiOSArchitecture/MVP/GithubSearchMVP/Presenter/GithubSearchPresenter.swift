@@ -18,8 +18,9 @@ protocol GithubSearchPresenterInput {
 //出力に関するprotocol
 protocol GithubSearchPresenterOutput: AnyObject {
   func update(loading: Bool)
-  func update(items: [GithubModel])
+  func update(githubModels: [GithubModel])
   func get(error: Error)
+  func showWeb(githubModel: GithubModel)
 }
 
 final class GithubSearchPresenter {
@@ -27,24 +28,24 @@ final class GithubSearchPresenter {
   private weak var output: GithubSearchPresenterOutput!
   private var api: GithubAPIProtocol!
   //状態をここで持ってる
-  private var items: [GithubModel]
+  private var githubModels: [GithubModel]
 
   //このoutputがViewControllerのこと
   init(output: GithubSearchPresenterOutput, api: GithubAPIProtocol = GithubAPI.shared) {
     self.output = output
     self.api = api
-    self.items = []
+    self.githubModels = []
   }
 }
 
 //PresenterはInputのprotocolに準拠する
 extension GithubSearchPresenter: GithubSearchPresenterInput {
-  var numberOfItems: Int { items.count }
+  var numberOfItems: Int { githubModels.count }
 
-  func item(index: Int) -> GithubModel { items[index] }
+  func item(index: Int) -> GithubModel { githubModels[index] }
 
   func didSelect(index: Int) {
-    print(items[index])
+    output.showWeb(githubModel: githubModels[index])
   }
 
   func searchText(_ text: String, sortType: Bool) {
@@ -55,11 +56,11 @@ extension GithubSearchPresenter: GithubSearchPresenterInput {
       //output(つまりVC側に何をするか任せる)
       self?.output.update(loading: false)
       switch result {
-      case .success(let items):
+      case .success(let githubModels):
         //状態を保持
-        self?.items = items
+        self?.githubModels = githubModels
         //output(つまりVC側に何をするか任せる)
-        self?.output.update(items: items)
+        self?.output.update(githubModels: githubModels)
       case .failure(let error):
         //output(つまりVC側に何をするか任せる)
         self?.output.get(error: error)
