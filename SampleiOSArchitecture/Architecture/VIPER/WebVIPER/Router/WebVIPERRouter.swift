@@ -18,7 +18,7 @@ final class WebVIPERRouter {
   }
 
   static func assembleModules(viperEntity: GithubSearchVIPEREntity) -> UIViewController {
-    let view = WebVIPERViewController.makeFromStoryboard()
+    let view = UIStoryboard.webVIPERViewController
     let interactor = WebVIPERInteractor()
     let router = WebVIPERRouter(viewController: view)
     let presenter = WebVIPERPresenter(
@@ -38,7 +38,7 @@ extension WebVIPERRouter: WebVIPERWireframe {
 }
 
 extension UIStoryboard {
-  static func loadWebVIPER() -> WebVIPERViewController {
+  static var webVIPERViewController: WebVIPERViewController {
     UIStoryboard(name: "WebVIPER", bundle: nil).instantiateInitialViewController() as! WebVIPERViewController 
   }
 }

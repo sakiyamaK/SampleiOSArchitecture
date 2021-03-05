@@ -11,7 +11,7 @@ import Foundation
 protocol GithubSearchPresenterInput {
   var numberOfItems: Int { get }
   func item(index: Int) -> GithubModel
-  func searchText(_ text: String, sortType: Bool)
+  func searchText(_ text: String?, sortType: Bool)
   func didSelect(index: Int)
 }
 
@@ -48,7 +48,8 @@ extension GithubSearchPresenter: GithubSearchPresenterInput {
     output.showWeb(githubModel: githubModels[index])
   }
 
-  func searchText(_ text: String, sortType: Bool) {
+  func searchText(_ text: String?, sortType: Bool) {
+    guard let text = text, text.count > 0 else { return }
     //output(つまりVC側に何をするか任せる)
     output.update(loading: true)
     //presenterがやることはapiを叩くのみ

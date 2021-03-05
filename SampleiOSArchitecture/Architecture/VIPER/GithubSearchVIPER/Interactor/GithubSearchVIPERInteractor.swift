@@ -7,10 +7,13 @@
 
 import Foundation
 
+//protocolを必ず用意
 protocol GithubSearchVIPERUsecase {
   func get(searchWord: String, isDesc: Bool, completion: ((Result<[GithubSearchVIPEREntity], GithubSearchVIPEREntityError>) -> Void)?)
 }
 
+//もっともごちゃごちゃしがちになる部分
+//他のアーキテクチャでいうUtilityが担当してたやつ全部きそう
 final class GithubSearchVIPERInteractor {
   private let host: String
   init(host: String = "https://api.github.com") {
@@ -18,6 +21,7 @@ final class GithubSearchVIPERInteractor {
   }
 }
 
+//用意したprotocolに準拠させる
 extension GithubSearchVIPERInteractor: GithubSearchVIPERUsecase {
   func get(searchWord: String, isDesc: Bool = true, completion: ((Result<[GithubSearchVIPEREntity], GithubSearchVIPEREntityError>) -> Void)? = nil) {
     guard searchWord.count > 0 else {

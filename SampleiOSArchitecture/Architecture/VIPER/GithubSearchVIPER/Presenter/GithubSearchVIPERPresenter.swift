@@ -7,6 +7,7 @@
 
 import Foundation
 
+//protocolを必ず用意
 protocol GithubSearchVIPERPresentation: AnyObject {
   func viewDidLoad()
   func tapSearchButton(word: String)
@@ -14,7 +15,10 @@ protocol GithubSearchVIPERPresentation: AnyObject {
   func selectItem(GithubSearchVIPEREntity: GithubSearchVIPEREntity)
 }
 
+//他の部品以外は状態(パラメータ)をもたない
+//徹底的に他との中継役だけに徹する
 final class GithubSearchVIPERPresenter {
+  //循環参照しないようにviewだけweak
   private weak var view: GithubSearchVIPERView?
   private let router: GithubSearchVIPERWireframe
   private let interactor: GithubSearchVIPERUsecase
@@ -30,6 +34,7 @@ final class GithubSearchVIPERPresenter {
   }
 }
 
+//用意したprotocolに準拠させる
 extension GithubSearchVIPERPresenter: GithubSearchVIPERPresentation {
   func viewDidLoad() {
     view?.initView()

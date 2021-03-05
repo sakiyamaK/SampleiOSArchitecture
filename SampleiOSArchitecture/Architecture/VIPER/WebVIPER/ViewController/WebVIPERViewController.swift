@@ -10,7 +10,7 @@ import WebKit
 
 protocol WebVIPERView: AnyObject {
   func setInitParameters(_ viperEntity: GithubSearchVIPEREntity)
-  func loadInitWebVIPER()
+  func fetch()
 }
 
 final class WebVIPERViewController: UIViewController {
@@ -19,11 +19,6 @@ final class WebVIPERViewController: UIViewController {
   private var initViperEntity: GithubSearchVIPEREntity?
 
   var presenter: WebVIPERPresentation!
-
-  static func makeFromStoryboard() -> WebVIPERViewController {
-    let vc = UIStoryboard.loadWebVIPER()
-    return vc
-  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,7 +31,7 @@ extension WebVIPERViewController: WebVIPERView {
     initViperEntity = viperEntity
   }
 
-  func loadInitWebVIPER() {
+  func fetch() {
     guard
       let viperEntity = initViperEntity,
       let url = URL(string: viperEntity.urlStr) else { return }

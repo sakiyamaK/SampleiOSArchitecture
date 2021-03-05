@@ -42,6 +42,8 @@ private extension GithubSearchMVVMViewController {
   func setupViewModel() {
     viewModel = GithubSearchMVVMViewModel(input: self)
 
+    //viewModelから通知がきたら何をするか先に宣言しておく
+
     viewModel.updateGithubModelsObservable.bind(to: Binder(self){ (vc, _) in
       vc.tableView.reloadData()
     }).disposed(by: rx.disposeBag)

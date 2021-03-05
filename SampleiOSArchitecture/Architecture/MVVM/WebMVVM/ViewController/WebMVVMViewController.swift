@@ -10,6 +10,8 @@ import WebKit
 import RxSwift
 import RxCocoa
 
+//Viewに関すること以外は何も書かない
+//ifやforといった「制御」が入ることがないはず
 final class WebMVVMViewController: UIViewController {
 
   @IBOutlet weak var webView: WKWebView!

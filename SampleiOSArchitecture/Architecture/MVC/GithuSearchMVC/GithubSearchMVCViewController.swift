@@ -24,7 +24,7 @@ final class GithubSearchMVCViewController: UIViewController {
     }
   }
 
-  var responseData: [GithubModel] = []
+  var githubModels: [GithubModel] = []
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -41,7 +41,7 @@ final class GithubSearchMVCViewController: UIViewController {
         switch result {
         case .success(let models):
           //APIからのデータを保存
-          self?.responseData = models
+          self?.githubModels = models
 
           self?.tableView.isHidden = false
           self?.indicator.isHidden = true
@@ -66,18 +66,18 @@ final class GithubSearchMVCViewController: UIViewController {
 
 extension GithubSearchMVCViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let githubModel = responseData[indexPath.item]
+    let githubModel = githubModels[indexPath.item]
     Router.showWebMVC(from: self, githubModel: githubModel)
   }
 }
 
 extension GithubSearchMVCViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return responseData.count
+    return githubModels.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let githubModel = responseData[indexPath.item]
+    let githubModel = githubModels[indexPath.item]
     let cell = tableView.dequeueReusableCell(withIdentifier: GithubTableViewCell.reuseIdentifier, for: indexPath) as! GithubTableViewCell
     cell.configure(githubModel: githubModel)
     return cell

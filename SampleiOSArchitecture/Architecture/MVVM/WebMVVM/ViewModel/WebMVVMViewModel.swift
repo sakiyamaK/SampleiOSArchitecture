@@ -13,7 +13,8 @@ protocol WebMVVMViewModelOutput {
   var loadObservable: Observable<URLRequest> { get }
 }
 
-
+//制御の全てを書く
+//その制御は全てリアクティブであり、最初に全て宣言する宣言型
 final class WebMVVMViewModel: WebMVVMViewModelOutput, HasDisposeBag {
 
   struct InitParameters {

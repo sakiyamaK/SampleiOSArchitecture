@@ -7,6 +7,8 @@
 
 import UIKit
 
+//Viewに関すること以外は何も書かない
+//ifやforといった「制御」が入ることがないはず
 final class GithubSearchMVPViewController: UIViewController {
 
   @IBOutlet private weak var indicator: UIActivityIndicatorView!
@@ -24,11 +26,8 @@ final class GithubSearchMVPViewController: UIViewController {
   }
 
   @objc private func tapSearchButton(_ button: UIButton) {
-    guard
-      let searchWord = urlTextField.text, searchWord.count > 0
-    else { return }
     //何をするかはpresenterに任せる
-    self.presenter.searchText(searchWord, sortType: true)
+    self.presenter.searchText(urlTextField.text, sortType: true)
   }
 
   //VCのインスタンス作成後にPresenterInputProtocolに準拠するもの(ここではGithubSearchPresenter)を登録する
@@ -41,26 +40,6 @@ final class GithubSearchMVPViewController: UIViewController {
     super.viewDidLoad()
     self.tableView.isHidden = true
     self.indicator.isHidden = true
-  }
-}
-
-extension GithubSearchMVPViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath, animated: true)
-    presenter.didSelect(index: indexPath.row)
-  }
-}
-
-extension GithubSearchMVPViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    presenter.numberOfItems
-  }
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: GithubTableViewCell.reuseIdentifier, for: indexPath) as! GithubTableViewCell
-    let githubModel = presenter.item(index: indexPath.item)
-    cell.configure(githubModel: githubModel)
-    return cell
   }
 }
 
@@ -89,5 +68,25 @@ extension GithubSearchMVPViewController: GithubSearchPresenterOutput {
     DispatchQueue.main.async {
       Router.showWebMVP(from: self, githubModel: githubModel)
     }
+  }
+}
+
+extension GithubSearchMVPViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+    presenter.didSelect(index: indexPath.row)
+  }
+}
+
+extension GithubSearchMVPViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    presenter.numberOfItems
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: GithubTableViewCell.reuseIdentifier, for: indexPath) as! GithubTableViewCell
+    let githubModel = presenter.item(index: indexPath.item)
+    cell.configure(githubModel: githubModel)
+    return cell
   }
 }

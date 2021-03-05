@@ -7,6 +7,7 @@
 
 import UIKit
 
+//protocolを必ず用意
 protocol GithubSearchVIPERView: AnyObject {
   func initView()
   func startLoading()
@@ -15,6 +16,8 @@ protocol GithubSearchVIPERView: AnyObject {
   func reloadTable(items: [GithubSearchVIPEREntity])
 }
 
+//Viewに関すること以外は何も書かない
+//ifやforといった「制御」が入ることがないはず
 final class GithubSearchVIPERViewController: UIViewController {
 
   @IBOutlet private weak var indicator: UIActivityIndicatorView!
@@ -31,14 +34,13 @@ final class GithubSearchVIPERViewController: UIViewController {
     }
   }
 
-  var presenter: GithubSearchVIPERPresentation!
-
-  private var items: [GithubSearchVIPEREntity] = []
-
-  static func makeFromStoryboard() -> GithubSearchVIPERViewController {
-    let vc = UIStoryboard.loadGithubSearchVIPER()
-    return vc
+  private var presenter: GithubSearchVIPERPresentation!
+  func inject(presenter: GithubSearchVIPERPresentation) {
+    self.presenter = presenter
   }
+
+  //状態をもつ ただし明確なルールではなさそう Presenter以外なら良いんじゃないか
+  private var items: [GithubSearchVIPEREntity] = []
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -53,6 +55,7 @@ private extension GithubSearchVIPERViewController {
   }
 }
 
+//用意したprotocolに準拠させる
 extension GithubSearchVIPERViewController: GithubSearchVIPERView {
   func initView() {
     DispatchQueue.main.async {
@@ -99,7 +102,7 @@ extension GithubSearchVIPERViewController: UITableViewDelegate {
 }
 extension GithubSearchVIPERViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return items.count
+    items.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

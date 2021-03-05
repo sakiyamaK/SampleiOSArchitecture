@@ -31,6 +31,6 @@ final class WebVIPERPresenter {
 
 extension WebVIPERPresenter: WebVIPERPresentation {
   func viewDidLoad() {
-    self.view?.loadInitWebVIPER()
+    self.view?.fetch()
   }
 }
