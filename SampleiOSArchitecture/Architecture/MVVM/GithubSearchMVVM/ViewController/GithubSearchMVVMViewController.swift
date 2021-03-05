@@ -24,6 +24,9 @@ final class GithubSearchMVVMViewController: UIViewController {
 
   @IBOutlet private weak var searchButton: UIButton!
 
+  //セルを選択したときに送るストリーム
+  //本来はこんな変数用意したくないが、delegateまみれのUIKitとRxSwiftがどうも相性よく書けない...
+  private let didSelectRelay: PublishRelay<Int> = .init()
   private var viewModel: GithubSearchMVVMViewModel!
 
   override func viewDidLoad() {
@@ -43,7 +46,7 @@ private extension GithubSearchMVVMViewController {
       vc.tableView.reloadData()
     }).disposed(by: rx.disposeBag)
 
-    viewModel.loadingObservable.skip(1)
+    viewModel.loadingObservable
       .debug()
       .bind(to: Binder(self){ (vc, loading) in
         vc.tableView.isHidden = loading
@@ -54,15 +57,17 @@ private extension GithubSearchMVVMViewController {
       .bind(to: Binder(self){ (vc, githubModel) in
         Router.showWebMVVM(from: vc, githubModel: githubModel)
       }).disposed(by: rx.disposeBag)
-
   }
 }
 
+//ViewModel内部に通知するパラメータたち
 extension GithubSearchMVVMViewController: GithubSearchMVVMViewModelInput {
   var searchTextObservable: Observable<String?> {
     self.searchButton.rx.tap.map { self.urlTextField.text }
   }
-  var didSelectRelay: PublishRelay<Int> { .init() }
+  var didSelectObservable: Observable<Int> {
+    self.didSelectRelay.asObservable()
+  }
 }
 
 extension GithubSearchMVVMViewController: UITableViewDelegate {

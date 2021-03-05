@@ -1,5 +1,5 @@
 //
-//  WebInteractor.swift
+//  WebVIPERInteractor.swift
 //  SampleiOSArchitecture
 //
 //  Created by  on 2021/2/24.
@@ -8,13 +8,13 @@
 import Foundation
 
 //Entityがないためやることがないが一応用意
-protocol WebUsecase {
+protocol WebVIPERUsecase {
 }
 
-final class WebInteractor {
+final class WebVIPERInteractor {
   init() {
   }
 }
 
-extension WebInteractor: WebUsecase {
+extension WebVIPERInteractor: WebVIPERUsecase {
 }

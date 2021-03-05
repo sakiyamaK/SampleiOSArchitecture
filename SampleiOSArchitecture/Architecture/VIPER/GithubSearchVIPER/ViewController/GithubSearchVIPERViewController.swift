@@ -1,5 +1,5 @@
 //
-//  VIPERView.swift
+//  GithubSearchVIPERView.swift
 //  SampleiOSArchitecture
 //
 //  Created by  on 2021/2/24.
@@ -7,15 +7,15 @@
 
 import UIKit
 
-protocol VIPERView: AnyObject {
+protocol GithubSearchVIPERView: AnyObject {
   func initView()
   func startLoading()
   func finishLoading()
   func showAlert(error: Error)
-  func reloadTable(items: [VIPEREntity])
+  func reloadTable(items: [GithubSearchVIPEREntity])
 }
 
-final class VIPERViewController: UIViewController {
+final class GithubSearchVIPERViewController: UIViewController {
 
   @IBOutlet private weak var indicator: UIActivityIndicatorView!
   @IBOutlet private weak var urlTextField: UITextField!
@@ -31,12 +31,12 @@ final class VIPERViewController: UIViewController {
     }
   }
 
-  var presenter: VIPERPresentation!
+  var presenter: GithubSearchVIPERPresentation!
 
-  private var items: [VIPEREntity] = []
+  private var items: [GithubSearchVIPEREntity] = []
 
-  static func makeFromStoryboard() -> VIPERViewController {
-    let vc = UIStoryboard.loadVIPER()
+  static func makeFromStoryboard() -> GithubSearchVIPERViewController {
+    let vc = UIStoryboard.loadGithubSearchVIPER()
     return vc
   }
 
@@ -46,14 +46,14 @@ final class VIPERViewController: UIViewController {
   }
 }
 
-private extension VIPERViewController {
+private extension GithubSearchVIPERViewController {
   @objc func tapSearchButton(_ sender: UIResponder) {
     guard let word = urlTextField.text else { return }
     presenter.tapSearchButton(word: word)
   }
 }
 
-extension VIPERViewController: VIPERView {
+extension GithubSearchVIPERViewController: GithubSearchVIPERView {
   func initView() {
     DispatchQueue.main.async {
       self.tableView.isHidden = true
@@ -82,7 +82,7 @@ extension VIPERViewController: VIPERView {
     }
   }
 
-  func reloadTable(items: [VIPEREntity]) {
+  func reloadTable(items: [GithubSearchVIPEREntity]) {
     DispatchQueue.main.async {
       self.items = items
       self.tableView.reloadData()
@@ -90,14 +90,14 @@ extension VIPERViewController: VIPERView {
   }
 }
 
-extension VIPERViewController: UITableViewDelegate {
+extension GithubSearchVIPERViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     let item = items[indexPath.row]
-    presenter.selectItem(viperEntity: item)
+    presenter.selectItem(GithubSearchVIPEREntity: item)
   }
 }
-extension VIPERViewController: UITableViewDataSource {
+extension GithubSearchVIPERViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return items.count
   }

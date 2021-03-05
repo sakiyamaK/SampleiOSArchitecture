@@ -1,5 +1,5 @@
 //
-//  VIPERPresentation.swift
+//  GithubSearchVIPERPresentation.swift
 //  SampleiOSArchitecture
 //
 //  Created by  on 2021/2/24.
@@ -7,22 +7,22 @@
 
 import Foundation
 
-protocol VIPERPresentation: AnyObject {
+protocol GithubSearchVIPERPresentation: AnyObject {
   func viewDidLoad()
   func tapSearchButton(word: String)
   func showAleart(error: Error)
-  func selectItem(viperEntity: VIPEREntity)
+  func selectItem(GithubSearchVIPEREntity: GithubSearchVIPEREntity)
 }
 
-final class VIPERPresenter {
-  private weak var view: VIPERView?
-  private let router: VIPERWireframe
-  private let interactor: VIPERUsecase
+final class GithubSearchVIPERPresenter {
+  private weak var view: GithubSearchVIPERView?
+  private let router: GithubSearchVIPERWireframe
+  private let interactor: GithubSearchVIPERUsecase
 
   init(
-    view: VIPERView,
-    interactor: VIPERUsecase,
-    router: VIPERWireframe
+    view: GithubSearchVIPERView,
+    interactor: GithubSearchVIPERUsecase,
+    router: GithubSearchVIPERWireframe
   ) {
     self.view = view
     self.interactor = interactor
@@ -30,7 +30,7 @@ final class VIPERPresenter {
   }
 }
 
-extension VIPERPresenter: VIPERPresentation {
+extension GithubSearchVIPERPresenter: GithubSearchVIPERPresentation {
   func viewDidLoad() {
     view?.initView()
   }
@@ -54,7 +54,7 @@ extension VIPERPresenter: VIPERPresentation {
     print(error.localizedDescription)
   }
 
-  func selectItem(viperEntity: VIPEREntity) {
-    router.showWeb(viperEntity: viperEntity)
+  func selectItem(GithubSearchVIPEREntity: GithubSearchVIPEREntity) {
+    router.showWeb(GithubSearchVIPEREntity: GithubSearchVIPEREntity)
   }
 }

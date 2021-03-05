@@ -63,6 +63,6 @@ extension Router {
 // 逆にいうとこうして他のアーキテクチャからVIPERに切り替えることもできる
 extension Router {
   static func showVIPER(from: UIViewController) {
-    from.show(next: VIPERRouter.assembleModules())
+    from.show(next: GithubSearchVIPERRouter.assembleModules())
   }
 }

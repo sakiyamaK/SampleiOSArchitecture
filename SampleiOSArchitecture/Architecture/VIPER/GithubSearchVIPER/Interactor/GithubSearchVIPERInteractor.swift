@@ -1,5 +1,5 @@
 //
-//  VIPERInteractor.swift
+//  GithubSearchVIPERInteractor.swift
 //  SampleiOSArchitecture
 //
 //  Created by  on 2021/2/24.
@@ -7,19 +7,19 @@
 
 import Foundation
 
-protocol VIPERUsecase {
-  func get(searchWord: String, isDesc: Bool, completion: ((Result<[VIPEREntity], VIPEREntityError>) -> Void)?)
+protocol GithubSearchVIPERUsecase {
+  func get(searchWord: String, isDesc: Bool, completion: ((Result<[GithubSearchVIPEREntity], GithubSearchVIPEREntityError>) -> Void)?)
 }
 
-final class VIPERInteractor {
+final class GithubSearchVIPERInteractor {
   private let host: String
   init(host: String = "https://api.github.com") {
     self.host = host
   }
 }
 
-extension VIPERInteractor: VIPERUsecase {
-  func get(searchWord: String, isDesc: Bool = true, completion: ((Result<[VIPEREntity], VIPEREntityError>) -> Void)? = nil) {
+extension GithubSearchVIPERInteractor: GithubSearchVIPERUsecase {
+  func get(searchWord: String, isDesc: Bool = true, completion: ((Result<[GithubSearchVIPEREntity], GithubSearchVIPEREntityError>) -> Void)? = nil) {
     guard searchWord.count > 0 else {
       completion?(.failure(.error))
       return
@@ -27,7 +27,7 @@ extension VIPERInteractor: VIPERUsecase {
     let url: URL = URL(string: "\(host)/search/repositories?q=\(searchWord)&sort=stars&order=\(isDesc ? "desc" : "asc")")!
     let task: URLSessionTask = URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
       guard let data = data,
-            let githubResponse = try? JSONDecoder().decode(VIPEREntityResponse.self, from: data),
+            let githubResponse = try? JSONDecoder().decode(GithubSearchVIPEREntityResponse.self, from: data),
             let models = githubResponse.items else {
         completion?(.failure(.error))
         return

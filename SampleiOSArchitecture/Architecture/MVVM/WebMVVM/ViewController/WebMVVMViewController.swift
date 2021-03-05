@@ -12,22 +12,30 @@ import RxCocoa
 
 final class WebMVVMViewController: UIViewController {
 
-  private var viewModel: WebMVVMViewModel!
-  private var initGitHubModel: GithubModel!
-
   @IBOutlet weak var webView: WKWebView!
 
   static func makeFromStoryboard(githubModel: GithubModel) -> WebMVVMViewController {
     let vc = UIStoryboard.webMVVMViewController
-    vc.initGitHubModel = githubModel
     vc.setupViewModel(githubModel: githubModel)
     return vc
+  }
+
+  //viewDidLoadしたときに送るストリーム
+  private let viewDidLoadRelay: PublishRelay<Void> = .init()
+  private var viewModel: WebMVVMViewModel!
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    viewDidLoadRelay.accept(())
   }
 }
 
 private extension WebMVVMViewController {
   func setupViewModel(githubModel: GithubModel) {
-    viewModel = WebMVVMViewModel(input: self)
+    //ストリームに流れる初期化パラメータ
+    let initParameters = WebMVVMViewModel.InitParameters.init(githubModel: githubModel)
+    viewModel = WebMVVMViewModel(input: self, initParameters: initParameters)
+
     viewModel.loadObservable.bind(to: Binder(self){ (vc, urlRequest) in
       vc.webView.load(urlRequest)
     }).disposed(by: rx.disposeBag)
@@ -35,5 +43,5 @@ private extension WebMVVMViewController {
 }
 
 extension WebMVVMViewController: WebMVVMViewModelInput {
-  var githubModel: BehaviorRelay<GithubModel> { .init(value: initGitHubModel) }
+  var fetch: Observable<Void> { viewDidLoadRelay.asObservable() }
 }

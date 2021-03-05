@@ -14,7 +14,7 @@ import NSObject_Rx
 //ViewModelの入力に関するprotocol
 protocol GithubSearchMVVMViewModelInput {
   var searchTextObservable: Observable<String?> { get }
-  var didSelectRelay: PublishRelay<Int> { get }
+  var didSelectObservable: Observable<Int> { get }
 }
 
 //ViewModelの出力に関するprotocol
@@ -29,7 +29,7 @@ protocol GithubSearchMVVMViewModelOutput {
 final class GithubSearchMVVMViewModel: GithubSearchMVVMViewModelOutput, HasDisposeBag {
   /*outputについての記述*/
   //出力側の定型文的な書き方
-  private let _loading: BehaviorRelay<Bool> = .init(value: false)
+  private let _loading: PublishRelay<Bool> = .init()
   lazy var loadingObservable: Observable<Bool> = _loading.asObservable()
   private let _updateGithubModels: BehaviorRelay<[GithubModel]> = .init(value: [])
   lazy var updateGithubModelsObservable = _updateGithubModels.asObservable()
@@ -43,29 +43,28 @@ final class GithubSearchMVVMViewModel: GithubSearchMVVMViewModelOutput, HasDispo
 
     self.githubModels = []
 
+    input.didSelectObservable
+      .filter { $0 < self.githubModels.count - 1 }
+      .map { self.githubModels[$0] }
+      .bind(to: _selectGithubModel).disposed(by: disposeBag)
+
     let searchTextObservable = input.searchTextObservable
-      .debug()
       .filterNil()
       .filter { $0.count > 0 }
       .distinctUntilChanged()
 
-    input.didSelectRelay.asObservable()
-      .debug()
-      .filter { $0 < self.githubModels.count - 1 }
-      .map { self.githubModels[$0] }
-      .debug()
-      .bind(to: _selectGithubModel).disposed(by: disposeBag)
+    //loadingをtrueにする
+    searchTextObservable.map {_ in return true }.bind(to: _loading).disposed(by: disposeBag)
 
     searchTextObservable
-      .debug()
       .flatMapLatest({ (searchWord) -> Observable<[GithubModel]> in
       GithubAPI.shared.rx.get(searchWord: searchWord, isDesc: true)
-    }).do(onNext: {[weak self] _ in
-      self?._loading.accept(true)
     }).map {[weak self] (githubModels) -> [GithubModel] in
       //最後に得たデータを保存
       self?.githubModels = githubModels
+      //loadingをfalseにする
       self?._loading.accept(false)
+      // 取得した値をストリームに流す(今のところ使ってないから流す必要はないけど一応)
       return githubModels
     }.bind(to: _updateGithubModels).disposed(by: disposeBag)
   }
