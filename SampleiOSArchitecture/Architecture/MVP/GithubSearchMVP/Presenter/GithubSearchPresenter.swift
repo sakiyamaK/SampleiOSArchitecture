@@ -49,7 +49,7 @@ extension GithubSearchPresenter: GithubSearchPresenterInput {
   }
 
   func searchText(_ text: String?, sortType: Bool) {
-    guard let text = text, text.count > 0 else { return }
+    guard let text = text, !text.isEmpty else { return }
     //output(つまりVC側に何をするか任せる)
     output.update(loading: true)
     //presenterがやることはapiを叩くのみ
