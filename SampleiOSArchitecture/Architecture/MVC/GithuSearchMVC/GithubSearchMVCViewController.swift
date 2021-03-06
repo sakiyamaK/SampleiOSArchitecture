@@ -24,7 +24,7 @@ final class GithubSearchMVCViewController: UIViewController {
     }
   }
 
-  var githubModels: [GithubModel] = []
+  private var githubModels: [GithubModel] = []
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,8 +32,18 @@ final class GithubSearchMVCViewController: UIViewController {
     tableView.isHidden = true
   }
 
+  @objc func tapSearchButton(_ button: UIButton) {
+    guard
+      let searchWord = urlTextField.text, searchWord.count > 0
+    else { return }
+    //リロード
+    self.reload(searchWord: searchWord)
+  }
+}
+
+private extension GithubSearchMVCViewController {
   //APIを叩いてテーブルをリロードするメソッド
-  private func reload(searchWord: String) {
+  func reload(searchWord: String) {
     tableView.isHidden = true
     indicator.isHidden = false
     GithubAPI.shared.get(searchWord: searchWord, isDesc: true) {[weak self] (result) in
@@ -54,14 +64,6 @@ final class GithubSearchMVCViewController: UIViewController {
       }
     }
   }
-
-  @objc func tapSearchButton(_ button: UIButton) {
-    guard
-      let searchWord = urlTextField.text, searchWord.count > 0
-    else { return }
-    //リロード
-    self.reload(searchWord: searchWord)
-  }
 }
 
 extension GithubSearchMVCViewController: UITableViewDelegate {
@@ -73,7 +75,7 @@ extension GithubSearchMVCViewController: UITableViewDelegate {
 
 extension GithubSearchMVCViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return githubModels.count
+    githubModels.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
