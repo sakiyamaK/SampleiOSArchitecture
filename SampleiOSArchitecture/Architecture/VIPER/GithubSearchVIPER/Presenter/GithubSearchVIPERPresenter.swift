@@ -10,7 +10,7 @@ import Foundation
 //protocolを必ず用意
 protocol GithubSearchVIPERPresentation: AnyObject {
   func viewDidLoad()
-  func tapSearchButton(word: String)
+  func tapSearchButton(word: String?)
   func selectItem(indexPath: IndexPath)
   func getSearchedItems() -> [GithubSearchVIPEREntity]
 }
@@ -40,9 +40,10 @@ extension GithubSearchVIPERPresenter: GithubSearchVIPERPresentation {
     view?.initView()
   }
 
-  func tapSearchButton(word: String) {
+  func tapSearchButton(word: String?) {
+    let parameters = GithubSearchParameters(searchWord: word)
     view?.startLoading()
-    interactor.get(searchWord: word, isDesc: true){[weak self] result in
+    interactor.get(parameters: parameters){[weak self] result in
       guard let self = self else { return }
       self.view?.finishLoading()
       switch result {

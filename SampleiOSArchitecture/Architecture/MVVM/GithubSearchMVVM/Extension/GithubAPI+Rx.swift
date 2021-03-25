@@ -16,11 +16,11 @@ extension GithubAPI: ReactiveCompatible {}
 //GithubAPIのrxにメソッドを追加する
 extension Reactive where Base: GithubAPI {
   //戻り値はObservable型にすること
-  func get(searchWord: String, isDesc: Bool = true) -> Observable<[GithubModel]> {
+  func get(parameters: GithubSearchParameters) -> Observable<[GithubModel]> {
     //Observableを作成するクラスメソッド
     return Observable.create { observer in
       //実際の処理
-      GithubAPI.shared.get(searchWord: searchWord, isDesc: isDesc) { (result) in
+      GithubAPI.shared.get(parameters: parameters) { (result) in
         switch result {
         case .success(let models):
           //戻り値の成功パターン

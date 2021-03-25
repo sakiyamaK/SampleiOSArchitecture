@@ -9,8 +9,8 @@ extension UIStoryboard {
 
 //MVC用
 extension UIStoryboard {
-  static var githubSearchMVCViewController: GithubSearchMVCViewController {
-    UIStoryboard(name: "GithubSearchMVC", bundle: nil).instantiateInitialViewController() as! GithubSearchMVCViewController
+  static var GithubSearchMVC01ViewController: GithubSearchMVC01ViewController {
+    UIStoryboard(name: "GithubSearchMVC01", bundle: nil).instantiateInitialViewController() as! GithubSearchMVC01ViewController
   }
 
   static var webMVCViewController: WebMVCViewController {

@@ -41,9 +41,15 @@ final class GithubSearchVIPERRouter {
       router: router
     )
 
+    let testPresenter = TestVIPERPresenter(
+      view: view,
+      interactor: interactor,
+      router: router
+    )
+
     //viewからpresenterに通知する必要があるため繋ぐ
     //viewとpresenterは互いが互いを知っている
-    view.inject(presenter: presenter)
+    view.inject(presenter: testPresenter)
 
     return view
   }

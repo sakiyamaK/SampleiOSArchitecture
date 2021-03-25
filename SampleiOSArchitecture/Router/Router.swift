@@ -19,7 +19,7 @@ final class Router {
 //MVC用の遷移
 extension Router {
   static func showMVC(from: UIViewController) {
-    from.show(next: UIStoryboard.githubSearchMVCViewController)
+    from.show(next: UIStoryboard.GithubSearchMVC01ViewController)
   }
 
   static func showWebMVC(from: UIViewController, githubModel: GithubModel) {

@@ -46,8 +46,7 @@ final class GithubSearchVIPERViewController: UIViewController {
 
 private extension GithubSearchVIPERViewController {
   @objc func tapSearchButton(_ sender: UIResponder) {
-    guard let word = urlTextField.text else { return }
-    presenter.tapSearchButton(word: word)
+    presenter.tapSearchButton(word: urlTextField.text)
   }
 }
 

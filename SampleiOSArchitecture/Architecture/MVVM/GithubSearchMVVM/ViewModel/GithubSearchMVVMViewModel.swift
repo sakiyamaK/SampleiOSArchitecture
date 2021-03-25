@@ -57,8 +57,9 @@ final class GithubSearchMVVMViewModel: GithubSearchMVVMViewModelOutput, HasDispo
     searchTextObservable.map {_ in return true }.bind(to: _loading).disposed(by: disposeBag)
 
     searchTextObservable
-      .flatMapLatest({ (searchWord) -> Observable<[GithubModel]> in
-      GithubAPI.shared.rx.get(searchWord: searchWord, isDesc: true)
+      .map { GithubSearchParameters(searchWord: $0) }
+      .flatMapLatest({ (parameters) -> Observable<[GithubModel]> in
+      GithubAPI.shared.rx.get(parameters: parameters)
     }).map {[weak self] (githubModels) -> [GithubModel] in
       //最後に得たデータを保存
       self?.githubModels = githubModels

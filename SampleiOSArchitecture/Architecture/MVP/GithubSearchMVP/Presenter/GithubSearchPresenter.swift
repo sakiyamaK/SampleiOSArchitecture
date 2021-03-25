@@ -11,7 +11,7 @@ import Foundation
 protocol GithubSearchPresenterInput {
   var numberOfItems: Int { get }
   func item(index: Int) -> GithubModel
-  func searchText(_ text: String?, sortType: Bool)
+  func search(parameters: GithubSearchParameters)
   func didSelect(index: Int)
 }
 
@@ -48,12 +48,12 @@ extension GithubSearchPresenter: GithubSearchPresenterInput {
     output.showWeb(githubModel: githubModels[index])
   }
 
-  func searchText(_ text: String?, sortType: Bool) {
-    guard let text = text, !text.isEmpty else { return }
+  func search(parameters: GithubSearchParameters) {
+    guard parameters.validation else { return }
     //output(つまりVC側に何をするか任せる)
     output.update(loading: true)
     //presenterがやることはapiを叩くのみ
-    self.api.get(searchWord: text, isDesc: sortType) {[weak self] (result) in
+    self.api.get(parameters: parameters) {[weak self] (result) in
       //output(つまりVC側に何をするか任せる)
       self?.output.update(loading: false)
       switch result {

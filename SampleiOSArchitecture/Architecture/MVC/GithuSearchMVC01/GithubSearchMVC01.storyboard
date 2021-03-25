@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Github SearchMVC View Controller-->
+        <!--Github SearchMVC01 View Controller-->
         <scene sceneID="kd3-n4-U2A">
             <objects>
-                <viewController id="mkL-dw-9Dp" customClass="GithubSearchMVCViewController" customModule="SampleiOSArchitecture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mkL-dw-9Dp" customClass="GithubSearchMVC01ViewController" customModule="SampleiOSArchitecture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nZi-SD-nhK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -27,7 +27,8 @@ final class GithubSearchMVPViewController: UIViewController {
 
   @objc private func tapSearchButton(_ button: UIButton) {
     //何をするかはpresenterに任せる
-    self.presenter.searchText(urlTextField.text, sortType: true)
+    let parameters = GithubSearchParameters.init(searchWord: urlTextField.text)
+    self.presenter.search(parameters: parameters)
   }
 
   //VCのインスタンス作成後にPresenterInputProtocolに準拠するもの(ここではGithubSearchPresenter)を登録する

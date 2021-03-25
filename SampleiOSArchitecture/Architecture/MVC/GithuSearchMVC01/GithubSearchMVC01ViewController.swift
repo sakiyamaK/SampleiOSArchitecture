@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class GithubSearchMVCViewController: UIViewController {
+final class GithubSearchMVC01ViewController: UIViewController {
 
   @IBOutlet private weak var indicator: UIActivityIndicatorView!
   @IBOutlet private weak var urlTextField: UITextField!
@@ -41,12 +41,13 @@ final class GithubSearchMVCViewController: UIViewController {
   }
 }
 
-private extension GithubSearchMVCViewController {
+private extension GithubSearchMVC01ViewController {
   //APIを叩いてテーブルをリロードするメソッド
   func reload(searchWord: String) {
     tableView.isHidden = true
     indicator.isHidden = false
-    GithubAPI.shared.get(searchWord: searchWord, isDesc: true) {[weak self] (result) in
+    let parameters = GithubSearchParameters.init(searchWord: searchWord)
+    GithubAPI.shared.get(parameters: parameters) {[weak self] (result) in
       DispatchQueue.main.async {
         switch result {
         case .success(let models):
@@ -66,14 +67,14 @@ private extension GithubSearchMVCViewController {
   }
 }
 
-extension GithubSearchMVCViewController: UITableViewDelegate {
+extension GithubSearchMVC01ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let githubModel = githubModels[indexPath.item]
     Router.showWebMVC(from: self, githubModel: githubModel)
   }
 }
 
-extension GithubSearchMVCViewController: UITableViewDataSource {
+extension GithubSearchMVC01ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     githubModels.count
   }
@@ -82,6 +83,18 @@ extension GithubSearchMVCViewController: UITableViewDataSource {
     let githubModel = githubModels[indexPath.item]
     let cell = tableView.dequeueReusableCell(withIdentifier: GithubTableViewCell.reuseIdentifier, for: indexPath) as! GithubTableViewCell
     cell.configure(githubModel: githubModel)
+    cell.delegate = self
     return cell
+  }
+}
+
+
+extension GithubSearchMVC01ViewController: GithubTableViewCellProtocol {
+  func tapNext(githubModel: GithubModel) {
+    Router.showWebMVC(from: self, githubModel: githubModel)
+  }
+
+  func tapCancel(githubModel: GithubModel) {
+    //削除するならその処理
   }
 }

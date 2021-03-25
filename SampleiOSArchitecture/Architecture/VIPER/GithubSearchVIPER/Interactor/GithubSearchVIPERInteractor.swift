@@ -9,7 +9,7 @@ import Foundation
 
 //protocolを必ず用意
 protocol GithubSearchVIPERUsecase {
-  func get(searchWord: String, isDesc: Bool, completion: ((Result<[GithubSearchVIPEREntity], GithubSearchVIPEREntityError>) -> Void)?)
+  func get(parameters: GithubSearchParameters, completion: ((Result<[GithubSearchVIPEREntity], GithubSearchVIPEREntityError>) -> Void)?)
   func getSearchedItems() -> [GithubSearchVIPEREntity]
 }
 
@@ -27,13 +27,13 @@ final class GithubSearchVIPERInteractor {
 
 //用意したprotocolに準拠させる
 extension GithubSearchVIPERInteractor: GithubSearchVIPERUsecase {
-  func get(searchWord: String, isDesc: Bool = true, completion: ((Result<[GithubSearchVIPEREntity], GithubSearchVIPEREntityError>) -> Void)? = nil) {
-    guard searchWord.count > 0 else {
+  func get(parameters: GithubSearchParameters, completion: ((Result<[GithubSearchVIPEREntity], GithubSearchVIPEREntityError>) -> Void)? = nil) {
+    guard parameters.validation else {
       completion?(.failure(.error))
       return
     }
     //APIをシングルトンにして呼び出す方式でもいいかもしれない
-    let url: URL = URL(string: "\(host)/search/repositories?q=\(searchWord)&sort=stars&order=\(isDesc ? "desc" : "asc")")!
+    let url: URL = URL(string: "\(host)/search/repositories?\(parameters.queryParameter)")!
     let task: URLSessionTask = URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
       guard let data = data,
             let githubResponse = try? JSONDecoder().decode(GithubSearchVIPEREntityResponse.self, from: data),
