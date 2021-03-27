@@ -83,18 +83,6 @@ extension GithubSearchMVC01ViewController: UITableViewDataSource {
     let githubModel = githubModels[indexPath.item]
     let cell = tableView.dequeueReusableCell(withIdentifier: GithubTableViewCell.reuseIdentifier, for: indexPath) as! GithubTableViewCell
     cell.configure(githubModel: githubModel)
-    cell.delegate = self
     return cell
-  }
-}
-
-
-extension GithubSearchMVC01ViewController: GithubTableViewCellProtocol {
-  func tapNext(githubModel: GithubModel) {
-    Router.showWebMVC(from: self, githubModel: githubModel)
-  }
-
-  func tapCancel(githubModel: GithubModel) {
-    //削除するならその処理
   }
 }
