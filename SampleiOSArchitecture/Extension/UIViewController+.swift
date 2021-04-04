@@ -9,11 +9,13 @@ import UIKit
 
 extension UIViewController {
   func show(next: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) {
-    if let nav = self.navigationController {
-      nav.pushViewController(next, animated: animated)
-      completion?()
-    } else {
-      self.present(next, animated: animated, completion: completion)
+    DispatchQueue.main.async {
+      if let nav = self.navigationController {
+        nav.pushViewController(next, animated: animated)
+        completion?()
+      } else {
+        self.present(next, animated: animated, completion: completion)
+      }
     }
   }
 }
