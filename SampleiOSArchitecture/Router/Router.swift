@@ -39,7 +39,7 @@ extension Router {
 
   static func showWebMVP(from: UIViewController, githubModel: GithubModel) {
     let vc = UIStoryboard.webMVPViewController
-    let presenter = WebMVPPresenter(view: vc, githubModel: githubModel)
+    let presenter = WebMVPPresenter(output: vc, githubModel: githubModel)
     vc.inject(presenter: presenter)
     from.show(next: vc)
   }

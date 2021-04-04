@@ -20,7 +20,7 @@ final class WebMVPViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    presenter.viewDidLoaded()
+    presenter.viewDidLoad()
   }
 }
 

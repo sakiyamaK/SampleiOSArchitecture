@@ -1,7 +1,7 @@
 import Foundation
 
 protocol WebMVPPresenterInput {
-  func viewDidLoaded()
+  func viewDidLoad()
 }
 
 protocol WebMVPPresenterOutput: AnyObject {
@@ -10,19 +10,19 @@ protocol WebMVPPresenterOutput: AnyObject {
 
 final class WebMVPPresenter {
 
-  private weak var view: WebMVPPresenterOutput!
+  private weak var output: WebMVPPresenterOutput!
   private var githubModel: GithubModel
 
-  init(view: WebMVPPresenterOutput, githubModel: GithubModel) {
-    self.view = view
+  init(output: WebMVPPresenterOutput, githubModel: GithubModel) {
+    self.output = output
     self.githubModel = githubModel
   }
 }
 
 
 extension WebMVPPresenter: WebMVPPresenterInput {
-  func viewDidLoaded() {
+  func viewDidLoad() {
     guard let url = URL(string: githubModel.urlStr) else { return }
-    self.view.load(request: URLRequest(url: url))
+    self.output.load(request: URLRequest(url: url))
   }
 }
