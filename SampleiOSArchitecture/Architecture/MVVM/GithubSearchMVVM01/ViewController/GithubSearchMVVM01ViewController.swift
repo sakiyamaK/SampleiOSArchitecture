@@ -11,23 +11,21 @@ import RxSwift
 import RxCocoa
 import RxOptional
 
-final class GithubSearchMVVMViewController: UIViewController {
+final class GithubSearchMVVM01ViewController: UIViewController {
+
+  @IBOutlet private weak var urlTextField: UITextField!
+  @IBOutlet private weak var searchButton: UIButton!
 
   @IBOutlet private weak var indicator: UIActivityIndicatorView!
-  @IBOutlet private weak var urlTextField: UITextField!
-
   @IBOutlet private weak var tableView: UITableView! {
     didSet {
       tableView.register(GithubTableViewCell.nib, forCellReuseIdentifier: GithubTableViewCell.reuseIdentifier)
     }
   }
-
-  @IBOutlet private weak var searchButton: UIButton!
-
   //セルを選択したときに送るストリーム
   //本来はこんな変数用意したくないが、delegateまみれのUIKitとRxSwiftがどうも相性よく書けない...
   private let didSelectRelay: PublishRelay<Int> = .init()
-  private var viewModel: GithubSearchMVVMViewModel!
+  private var viewModel: GithubSearchMVVM01ViewModel!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -38,9 +36,9 @@ final class GithubSearchMVVMViewController: UIViewController {
   }
 }
 
-private extension GithubSearchMVVMViewController {
+private extension GithubSearchMVVM01ViewController {
   func setupViewModel() {
-    viewModel = GithubSearchMVVMViewModel(input: self)
+    viewModel = GithubSearchMVVM01ViewModel(input: self)
 
     //viewModelから通知がきたら何をするか先に宣言しておく
 
@@ -63,7 +61,7 @@ private extension GithubSearchMVVMViewController {
 }
 
 //ViewModel内部に通知するパラメータたち
-extension GithubSearchMVVMViewController: GithubSearchMVVMViewModelInput {
+extension GithubSearchMVVM01ViewController: GithubSearchMVVM01ViewModelInput {
   var searchTextObservable: Observable<String?> {
     self.searchButton.rx.tap.map { self.urlTextField.text }
   }
@@ -72,13 +70,13 @@ extension GithubSearchMVVMViewController: GithubSearchMVVMViewModelInput {
   }
 }
 
-extension GithubSearchMVVMViewController: UITableViewDelegate {
+extension GithubSearchMVVM01ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.didSelectRelay.accept(indexPath.item)
   }
 }
 
-extension GithubSearchMVVMViewController: UITableViewDataSource {
+extension GithubSearchMVVM01ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     viewModel.githubModels.count
   }

@@ -30,13 +30,20 @@ extension UIStoryboard {
   }
 }
 
-//MVVM用
+//MVVM01用
 extension UIStoryboard {
-  static var githubSearchMVVMViewController: GithubSearchMVVMViewController {
-    UIStoryboard(name: "GithubSearchMVVM", bundle: nil).instantiateInitialViewController() as! GithubSearchMVVMViewController
+  static var githubSearchMVVM01ViewController: GithubSearchMVVM01ViewController {
+    UIStoryboard(name: "GithubSearchMVVM01", bundle: nil).instantiateInitialViewController() as! GithubSearchMVVM01ViewController
   }
 
   static var webMVVMViewController: WebMVVMViewController {
     UIStoryboard(name: "WebMVVM", bundle: nil).instantiateInitialViewController() as! WebMVVMViewController
+  }
+}
+
+//MVVM02用
+extension UIStoryboard {
+  static var githubSearchMVVM02ViewController: GithubSearchMVVM02ViewController {
+    UIStoryboard(name: "GithubSearchMVVM02", bundle: nil).instantiateInitialViewController() as! GithubSearchMVVM02ViewController
   }
 }

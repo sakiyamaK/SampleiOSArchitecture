@@ -11,12 +11,11 @@ class RootViewController: UIViewController {
 
   @IBOutlet private weak var mvcButton: UIButton!
   @IBOutlet private weak var mvpButton: UIButton!
-  @IBOutlet private weak var mvvmButton: UIButton!
+  @IBOutlet private weak var mvvm01Button: UIButton!
+  @IBOutlet private weak var mvvm02Button: UIButton!
   @IBOutlet private weak var viperButton: UIButton!
 
-  private lazy var buttons: [UIButton] = [mvcButton, mvpButton, mvvmButton, viperButton]
-
-
+  private lazy var buttons: [UIButton] = [mvcButton, mvpButton, mvvm01Button, mvvm02Button, viperButton]
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -33,8 +32,10 @@ private extension RootViewController {
       Router.showMVC(from: self)
     case mvpButton:
       Router.showMVP(from: self)
-    case mvvmButton:
-      Router.showMVVM(from: self)
+    case mvvm01Button:
+      Router.showMVVM01(from: self)
+    case mvvm02Button:
+      Router.showMVVM02(from: self)
     case viperButton:
       Router.showVIPER(from: self)
     default:

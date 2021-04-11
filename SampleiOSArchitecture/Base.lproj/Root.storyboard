@@ -21,19 +21,23 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlo-ul-CsS">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="163.5"/>
                                         <state key="normal" title="MVC"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOg-Ch-pwZ">
-                                        <rect key="frame" x="0.0" y="204.5" width="414" height="204.5"/>
+                                        <rect key="frame" x="0.0" y="163.5" width="414" height="163.5"/>
                                         <state key="normal" title="MVP"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBn-oW-IgP">
-                                        <rect key="frame" x="0.0" y="409" width="414" height="204.5"/>
-                                        <state key="normal" title="MVVM"/>
+                                        <rect key="frame" x="0.0" y="327" width="414" height="164"/>
+                                        <state key="normal" title="MVVM_RxSwift"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPi-jx-2Wz">
+                                        <rect key="frame" x="0.0" y="491" width="414" height="163.5"/>
+                                        <state key="normal" title="MVVM_Combine"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpQ-wQ-71g">
-                                        <rect key="frame" x="0.0" y="613.5" width="414" height="204.5"/>
+                                        <rect key="frame" x="0.0" y="654.5" width="414" height="163.5"/>
                                         <state key="normal" title="VIPER"/>
                                     </button>
                                 </subviews>
@@ -51,7 +55,8 @@
                     <connections>
                         <outlet property="mvcButton" destination="nlo-ul-CsS" id="OEO-ob-WIR"/>
                         <outlet property="mvpButton" destination="fOg-Ch-pwZ" id="GCX-KM-p4w"/>
-                        <outlet property="mvvmButton" destination="vBn-oW-IgP" id="ArS-pK-5wF"/>
+                        <outlet property="mvvm01Button" destination="vBn-oW-IgP" id="ArS-pK-5wF"/>
+                        <outlet property="mvvm02Button" destination="NPi-jx-2Wz" id="d9z-ws-qYF"/>
                         <outlet property="viperButton" destination="YpQ-wQ-71g" id="RS9-CI-bbS"/>
                     </connections>
                 </viewController>

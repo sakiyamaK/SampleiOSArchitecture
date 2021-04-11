@@ -12,13 +12,13 @@ import RxCocoa
 import NSObject_Rx
 
 //ViewModelの入力に関するprotocol
-protocol GithubSearchMVVMViewModelInput {
+protocol GithubSearchMVVM01ViewModelInput {
   var searchTextObservable: Observable<String?> { get }
   var didSelectObservable: Observable<Int> { get }
 }
 
 //ViewModelの出力に関するprotocol
-protocol GithubSearchMVVMViewModelOutput {
+protocol GithubSearchMVVM01ViewModelOutput {
   var loadingObservable: Observable<Bool> { get }
   var updateGithubModelsObservable: Observable<[GithubModel]> { get }
   var selectGithubModelObservable: Observable<GithubModel> { get }
@@ -26,7 +26,7 @@ protocol GithubSearchMVVMViewModelOutput {
 }
 
 //ViewModelはInputとOutputのprotocolに準拠する
-final class GithubSearchMVVMViewModel: GithubSearchMVVMViewModelOutput, HasDisposeBag {
+final class GithubSearchMVVM01ViewModel: GithubSearchMVVM01ViewModelOutput, HasDisposeBag {
   /*outputについての記述*/
   //出力側の定型文的な書き方
   private let _loading: PublishRelay<Bool> = .init()
@@ -39,7 +39,7 @@ final class GithubSearchMVVMViewModel: GithubSearchMVVMViewModelOutput, HasDispo
   private(set) var githubModels: [GithubModel]
 
   //初期化時にストリームを決める
-  init(input: GithubSearchMVVMViewModelInput, api: GithubAPIProtocol = GithubAPI.shared) {
+  init(input: GithubSearchMVVM01ViewModelInput, api: GithubAPIProtocol = GithubAPI.shared) {
 
     self.githubModels = []
 

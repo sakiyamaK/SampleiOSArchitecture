@@ -47,13 +47,18 @@ extension Router {
 
 //MVVM用の遷移
 extension Router {
-  static func showMVVM(from: UIViewController) {
-    let vc = UIStoryboard.githubSearchMVVMViewController
+  static func showMVVM01(from: UIViewController) {
+    let vc = UIStoryboard.githubSearchMVVM01ViewController
     from.show(next: vc)
   }
 
   static func showWebMVVM(from: UIViewController, githubModel: GithubModel) {
     let vc = WebMVVMViewController.makeFromStoryboard(githubModel: githubModel)
+    from.show(next: vc)
+  }
+
+  static func showMVVM02(from: UIViewController) {
+    let vc = GithubSearchMVVM02ViewController.makeFromStoryboard()
     from.show(next: vc)
   }
 }
