@@ -1,13 +1,29 @@
 import Combine
 
-final class GithubSearchMVVM02ViewModel {
+protocol GithubSearchMVVM02ViewModelInput {
+  var searchText: String { get set }
+  var selectIndex: Int? { get set }
+}
 
+protocol GithubSearchMVVM02ViewModelOutput {
+  var githubModels: [GithubModel] { get }
+  var githubModelsPublisher: Published<[GithubModel]>.Publisher { get }
+  var selectGithubModel: GithubModel? { get }
+  var selectGithubModelPublisher: Published<GithubModel?>.Publisher { get }
+  var loading: Bool? { get }
+  var loadingPublisher: Published<Bool?>.Publisher { get }
+}
+
+final class GithubSearchMVVM02ViewModel: GithubSearchMVVM02ViewModelInput, GithubSearchMVVM02ViewModelOutput{
   @Published var searchText: String = ""
   @Published var selectIndex: Int?
 
   @Published private(set) var githubModels: [GithubModel] = []
+  var githubModelsPublisher: Published<[GithubModel]>.Publisher { $githubModels }
   @Published private(set) var selectGithubModel: GithubModel?
+  var selectGithubModelPublisher: Published<GithubModel?>.Publisher { $selectGithubModel }
   @Published private(set) var loading: Bool?
+  var loadingPublisher: Published<Bool?>.Publisher { $loading }
 
   private var bindings = Set<AnyCancellable>()
 

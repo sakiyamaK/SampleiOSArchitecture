@@ -11,7 +11,9 @@ import CombineCocoa
 
 final class GithubSearchMVVM02ViewController: UIViewController {
 
-  private var viewModel: GithubSearchMVVM02ViewModel!
+  private var input: GithubSearchMVVM02ViewModelInput!
+  private var output: GithubSearchMVVM02ViewModelOutput!
+//  private var viewModel: GithubSearchMVVM02ViewModel!
   private var bindings = Set<AnyCancellable>()
 
   @IBOutlet private weak var urlTextField: UITextField!
@@ -26,7 +28,10 @@ final class GithubSearchMVVM02ViewController: UIViewController {
 
   static func makeFromStoryboard() -> GithubSearchMVVM02ViewController {
     let vc = UIStoryboard.githubSearchMVVM02ViewController
-    vc.viewModel = .init()
+    let viewModel = GithubSearchMVVM02ViewModel()
+//    vc.viewModel = viewModel
+    vc.input = viewModel
+    vc.output = viewModel
     return vc
   }
 
@@ -43,10 +48,24 @@ private extension GithubSearchMVVM02ViewController {
 
     searchButton.tapPublisher
       .compactMap { self.urlTextField.text }
-      .assign(to: \.searchText, on: viewModel)
+      .sink(receiveValue: {[weak self] text in self?.input.searchText = text })
+//      .assign(to: \.searchText, on: viewModel)
       .store(in: &bindings)
 
-    viewModel.$loading
+    /* githubModelsを受け取る */
+    output.githubModelsPublisher
+      .receive(on: RunLoop.main)
+      .sink {[weak self] _ in
+        self?.tableView.reloadData()
+      }.store(in: &bindings)
+//もしくはこれ
+//    viewModel.$githubModels
+//      .receive(on: RunLoop.main)
+//      .sink {[weak self] _ in
+//        self?.tableView.reloadData()
+//      }.store(in: &bindings)
+
+    output.loadingPublisher
       .receive(on: RunLoop.main)
       .compactMap { $0 }
       .sink(receiveValue: {[weak self] loading in
@@ -54,13 +73,7 @@ private extension GithubSearchMVVM02ViewController {
         self?.indicator.isHidden = !loading
       }).store(in: &bindings)
 
-    viewModel.$githubModels
-      .receive(on: RunLoop.main)
-      .sink {[weak self] _ in
-        self?.tableView.reloadData()
-      }.store(in: &bindings)
-
-    viewModel.$selectGithubModel
+    output.selectGithubModelPublisher
       .receive(on: RunLoop.main)
       .compactMap{ $0 }
       .sink {[weak self] githubModel in
@@ -73,17 +86,17 @@ private extension GithubSearchMVVM02ViewController {
 
 extension GithubSearchMVVM02ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    viewModel.selectIndex = indexPath.item
+    input.selectIndex = indexPath.item
   }
 }
 
 extension GithubSearchMVVM02ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    viewModel.githubModels.count
+    output.githubModels.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let githubModel = viewModel.githubModels[indexPath.item]
+    let githubModel = output.githubModels[indexPath.item]
     let cell = tableView.dequeueReusableCell(withIdentifier: GithubTableViewCell.reuseIdentifier, for: indexPath) as! GithubTableViewCell
     cell.configure(githubModel: githubModel)
     return cell
