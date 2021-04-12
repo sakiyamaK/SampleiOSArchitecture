@@ -25,7 +25,8 @@ final class WebVIPERRouter {
     let presenter = WebVIPERPresenter(
       view: view,
       interactor: interactor,
-      router: router)
+      router: router
+    )
 
     view.inject(presenter: presenter)
 
@@ -35,13 +36,13 @@ final class WebVIPERRouter {
 
 extension WebVIPERRouter: WebVIPERWireframe {
   func showAlert(error: Error) {
-    //アラート画面のRouterを呼ぶ
+    // アラート画面のRouterを呼ぶ
     print(error.localizedDescription)
   }
 }
 
 extension UIStoryboard {
   static var webVIPERViewController: WebVIPERViewController {
-    UIStoryboard(name: "WebVIPER", bundle: nil).instantiateInitialViewController() as! WebVIPERViewController 
+    return UIStoryboard(name: "WebVIPER", bundle: nil).instantiateInitialViewController() as! WebVIPERViewController
   }
 }

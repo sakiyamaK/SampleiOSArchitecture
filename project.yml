@@ -1,0 +1,66 @@
+name: SampleiOSArchitecture
+# configs:
+#     Debug: debug
+#     Release: release
+# configFiles:
+#   Debug: configs/Debug.xcconfig
+#   Release: configs/Release.xcconfig
+options:
+  bundleIdPrefix: com.sakiyamaK
+  deploymentTarget:
+    iOS: 13.0
+packages:
+  CombineCocoa:
+      url: https://github.com/CombineCommunity/CombineCocoa
+      from: 0.0.2
+configs:
+  Debug: debug
+  Release: release
+schemes:
+  SampleiOSArchitecture:
+    build:
+      targets:
+        SampleiOSArchitecture: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      gatherCoverageData: true
+      coverageTargets:
+        - SampleiOSArchitecture
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
+
+targets:
+  SampleiOSArchitecture:
+    platform: iOS
+    type: application
+    dependencies:
+        - package: CombineCocoa
+    sources:
+      - path: SampleiOSArchitecture/
+      # - path: R.generated.swift
+      #   optional: true
+    preBuildScripts:
+        - path: /bin/sh
+          name: Run Script(Swiftformat)
+          script: |
+            if which mint >/dev/null; then
+              git diff --name-only | grep .swift | while read filename; do
+                mint run swiftformat "$filename" --swiftversion 5
+              done
+            else
+              echo "warning: Mintがインストールされていません。こちらからダウンロードしてください https://github.com/yonaskolb/Mint"
+            fi
+        - path: /bin/sh
+          name: Run Script(SwiftLint)
+          script: |
+            if which swiftlint >/dev/null; then
+              swiftlint
+            else
+              echo "warning: Mintがインストールされていません。こちらからダウンロードしてください https://github.com/yonaskolb/Mint"
+            fi

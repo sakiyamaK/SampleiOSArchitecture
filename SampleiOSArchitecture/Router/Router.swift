@@ -16,7 +16,7 @@ final class Router {
   }
 }
 
-//MVC用の遷移
+// MVC用の遷移
 extension Router {
   static func showMVC(from: UIViewController) {
     from.show(next: UIStoryboard.GithubSearchMVC01ViewController)
@@ -28,7 +28,7 @@ extension Router {
   }
 }
 
-//MVP用の遷移
+// MVP用の遷移
 extension Router {
   static func showMVP(from: UIViewController) {
     let vc = UIStoryboard.githubSearchMVPViewController
@@ -45,7 +45,7 @@ extension Router {
   }
 }
 
-//MVVM用の遷移
+// MVVM用の遷移
 extension Router {
   static func showMVVM01(from: UIViewController) {
     let vc = UIStoryboard.githubSearchMVVM01ViewController
@@ -61,9 +61,14 @@ extension Router {
     let vc = GithubSearchMVVM02ViewController.makeFromStoryboard()
     from.show(next: vc)
   }
+
+  static func showMVVM03(from: UIViewController) {
+    let vc = GithubSearchMVVM03ViewController.makeFromStoryboard()
+    from.show(next: vc)
+  }
 }
 
-//VIPER用の遷移
+// VIPER用の遷移
 // 本来はこんな書き方しないが起動時にVIPERの記述になっていないためしかたなく
 // 逆にいうとこうして他のアーキテクチャからVIPERに切り替えることもできる
 extension Router {

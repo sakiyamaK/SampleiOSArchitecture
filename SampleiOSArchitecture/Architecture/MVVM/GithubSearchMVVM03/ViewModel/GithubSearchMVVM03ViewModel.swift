@@ -1,11 +1,29 @@
 import Combine
 
-protocol GithubSearchMVVM02ViewModelInput {
+protocol GithubSearchMVVM03ViewModelInput {
   var searchText: String { get set }
+  var searchTextPublisher: Published<String>.Publisher { get }
   var selectIndex: Int? { get set }
+  var selectIndexPublisher: Published<Int?>.Publisher { get }
 }
 
-protocol GithubSearchMVVM02ViewModelOutput {
+final class GithubSearchMVVM03ViewModelInputImpl: GithubSearchMVVM03ViewModelInput {
+  @Published var searchText: String = ""
+  var searchTextPublisher: Published<String>.Publisher { $searchText }
+
+  @Published var selectIndex: Int?
+  var selectIndexPublisher: Published<Int?>.Publisher { $selectIndex }
+}
+
+protocol GithubSearchMVVM03ViewModelDependency {
+  var api: GithubAPIProtocol { get }
+}
+
+final class GithubSearchMVVM03ViewModelDependencyImpl: GithubSearchMVVM03ViewModelDependency {
+  var api: GithubAPIProtocol = GithubAPI.shared
+}
+
+protocol GithubSearchMVVM03ViewModelOutput {
   var githubModels: [GithubModel] { get }
   var githubModelsPublisher: Published<[GithubModel]>.Publisher { get }
   var selectGithubModel: GithubModel? { get }
@@ -14,9 +32,7 @@ protocol GithubSearchMVVM02ViewModelOutput {
   var loadingPublisher: Published<Bool?>.Publisher { get }
 }
 
-final class GithubSearchMVVM02ViewModel: GithubSearchMVVM02ViewModelInput, GithubSearchMVVM02ViewModelOutput {
-  @Published var searchText: String = ""
-  @Published var selectIndex: Int?
+final class GithubSearchMVVM03ViewModelOutputImpl: GithubSearchMVVM03ViewModelOutput {
 
   @Published private(set) var githubModels: [GithubModel] = []
   var githubModelsPublisher: Published<[GithubModel]>.Publisher { $githubModels }
@@ -27,8 +43,8 @@ final class GithubSearchMVVM02ViewModel: GithubSearchMVVM02ViewModelInput, Githu
 
   private var bindings = Set<AnyCancellable>()
 
-  init(api: GithubAPI = GithubAPI.shared) {
-    let searchTextPublisher = $searchText
+  init(input: GithubSearchMVVM03ViewModelInput, dependency: GithubSearchMVVM03ViewModelDependency) {
+    let searchTextPublisher = input.searchTextPublisher
       .compactMap { $0 }
       .removeDuplicates()
       .filter { !$0.isEmpty }
@@ -39,7 +55,7 @@ final class GithubSearchMVVM02ViewModel: GithubSearchMVVM02ViewModelInput, Githu
       .sink { [weak self] in
         guard let self = self else { return }
         self.loading = true
-        api.get(parameters: $0).sink { completion in
+        dependency.api.get(parameters: $0).sink{ completion in
           self.loading = false
           switch completion {
           case let .failure(error):
@@ -53,7 +69,7 @@ final class GithubSearchMVVM02ViewModel: GithubSearchMVVM02ViewModelInput, Githu
         }.store(in: &self.bindings)
       }.store(in: &bindings)
 
-    let selectIndexPublisher = $selectIndex
+    let selectIndexPublisher = input.selectIndexPublisher
       .compactMap { $0 }
       .map { self.githubModels[$0] }
 

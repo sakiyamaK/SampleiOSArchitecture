@@ -7,7 +7,7 @@
 
 import Foundation
 
-//protocolを必ず用意
+// protocolを必ず用意
 protocol GithubSearchVIPERPresentation: AnyObject {
   func viewDidLoad()
   func tapSearchButton(word: String?)
@@ -15,10 +15,10 @@ protocol GithubSearchVIPERPresentation: AnyObject {
   func getSearchedItems() -> [GithubSearchVIPEREntity]
 }
 
-//他の部品以外は状態(パラメータ)をもたない
-//徹底的に他との中継役だけに徹する
+// 他の部品以外は状態(パラメータ)をもたない
+// 徹底的に他との中継役だけに徹する
 final class GithubSearchVIPERPresenter {
-  //循環参照しないようにviewだけweak
+  // 循環参照しないようにviewだけweak
   private weak var view: GithubSearchVIPERView?
   private let router: GithubSearchVIPERWireframe
   private let interactor: GithubSearchVIPERUsecase
@@ -34,7 +34,7 @@ final class GithubSearchVIPERPresenter {
   }
 }
 
-//用意したprotocolに準拠させる
+// 用意したprotocolに準拠させる
 extension GithubSearchVIPERPresenter: GithubSearchVIPERPresentation {
   func viewDidLoad() {
     view?.initView()
@@ -43,13 +43,13 @@ extension GithubSearchVIPERPresenter: GithubSearchVIPERPresentation {
   func tapSearchButton(word: String?) {
     let parameters = GithubSearchParameters(searchWord: word)
     view?.startLoading()
-    interactor.get(parameters: parameters){[weak self] result in
+    interactor.get(parameters: parameters) { [weak self] result in
       guard let self = self else { return }
       self.view?.finishLoading()
       switch result {
-      case .success(let items):
+      case let .success(items):
         self.view?.reloadTable(items: items)
-      case .failure(let error):
+      case let .failure(error):
         self.router.showAlert(error: error)
       }
     }

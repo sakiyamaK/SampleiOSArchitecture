@@ -9,7 +9,6 @@ protocol WebMVPPresenterOutput: AnyObject {
 }
 
 final class WebMVPPresenter {
-
   private weak var output: WebMVPPresenterOutput!
   private var githubModel: GithubModel
 
@@ -19,10 +18,9 @@ final class WebMVPPresenter {
   }
 }
 
-
 extension WebMVPPresenter: WebMVPPresenterInput {
   func viewDidLoad() {
     guard let url = URL(string: githubModel.urlStr) else { return }
-    self.output.load(request: URLRequest(url: url))
+    output.load(request: URLRequest(url: url))
   }
 }

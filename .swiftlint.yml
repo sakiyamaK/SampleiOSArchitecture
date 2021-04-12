@@ -1,0 +1,31 @@
+included:
+  - SampleiOSArchitecture
+
+excluded:
+  - Pods
+  - Carthage
+  - R.generated.swift
+
+disabled_rules:
+  # Cocoaのdelegate method長くなる傾向があるし単純に長さだけしか見てない警告はあまり意味がないので
+  - line_length
+  - identifier_name
+  - function_body_length
+  - switch_case_alignment
+  - type_name
+  - cyclomatic_complexity
+  - nesting
+  - force_try
+  # アニメーションの組み合わせで使うので警告させない
+  - multiple_closures_with_trailing_closure
+  # set getを書く時に必要なので警告させない
+  - implicit_getter
+  # 現状長いメソッドも多い
+  - type_body_length
+  # オーディオメニュー選択時が6パラメータある
+  - function_parameter_count
+  - force_cast
+
+file_length:
+  - 800 # warning
+  - 1000 # error

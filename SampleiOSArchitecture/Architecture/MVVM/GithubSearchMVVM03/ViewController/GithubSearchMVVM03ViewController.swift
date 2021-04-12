@@ -1,18 +1,19 @@
 //
-//  GithubSearchMVVM02View.swift
+//  GithubSearchMVVM03View.swift
 //  SampleiOSArchitecture
 //
-//  Created by  on 2021/4/8.
+//  Created by  on 2021/4/13.
 //
 
+import UIKit
 import Combine
 import CombineCocoa
-import UIKit
 
-final class GithubSearchMVVM02ViewController: UIViewController {
-  private var input: GithubSearchMVVM02ViewModelInput!
-  private var output: GithubSearchMVVM02ViewModelOutput!
-//  private var viewModel: GithubSearchMVVM02ViewModel!
+final class GithubSearchMVVM03ViewController: UIViewController {
+
+  private let dependency: GithubSearchMVVM03ViewModelDependency = GithubSearchMVVM03ViewModelDependencyImpl()
+  private var input: GithubSearchMVVM03ViewModelInput = GithubSearchMVVM03ViewModelInputImpl()
+  private var output: GithubSearchMVVM03ViewModelOutput!
   private var bindings = Set<AnyCancellable>()
 
   @IBOutlet private var urlTextField: UITextField!
@@ -25,15 +26,11 @@ final class GithubSearchMVVM02ViewController: UIViewController {
     }
   }
 
-  static func makeFromStoryboard() -> GithubSearchMVVM02ViewController {
-    let vc = UIStoryboard.githubSearchMVVM02ViewController
-    let viewModel = GithubSearchMVVM02ViewModel()
-//    vc.viewModel = viewModel
-    vc.input = viewModel
-    vc.output = viewModel
+  static func makeFromStoryboard() -> GithubSearchMVVM03ViewController {
+    let vc = UIStoryboard.githubSearchMVVM03ViewController
+    vc.output = GithubSearchMVVM03ViewModelOutputImpl.init(input: vc.input, dependency: vc.dependency)
     return vc
   }
-
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.isHidden = true
@@ -42,26 +39,19 @@ final class GithubSearchMVVM02ViewController: UIViewController {
   }
 }
 
-private extension GithubSearchMVVM02ViewController {
+private extension GithubSearchMVVM03ViewController {
   func setupViewModel() {
+
     searchButton.tapPublisher
       .compactMap { self.urlTextField.text }
       .sink(receiveValue: { [weak self] text in self?.input.searchText = text })
-//      .assign(to: \.searchText, on: viewModel)
       .store(in: &bindings)
 
-    /* githubModelsを受け取る */
     output.githubModelsPublisher
       .receive(on: RunLoop.main)
       .sink { [weak self] _ in
         self?.tableView.reloadData()
       }.store(in: &bindings)
-    // もしくはこれ
-//    viewModel.$githubModels
-//      .receive(on: RunLoop.main)
-//      .sink {[weak self] _ in
-//        self?.tableView.reloadData()
-//      }.store(in: &bindings)
 
     output.loadingPublisher
       .receive(on: RunLoop.main)
@@ -81,13 +71,13 @@ private extension GithubSearchMVVM02ViewController {
   }
 }
 
-extension GithubSearchMVVM02ViewController: UITableViewDelegate {
+extension GithubSearchMVVM03ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     input.selectIndex = indexPath.item
   }
 }
 
-extension GithubSearchMVVM02ViewController: UITableViewDataSource {
+extension GithubSearchMVVM03ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     output.githubModels.count
   }
