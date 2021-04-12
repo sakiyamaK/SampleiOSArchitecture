@@ -14,7 +14,7 @@ protocol GithubSearchMVVM02ViewModelOutput {
   var loadingPublisher: Published<Bool?>.Publisher { get }
 }
 
-final class GithubSearchMVVM02ViewModel: GithubSearchMVVM02ViewModelInput, GithubSearchMVVM02ViewModelOutput{
+final class GithubSearchMVVM02ViewModel: GithubSearchMVVM02ViewModelInput, GithubSearchMVVM02ViewModelOutput {
   @Published var searchText: String = ""
   @Published var selectIndex: Int?
 
