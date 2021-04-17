@@ -64,6 +64,7 @@ final class GithubAPI: GithubAPIProtocol {
       }
       completion?(.success(models))
     })
+
     task.resume()
   }
 }

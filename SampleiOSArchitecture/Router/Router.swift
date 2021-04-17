@@ -9,7 +9,7 @@ import UIKit
 
 final class Router {
   static func showRoot(window: UIWindow) {
-    let vc = UIStoryboard.rootViewController
+    let vc = RootViewController()
     let nav = UINavigationController(rootViewController: vc)
     window.rootViewController = nav
     window.makeKeyAndVisible()

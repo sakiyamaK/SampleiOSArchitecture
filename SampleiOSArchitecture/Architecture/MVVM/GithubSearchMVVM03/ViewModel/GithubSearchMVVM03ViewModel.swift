@@ -33,7 +33,6 @@ protocol GithubSearchMVVM03ViewModelOutput {
 }
 
 final class GithubSearchMVVM03ViewModelOutputImpl: GithubSearchMVVM03ViewModelOutput {
-
   @Published private(set) var githubModels: [GithubModel] = []
   var githubModelsPublisher: Published<[GithubModel]>.Publisher { $githubModels }
   @Published private(set) var selectGithubModel: GithubModel?
@@ -55,7 +54,7 @@ final class GithubSearchMVVM03ViewModelOutputImpl: GithubSearchMVVM03ViewModelOu
       .sink { [weak self] in
         guard let self = self else { return }
         self.loading = true
-        dependency.api.get(parameters: $0).sink{ completion in
+        dependency.api.get(parameters: $0).sink { completion in
           self.loading = false
           switch completion {
           case let .failure(error):

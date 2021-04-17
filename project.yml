@@ -40,7 +40,7 @@ targets:
     platform: iOS
     type: application
     dependencies:
-        - package: CombineCocoa
+      - package: CombineCocoa
     sources:
       - path: SampleiOSArchitecture/
       # - path: R.generated.swift
