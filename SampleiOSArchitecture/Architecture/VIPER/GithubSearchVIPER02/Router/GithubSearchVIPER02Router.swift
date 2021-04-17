@@ -5,39 +5,52 @@
 //  Created by  on 2021/4/17.
 //
 
+import SwiftUI
 import UIKit
 
-protocol GithubSearchVIPER02Wireframe: AnyObject {
-}
-
 final class GithubSearchVIPER02Router {
-  private unowned let viewController: UIViewController
+  // TODO: 循環参照してそう
+  private var viewController: UIViewController
 
-  private init(viewController: UIViewController) {
+  init(viewController: UIViewController) {
     self.viewController = viewController
   }
 
-  static func assembleModules() -> UIViewController {
-    let view = GithubSearchVIPER02ViewController.makeFromStoryboard()
+  // SwiftUIとUIKitのどちらにも対応できるようにするための処理
+  private static func assembleModulesShare() -> (GithubSearchVIPER02View, GithubSearchVIPER02Router) {
     let interactor = GithubSearchVIPER02Interactor()
-    let router = GithubSearchVIPER02Router(viewController: view)
+    let store = GithubSearchVIPER02Store()
+    let view = GithubSearchVIPER02View(store: store)
+    let router = GithubSearchVIPER02Router(viewController: UIHostingController(rootView: view))
     let presenter = GithubSearchVIPER02Presenter(
-      view: view,
+      view: store,
       interactor: interactor,
       router: router
     )
+    store.inject(presenter: presenter)
+    return (view, router)
+  }
 
-    view.presenter = presenter
-
+  // SwiftUI用
+  static func assembleModules() -> some View {
+    let (view, _) = GithubSearchVIPER02Router.assembleModulesShare()
     return view
+  }
+
+  // UIKit用
+  static func assembleModulesUIKit() -> UIViewController {
+    let (_, router) = GithubSearchVIPER02Router.assembleModulesShare()
+    return router.viewController
   }
 }
 
-extension GithubSearchVIPER02Router: GithubSearchVIPER02Wireframe {
-}
+extension GithubSearchVIPER02Router: GithubSearchVIPERWireframe {
+  func showAlert(error: Error) {
+    print(error.localizedDescription)
+  }
 
-extension UIStoryboard {
-  static func loadGithubSearchVIPER02() -> GithubSearchVIPER02ViewController {
-    UIStoryboard(name: "GithubSearchVIPER02", bundle: nil).instantiateInitialViewController() as! GithubSearchVIPER02ViewController 
+  func showWeb(initParameters: WebVIPERUsecaseInitParameters) {
+    let next = WebVIPERRouter.assembleModules(initParameters: initParameters)
+    viewController.show(next: next)
   }
 }

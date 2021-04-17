@@ -23,3 +23,23 @@ struct GithubModel: Codable {
     case fullName = "full_name"
   }
 }
+
+extension GithubModel {
+  private static var jsonStr: String {
+    """
+    {
+    "id": 999,
+    "name": "test",
+    "full_name": "sakiyamaK"
+    }
+    """
+  }
+
+  static var testData: GithubModel {
+    try! JSONDecoder().decode(
+      GithubModel.self,
+      from:
+      GithubModel.jsonStr.data(using: .utf8)!
+    )
+  }
+}

@@ -8,7 +8,7 @@
 import Foundation
 
 enum GithubError: Error {
-  case error
+  case error, connect, parse
 }
 
 struct GithubSearchParameters {

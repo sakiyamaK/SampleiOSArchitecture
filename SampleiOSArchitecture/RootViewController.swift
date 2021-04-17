@@ -34,7 +34,7 @@ final class RootViewController: UIViewController {
       case SegueButton.viper01:
         Router.showVIPER(from: from)
       case SegueButton.viper02:
-        Router.showVIPER(from: from)
+        Router.showVIPER02(from: from)
       }
     }
   }

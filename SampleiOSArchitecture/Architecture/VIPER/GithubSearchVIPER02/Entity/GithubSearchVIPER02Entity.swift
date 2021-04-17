@@ -7,5 +7,8 @@
 
 import Foundation
 
-struct GithubSearchVIPER02Entity: Decodable {
-}
+typealias GithubSearchVIPER02EntityResponse = GithubSearchVIPEREntityResponse
+typealias GithubSearchVIPER02Entity = GithubSearchVIPEREntity
+typealias GithubSearchVIPER02EntityError = GithubSearchVIPEREntityError
+
+extension GithubSearchVIPEREntity: Identifiable {}

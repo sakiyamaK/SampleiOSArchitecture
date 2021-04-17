@@ -7,13 +7,5 @@
 
 import Foundation
 
-protocol GithubSearchVIPER02Usecase {
-}
-
-final class GithubSearchVIPER02Interactor {
-  init() {
-  }
-}
-
-extension GithubSearchVIPER02Interactor: GithubSearchVIPER02Usecase {
-}
+typealias GithubSearchVIPER02Usecase = GithubSearchVIPERUsecase
+typealias GithubSearchVIPER02Interactor = GithubSearchVIPERInteractor
