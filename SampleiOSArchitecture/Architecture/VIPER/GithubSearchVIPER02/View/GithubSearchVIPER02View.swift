@@ -23,18 +23,22 @@ struct GithubSearchVIPER02View: View {
       }
       .padding(.init(top: 8, leading: 16, bottom: 8, trailing: 16))
       if store.loading {
-        ActivityIndicatorView(isAnimating: .constant(true), style: .large)
+        ActivityIndicatorView(isAnimating: .constant(true), style: .medium)
       } else if !store.items.isEmpty {
-        ForEach(Array(store.items.enumerated()), id: \.offset) { offset, element in
-          Button(action: {
-            store.tapCell(indexPath: IndexPath(item: offset, section: 0))
-          }, label: {
-            GithubSearchVIPER02Cell(githubModel: element)
-          })
+        ScrollView {
+          ForEach(Array(store.items.enumerated()), id: \.offset) { offset, element in
+            Button(action: {
+              store.tapCell(indexPath: IndexPath(item: offset, section: 0))
+            }, label: {
+              GithubSearchVIPER02Cell(githubModel: element)
+            })
+          }
         }
+        .layoutPriority(10)
       }
+      Spacer()
+        .frame(maxHeight: .infinity)
     }
-    Spacer().frame(maxHeight: .infinity)
   }
 }
 
