@@ -7,7 +7,7 @@
 
 import UIKit
 
-//protocolを必ず用意
+// protocolを必ず用意
 protocol GithubSearchVIPERView: AnyObject {
   func initView()
   func startLoading()
@@ -15,19 +15,19 @@ protocol GithubSearchVIPERView: AnyObject {
   func reloadTable(items: [GithubSearchVIPEREntity])
 }
 
-//Viewに関すること以外は何も書かない
-//ifやforといった「制御」が入ることがないはず
+// Viewに関すること以外は何も書かない
+// ifやforといった「制御」が入ることがないはず
 final class GithubSearchVIPERViewController: UIViewController {
+  @IBOutlet private var indicator: UIActivityIndicatorView!
+  @IBOutlet private var urlTextField: UITextField!
 
-  @IBOutlet private weak var indicator: UIActivityIndicatorView!
-  @IBOutlet private weak var urlTextField: UITextField!
-
-  @IBOutlet private weak var tableView: UITableView! {
+  @IBOutlet private var tableView: UITableView! {
     didSet {
       tableView.register(GithubTableViewCell.nib, forCellReuseIdentifier: GithubTableViewCell.reuseIdentifier)
     }
   }
-  @IBOutlet private weak var searchButton: UIButton! {
+
+  @IBOutlet private var searchButton: UIButton! {
     didSet {
       searchButton.addTarget(self, action: #selector(tapSearchButton(_:)), for: .touchUpInside)
     }
@@ -50,7 +50,7 @@ private extension GithubSearchVIPERViewController {
   }
 }
 
-//用意したprotocolに準拠させる
+// 用意したprotocolに準拠させる
 extension GithubSearchVIPERViewController: GithubSearchVIPERView {
   func initView() {
     DispatchQueue.main.async {
@@ -86,6 +86,7 @@ extension GithubSearchVIPERViewController: UITableViewDelegate {
     presenter.selectItem(indexPath: indexPath)
   }
 }
+
 extension GithubSearchVIPERViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     presenter.getSearchedItems().count

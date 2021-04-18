@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,7 +29,7 @@
 		58C547CFFC111DB26AEA30AD /* GithubSearchMVVM01.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD4411685020BFC35F6E2A6 /* GithubSearchMVVM01.storyboard */; };
 		5B581753815A9FD48D10D689 /* GithubSearchVIPER02Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249959954954C497D6C389BC /* GithubSearchVIPER02Cell.swift */; };
 		5E2A265DC52C26E5619A1894 /* WebVIPERPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABA7831038E1E3F9C1D9219 /* WebVIPERPresenter.swift */; };
-		61B550EE374E53DCC573A835 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D9EC1931114F903F39C91D9B /* SwiftPackageProductDependency */; };
+		61B550EE374E53DCC573A835 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D9EC1931114F903F39C91D9B /* CombineCocoa */; };
 		6DE5EBEF50445F1993C0F40A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC27F8796DC7465898E0B /* RootViewController.swift */; };
 		735B006AD3400C301F203703 /* GithubSearchVIPER02Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3463FE1E8113ECE133B233 /* GithubSearchVIPER02Router.swift */; };
 		78ED581507447DF9956D98B0 /* GithubSearchVIPER02Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7407A6B6B4FC76E8DFDC196 /* GithubSearchVIPER02Interactor.swift */; };
@@ -134,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B550EE374E53DCC573A835 /* BuildFile in Frameworks */,
+				61B550EE374E53DCC573A835 /* CombineCocoa in Frameworks */,
 				54D946B2AC41CE4ED9517EE8 /* Pods_SampleiOSArchitecture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,7 +202,6 @@
 				19D9EBC21930A5C3BD3E9B99 /* Pods-SampleiOSArchitecture.debug.xcconfig */,
 				A0DC208BE9E649DBCFCE1CDC /* Pods-SampleiOSArchitecture.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -334,8 +333,6 @@
 		6E1B55E8A20E6EA75D851AEC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D3C31BC4FE470BC3288710AA /* ActivityIndicatorView.swift */,
-				249959954954C497D6C389BC /* GithubSearchVIPER02Cell.swift */,
 				C5D4AF66DFDCC5F63ACF23E2 /* GithubSearchVIPER02View.swift */,
 			);
 			path = View;
@@ -466,6 +463,8 @@
 		AB075CCBF19115E8C29397CA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				249959954954C497D6C389BC /* GithubSearchVIPER02Cell.swift */,
+				D3C31BC4FE470BC3288710AA /* ActivityIndicatorView.swift */,
 				4AE7FB6CD5F889274B999628 /* GithubTableViewCell */,
 			);
 			path = View;
@@ -670,7 +669,7 @@
 			);
 			name = SampleiOSArchitecture;
 			packageProductDependencies = (
-				D9EC1931114F903F39C91D9B /* SwiftPackageProductDependency */,
+				D9EC1931114F903F39C91D9B /* CombineCocoa */,
 			);
 			productName = SampleiOSArchitecture;
 			productReference = DC258B0A044ABFCE531CE358 /* SampleiOSArchitecture.app */;
@@ -683,8 +682,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 713156F96FF2760CC6C0DD56 /* Build configuration list for PBXProject "SampleiOSArchitecture" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -696,7 +693,7 @@
 			);
 			mainGroup = 6C52C0C4D71F0705172D75A6;
 			packageReferences = (
-				CD0EB3436756FFA54F9B530E /* RemoteSwiftPackageReference */,
+				CD0EB3436756FFA54F9B530E /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 			);
 			productRefGroup = FCB347B440AE861AB6DE9D91 /* Products */;
 			projectDirPath = "";
@@ -1049,7 +1046,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD0EB3436756FFA54F9B530E /* RemoteSwiftPackageReference */ = {
+		CD0EB3436756FFA54F9B530E /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
 			requirement = {
@@ -1060,9 +1057,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D9EC1931114F903F39C91D9B /* SwiftPackageProductDependency */ = {
+		D9EC1931114F903F39C91D9B /* CombineCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD0EB3436756FFA54F9B530E /* RemoteSwiftPackageReference */;
+			package = CD0EB3436756FFA54F9B530E /* XCRemoteSwiftPackageReference "CombineCocoa" */;
 			productName = CombineCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */

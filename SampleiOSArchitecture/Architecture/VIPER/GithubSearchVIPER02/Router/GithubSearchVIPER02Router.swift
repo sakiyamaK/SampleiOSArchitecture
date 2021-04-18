@@ -9,38 +9,36 @@ import SwiftUI
 import UIKit
 
 final class GithubSearchVIPER02Router {
-  // TODO: 循環参照してそう
-  private var viewController: UIViewController
+  private unowned let viewController: UIViewController
 
   init(viewController: UIViewController) {
     self.viewController = viewController
   }
 
   // SwiftUIとUIKitのどちらにも対応できるようにするための処理
-  private static func assembleModulesShare() -> (GithubSearchVIPER02View, GithubSearchVIPER02Router) {
+  private static func assembleModulesShare() -> (GithubSearchVIPER02View, UIViewController) {
     let interactor = GithubSearchVIPER02Interactor()
     let viewHelper = GithubSearchVIPER02ViewHelper()
     let view = GithubSearchVIPER02View(viewHelper: viewHelper)
-    let router = GithubSearchVIPER02Router(viewController: UIHostingController(rootView: view))
+    let viewController = UIHostingController(rootView: view)
+    let router = GithubSearchVIPER02Router(viewController: viewController)
     let presenter = GithubSearchVIPER02Presenter(
       view: viewHelper,
       interactor: interactor,
       router: router
     )
     viewHelper.inject(presenter: presenter)
-    return (view, router)
+    return (view, viewController)
   }
 
   // SwiftUI用
   static func assembleModules() -> some View {
-    let (view, _) = GithubSearchVIPER02Router.assembleModulesShare()
-    return view
+    GithubSearchVIPER02Router.assembleModulesShare().0
   }
 
   // UIKit用
   static func assembleModulesUIKit() -> UIViewController {
-    let (_, router) = GithubSearchVIPER02Router.assembleModulesShare()
-    return router.viewController
+    GithubSearchVIPER02Router.assembleModulesShare().1
   }
 }
 
