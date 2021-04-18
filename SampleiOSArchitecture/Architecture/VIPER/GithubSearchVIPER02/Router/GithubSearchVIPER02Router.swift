@@ -19,15 +19,15 @@ final class GithubSearchVIPER02Router {
   // SwiftUIとUIKitのどちらにも対応できるようにするための処理
   private static func assembleModulesShare() -> (GithubSearchVIPER02View, GithubSearchVIPER02Router) {
     let interactor = GithubSearchVIPER02Interactor()
-    let store = GithubSearchVIPER02Store()
-    let view = GithubSearchVIPER02View(store: store)
+    let viewHelper = GithubSearchVIPER02ViewHelper()
+    let view = GithubSearchVIPER02View(viewHelper: viewHelper)
     let router = GithubSearchVIPER02Router(viewController: UIHostingController(rootView: view))
     let presenter = GithubSearchVIPER02Presenter(
-      view: store,
+      view: viewHelper,
       interactor: interactor,
       router: router
     )
-    store.inject(presenter: presenter)
+    viewHelper.inject(presenter: presenter)
     return (view, router)
   }
 

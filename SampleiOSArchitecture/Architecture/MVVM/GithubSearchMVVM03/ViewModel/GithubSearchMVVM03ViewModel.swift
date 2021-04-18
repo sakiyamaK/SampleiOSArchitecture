@@ -1,5 +1,9 @@
 import Combine
 
+// ViewModel(input: GithubSearchMVVM03ViewModelInput, dependency: GithubSearchMVVM03ViewModelDependency)タイプ
+// initパラメータの全てがプロトコルになっている
+// @PublishedのためにImplな実装がそれぞれ用意されている
+
 protocol GithubSearchMVVM03ViewModelInput {
   var searchText: String { get set }
   var searchTextPublisher: Published<String>.Publisher { get }

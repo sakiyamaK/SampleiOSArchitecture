@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct GithubSearchVIPER02View: View {
-  @ObservedObject var store: GithubSearchVIPER02Store
+  @ObservedObject var viewHelper: GithubSearchVIPER02ViewHelper
 
   var body: some View {
     VStack {
       HStack {
-        TextField("", text: $store.word)
+        TextField("", text: $viewHelper.word)
           .textFieldStyle(RoundedBorderTextFieldStyle())
         Button(action: {
-          store.tapSearchButton()
+          viewHelper.tapSearchButton()
         }, label: {
           Image(systemName: "magnifyingglass")
         })
       }
       .padding(.init(top: 8, leading: 16, bottom: 8, trailing: 16))
-      if store.loading {
+      if viewHelper.loading {
         ActivityIndicatorView(isAnimating: .constant(true), style: .medium)
-      } else if !store.items.isEmpty {
+      } else if !viewHelper.items.isEmpty {
         ScrollView {
-          ForEach(Array(store.items.enumerated()), id: \.offset) { offset, element in
+          ForEach(Array(viewHelper.items.enumerated()), id: \.offset) { offset, element in
             Button(action: {
-              store.tapCell(indexPath: IndexPath(item: offset, section: 0))
+              viewHelper.tapCell(indexPath: IndexPath(item: offset, section: 0))
             }, label: {
               GithubSearchVIPER02Cell(githubModel: element)
             })

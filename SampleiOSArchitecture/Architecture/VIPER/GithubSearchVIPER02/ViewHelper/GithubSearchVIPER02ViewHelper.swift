@@ -8,7 +8,7 @@
 import Combine
 import UIKit
 
-final class GithubSearchVIPER02Store: ObservableObject {
+final class GithubSearchVIPER02ViewHelper: ObservableObject {
   @Published var loading: Bool = false
   @Published var items: [GithubSearchVIPER02Entity] = []
   @Published var word: String = ""
@@ -27,7 +27,7 @@ final class GithubSearchVIPER02Store: ObservableObject {
   }
 }
 
-extension GithubSearchVIPER02Store: GithubSearchVIPERView {
+extension GithubSearchVIPER02ViewHelper: GithubSearchVIPERView {
   func initView() {}
 
   func startLoading() {

@@ -1,5 +1,7 @@
 import Combine
 
+// ViewModel: GithubSearchMVVM02ViewModelInput, GithubSearchMVVM02ViewModelOutput タイプ
+
 protocol GithubSearchMVVM02ViewModelInput {
   var searchText: String { get set }
   var selectIndex: Int? { get set }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		0E8B294514CA4AC64B64720B /* WebVIPER.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F18264CB63E228BFCC4D646 /* WebVIPER.storyboard */; };
 		10179DDD9A905A12004FCAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E69CE9ABE02873CAF26464 /* Assets.xcassets */; };
 		14144DBCD82783F2720A494E /* GithubSearchVIPER.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31440491620CA04F93A54AB4 /* GithubSearchVIPER.storyboard */; };
+		2771E90FBC1C3CAFE6AA88FE /* GithubSearchVIPER02View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D4AF66DFDCC5F63ACF23E2 /* GithubSearchVIPER02View.swift */; };
 		2F18C55B099369226C83EA6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B8F3310AD4859FE5B068AC /* AppDelegate.swift */; };
 		36A53B81B1835166A9AA36E6 /* GithubSearchMVVM02ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F6742FC2E01B47FE3F3E51 /* GithubSearchMVVM02ViewModel.swift */; };
 		3C1A252346944B88E0CAE31B /* WebVIPERRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAE9CB4D7FD9184F597EDD /* WebVIPERRouter.swift */; };
@@ -23,13 +24,16 @@
 		4CB0526A515EBEE22155140E /* WebVIPERInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84B4B429D116EE69E19D51 /* WebVIPERInteractor.swift */; };
 		4F71771932D0485D88CD78E2 /* WebMVPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C749505C3DE8C408AA3BC /* WebMVPPresenter.swift */; };
 		5144642C300FCDA3FA843105 /* WebVIPERViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA90EC6237DA793A81B4593A /* WebVIPERViewController.swift */; };
+		54D946B2AC41CE4ED9517EE8 /* Pods_SampleiOSArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985299171CFEBF4FA5066DC0 /* Pods_SampleiOSArchitecture.framework */; };
 		56E302E6E7926ABDD4A83371 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503D5CD97E6ED8D1B745F08 /* UIViewController+.swift */; };
 		58C547CFFC111DB26AEA30AD /* GithubSearchMVVM01.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD4411685020BFC35F6E2A6 /* GithubSearchMVVM01.storyboard */; };
+		5B581753815A9FD48D10D689 /* GithubSearchVIPER02Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249959954954C497D6C389BC /* GithubSearchVIPER02Cell.swift */; };
 		5E2A265DC52C26E5619A1894 /* WebVIPERPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABA7831038E1E3F9C1D9219 /* WebVIPERPresenter.swift */; };
-		61B550EE374E53DCC573A835 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D9EC1931114F903F39C91D9B /* CombineCocoa */; };
+		61B550EE374E53DCC573A835 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D9EC1931114F903F39C91D9B /* SwiftPackageProductDependency */; };
 		6DE5EBEF50445F1993C0F40A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC27F8796DC7465898E0B /* RootViewController.swift */; };
 		735B006AD3400C301F203703 /* GithubSearchVIPER02Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3463FE1E8113ECE133B233 /* GithubSearchVIPER02Router.swift */; };
 		78ED581507447DF9956D98B0 /* GithubSearchVIPER02Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7407A6B6B4FC76E8DFDC196 /* GithubSearchVIPER02Interactor.swift */; };
+		7A16EFB1CD043B8D2DDC4332 /* GithubSearchVIPER02ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909C25806B743E778C2C9F06 /* GithubSearchVIPER02ViewHelper.swift */; };
 		7ABEBC71C9BDAA9F749DD426 /* WebMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DE20B517E3D994E3F25131 /* WebMVCViewController.swift */; };
 		7F14959253A6A8BF5D0D81B7 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC9430E69C2223D89C48ED5 /* GithubAPI.swift */; };
 		81A2D8E03B9E0CEBCDC822A5 /* GithubSearchMVVM03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D3EA4791EE8C3F0527797D /* GithubSearchMVVM03ViewController.swift */; };
@@ -48,11 +52,6 @@
 		969BE4F20BD3067F387B1EE5 /* WebMVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB4A6AB3B0932BE0018EBA1 /* WebMVC.storyboard */; };
 		9FD2455B0AA3A3D2BF16B734 /* GithubSearchVIPERPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C216BED43AA4F75F88DC9 /* GithubSearchVIPERPresenter.swift */; };
 		A4B31609D4E9CE8F53034E86 /* WebMVPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B87DAFF25C31793A297D15 /* WebMVPViewController.swift */; };
-		B1FB9F4653930A1A2DDA4852 /* Pods_SampleiOSArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA06F3E4A6E450E6F11F594 /* Pods_SampleiOSArchitecture.framework */; };
-		B6AF9A1D262AD749006A829C /* GithubSearchVIPER02View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF9A1C262AD749006A829C /* GithubSearchVIPER02View.swift */; };
-		B6AF9A24262AF359006A829C /* GithubSearchVIPER02Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF9A23262AF359006A829C /* GithubSearchVIPER02Cell.swift */; };
-		B6AF9A29262B1F9A006A829C /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF9A28262B1F9A006A829C /* ActivityIndicatorView.swift */; };
-		B6AF9A2D262B2922006A829C /* GithubSearchVIPER02Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF9A2C262B2922006A829C /* GithubSearchVIPER02Store.swift */; };
 		BE769FFB88C98D2636DF3B55 /* GithubSearchVIPERRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274A59D112CCC39F185AC55 /* GithubSearchVIPERRouter.swift */; };
 		C21FC22B0A2F739932B31B1B /* GithubSearchVIPER02Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E6A183044C6BF9938E209 /* GithubSearchVIPER02Presenter.swift */; };
 		C26C32C7EA835CB45AA6D366 /* WebMVVM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3904DDF40A0F720597C114F /* WebMVVM.storyboard */; };
@@ -60,6 +59,7 @@
 		C4E5A65EA2BF63125BD9314B /* GithubSearchVIPEREntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5058FB3315C8BD81D6DCA2EA /* GithubSearchVIPEREntity.swift */; };
 		D39536E0264ED61990C58FF1 /* GithubSearchMVP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393E01127790472157B259AA /* GithubSearchMVP.storyboard */; };
 		D6C87ADBDB05E8164200F2E3 /* GithubSearchMVVM01ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E6FE6FBEF9DD1F176CBEF /* GithubSearchMVVM01ViewModel.swift */; };
+		D808F23F37B6D818CC3F0810 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C31BC4FE470BC3288710AA /* ActivityIndicatorView.swift */; };
 		DE7425557B6547AE5A0C8BBE /* GithubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130EBD6D0DD6EDD9324A6AA /* GithubTableViewCell.swift */; };
 		DF918CD2EBA8E9FECD62323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8126924E39401AF5F6263D0F /* LaunchScreen.storyboard */; };
 		EF46D7A1E2D33362150FD37D /* GithubSearchVIPERViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE001E1648BA19D88DBAC81 /* GithubSearchVIPERViewController.swift */; };
@@ -71,8 +71,10 @@
 		0AA3F7FF80ADEC7C6EB11A3D /* GithubSearchMVVM03ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM03ViewModel.swift; sourceTree = "<group>"; };
 		0AE001E1648BA19D88DBAC81 /* GithubSearchVIPERViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPERViewController.swift; sourceTree = "<group>"; };
 		0BA0DB5228893E68337D368F /* GithubAPI+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubAPI+Rx.swift"; sourceTree = "<group>"; };
+		19D9EBC21930A5C3BD3E9B99 /* Pods-SampleiOSArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleiOSArchitecture.debug.xcconfig"; path = "Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
 		1F18264CB63E228BFCC4D646 /* WebVIPER.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebVIPER.storyboard; sourceTree = "<group>"; };
 		228D82B2C1131DEB2681ED18 /* GithubSearchMVPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVPViewController.swift; sourceTree = "<group>"; };
+		249959954954C497D6C389BC /* GithubSearchVIPER02Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Cell.swift; sourceTree = "<group>"; };
 		268DE0612EB833FD54E6CA63 /* GithubSearchVIPER02Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Entity.swift; sourceTree = "<group>"; };
 		2E138F787C1D48CD47AE493C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31440491620CA04F93A54AB4 /* GithubSearchVIPER.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchVIPER.storyboard; sourceTree = "<group>"; };
@@ -81,12 +83,10 @@
 		393E01127790472157B259AA /* GithubSearchMVP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVP.storyboard; sourceTree = "<group>"; };
 		4503D5CD97E6ED8D1B745F08 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		4DF1AC4B4EE8D9EE4282B6C0 /* GithubSearchMVC01.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVC01.storyboard; sourceTree = "<group>"; };
-		4FA06F3E4A6E450E6F11F594 /* Pods_SampleiOSArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleiOSArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5058FB3315C8BD81D6DCA2EA /* GithubSearchVIPEREntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPEREntity.swift; sourceTree = "<group>"; };
 		598E6A183044C6BF9938E209 /* GithubSearchVIPER02Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Presenter.swift; sourceTree = "<group>"; };
 		5BBAE9CB4D7FD9184F597EDD /* WebVIPERRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVIPERRouter.swift; sourceTree = "<group>"; };
 		5FA351F5B16942B1C651F91A /* GithubSearchVIPERInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPERInteractor.swift; sourceTree = "<group>"; };
-		62DB0CDD5B8BA26580BC9D69 /* Pods-SampleiOSArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleiOSArchitecture.debug.xcconfig"; path = "Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
 		7D4851FC2E74B2C50CD3C436 /* GithubSearchMVVM02.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVVM02.storyboard; sourceTree = "<group>"; };
 		7FC9430E69C2223D89C48ED5 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
 		83B6402AE953E386D7B4AC3C /* GithubSearchMVC01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVC01ViewController.swift; sourceTree = "<group>"; };
@@ -95,10 +95,13 @@
 		88E69CE9ABE02873CAF26464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD4411685020BFC35F6E2A6 /* GithubSearchMVVM01.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVVM01.storyboard; sourceTree = "<group>"; };
 		8D3463FE1E8113ECE133B233 /* GithubSearchVIPER02Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Router.swift; sourceTree = "<group>"; };
+		909C25806B743E778C2C9F06 /* GithubSearchVIPER02ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02ViewHelper.swift; sourceTree = "<group>"; };
 		96F898868ADA66618BC5B716 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		985299171CFEBF4FA5066DC0 /* Pods_SampleiOSArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleiOSArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3BC27F8796DC7465898E0B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		9DB4A6AB3B0932BE0018EBA1 /* WebMVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebMVC.storyboard; sourceTree = "<group>"; };
 		9E45FBED5E8286784719FE83 /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
+		A0DC208BE9E649DBCFCE1CDC /* Pods-SampleiOSArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleiOSArchitecture.release.xcconfig"; path = "Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 		A9611E52F0219A4D2763DEF4 /* WebMVP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebMVP.storyboard; sourceTree = "<group>"; };
 		AA1C5557D0AD80F7A139B2C7 /* GithubSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchPresenter.swift; sourceTree = "<group>"; };
 		AEB8D0AB85E479072BC904E5 /* WebMVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMVVMViewController.swift; sourceTree = "<group>"; };
@@ -107,21 +110,18 @@
 		B3904DDF40A0F720597C114F /* WebMVVM.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebMVVM.storyboard; sourceTree = "<group>"; };
 		B3DE20B517E3D994E3F25131 /* WebMVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMVCViewController.swift; sourceTree = "<group>"; };
 		B68FD8FA3C181985715749E2 /* GithubSearchMVVM03.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVVM03.storyboard; sourceTree = "<group>"; };
-		B6AF9A1C262AD749006A829C /* GithubSearchVIPER02View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02View.swift; sourceTree = "<group>"; };
-		B6AF9A23262AF359006A829C /* GithubSearchVIPER02Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Cell.swift; sourceTree = "<group>"; };
-		B6AF9A28262B1F9A006A829C /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
-		B6AF9A2C262B2922006A829C /* GithubSearchVIPER02Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Store.swift; sourceTree = "<group>"; };
 		B7D3089DC71B7A75E014B9B7 /* GithubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubModel.swift; sourceTree = "<group>"; };
-		B94DA01F7047A39751FA6283 /* Pods-SampleiOSArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleiOSArchitecture.release.xcconfig"; path = "Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 		C1F637902A03BE659C5CCCF8 /* GithubSearchMVVM02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM02ViewController.swift; sourceTree = "<group>"; };
+		C5D4AF66DFDCC5F63ACF23E2 /* GithubSearchVIPER02View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02View.swift; sourceTree = "<group>"; };
 		C7D3EA4791EE8C3F0527797D /* GithubSearchMVVM03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM03ViewController.swift; sourceTree = "<group>"; };
 		CA90EC6237DA793A81B4593A /* WebVIPERViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVIPERViewController.swift; sourceTree = "<group>"; };
 		D23623BA69CC1F37ABF060A4 /* GithubTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GithubTableViewCell.xib; sourceTree = "<group>"; };
+		D3C31BC4FE470BC3288710AA /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		D6F6742FC2E01B47FE3F3E51 /* GithubSearchMVVM02ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM02ViewModel.swift; sourceTree = "<group>"; };
 		D7407A6B6B4FC76E8DFDC196 /* GithubSearchVIPER02Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Interactor.swift; sourceTree = "<group>"; };
 		D9D74AC0216B041100AB3392 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DABA7831038E1E3F9C1D9219 /* WebVIPERPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVIPERPresenter.swift; sourceTree = "<group>"; };
-		DC258B0A044ABFCE531CE358 /* SampleiOSArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleiOSArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC258B0A044ABFCE531CE358 /* SampleiOSArchitecture.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SampleiOSArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0E6FE6FBEF9DD1F176CBEF /* GithubSearchMVVM01ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM01ViewModel.swift; sourceTree = "<group>"; };
 		E76C749505C3DE8C408AA3BC /* WebMVPPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMVPPresenter.swift; sourceTree = "<group>"; };
 		EC84B4B429D116EE69E19D51 /* WebVIPERInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVIPERInteractor.swift; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B550EE374E53DCC573A835 /* CombineCocoa in Frameworks */,
-				B1FB9F4653930A1A2DDA4852 /* Pods_SampleiOSArchitecture.framework in Frameworks */,
+				61B550EE374E53DCC573A835 /* BuildFile in Frameworks */,
+				54D946B2AC41CE4ED9517EE8 /* Pods_SampleiOSArchitecture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,15 +151,6 @@
 			path = WebMVC;
 			sourceTree = "<group>";
 		};
-		0319D4D4445FBDD075FDCF93 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				62DB0CDD5B8BA26580BC9D69 /* Pods-SampleiOSArchitecture.debug.xcconfig */,
-				B94DA01F7047A39751FA6283 /* Pods-SampleiOSArchitecture.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		073CF6768B3CBAAD55BAB3A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,20 +159,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		0881316DFB03FBF12A8E031A /* ViewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				909C25806B743E778C2C9F06 /* GithubSearchVIPER02ViewHelper.swift */,
+			);
+			path = ViewHelper;
+			sourceTree = "<group>";
+		};
 		0E1A3FE9D26F9E5A816D3C5D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				D6F6742FC2E01B47FE3F3E51 /* GithubSearchMVVM02ViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		1536E9708AF284477A642D9B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4FA06F3E4A6E450E6F11F594 /* Pods_SampleiOSArchitecture.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2CF0A84E07AE6FF508176138 /* ViewController */ = {
@@ -203,6 +194,16 @@
 				956A6B8265C2DB3775BF450C /* ViewController */,
 			);
 			path = GithubSearchVIPER01;
+			sourceTree = "<group>";
+		};
+		3046C886F02C4FB63351CCA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19D9EBC21930A5C3BD3E9B99 /* Pods-SampleiOSArchitecture.debug.xcconfig */,
+				A0DC208BE9E649DBCFCE1CDC /* Pods-SampleiOSArchitecture.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		3256E74482642D36E80F0601 /* GithubSearchMVVM01 */ = {
@@ -325,17 +326,17 @@
 			children = (
 				CB7DCFB8975B36D69F9686F8 /* SampleiOSArchitecture */,
 				FCB347B440AE861AB6DE9D91 /* Products */,
-				0319D4D4445FBDD075FDCF93 /* Pods */,
-				1536E9708AF284477A642D9B /* Frameworks */,
+				3046C886F02C4FB63351CCA9 /* Pods */,
+				DD281831208E7E441C229D39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		6E1B55E8A20E6EA75D851AEC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B6AF9A1C262AD749006A829C /* GithubSearchVIPER02View.swift */,
-				B6AF9A23262AF359006A829C /* GithubSearchVIPER02Cell.swift */,
-				B6AF9A28262B1F9A006A829C /* ActivityIndicatorView.swift */,
+				D3C31BC4FE470BC3288710AA /* ActivityIndicatorView.swift */,
+				249959954954C497D6C389BC /* GithubSearchVIPER02Cell.swift */,
+				C5D4AF66DFDCC5F63ACF23E2 /* GithubSearchVIPER02View.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -486,23 +487,15 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		B6AF9A2B262B2905006A829C /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				B6AF9A2C262B2922006A829C /* GithubSearchVIPER02Store.swift */,
-			);
-			path = Store;
-			sourceTree = "<group>";
-		};
 		BB5D58146171E66536BB5403 /* GithubSearchVIPER02 */ = {
 			isa = PBXGroup;
 			children = (
-				B6AF9A2B262B2905006A829C /* Store */,
 				A43C16481D13015FE77925F8 /* Entity */,
 				447826B58FF1F74BD02A45C3 /* Interactor */,
 				B3C2BD51394560EDA0E8CA21 /* Presenter */,
 				5470D21407800338B9328D8D /* Router */,
 				6E1B55E8A20E6EA75D851AEC /* View */,
+				0881316DFB03FBF12A8E031A /* ViewHelper */,
 			);
 			path = GithubSearchVIPER02;
 			sourceTree = "<group>";
@@ -574,6 +567,14 @@
 				5058FB3315C8BD81D6DCA2EA /* GithubSearchVIPEREntity.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		DD281831208E7E441C229D39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				985299171CFEBF4FA5066DC0 /* Pods_SampleiOSArchitecture.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DEED0D058B9E3C3EEC869B5F /* MVVM */ = {
@@ -655,13 +656,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A3829F26B9EF09595695E67 /* Build configuration list for PBXNativeTarget "SampleiOSArchitecture" */;
 			buildPhases = (
-				40C511761A9914ED4250DB2B /* [CP] Check Pods Manifest.lock */,
+				1A18457A7C6694A40370ADE8 /* [CP] Check Pods Manifest.lock */,
 				D2DB8CF9A09930BDDFD86CE0 /* Run Script(Swiftformat) */,
 				05237B8A32C07C40008BA0F3 /* Run Script(SwiftLint) */,
 				EED9B316F1E18CA731C459E9 /* Sources */,
 				8F3B412F0C3D476D1EA6C33A /* Resources */,
 				3EE0764CE2AD6E66E4E2EA66 /* Frameworks */,
-				E46B33537C6F680F83F461F4 /* [CP] Embed Pods Frameworks */,
+				86447C6015005A80974E3A3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -669,7 +670,7 @@
 			);
 			name = SampleiOSArchitecture;
 			packageProductDependencies = (
-				D9EC1931114F903F39C91D9B /* CombineCocoa */,
+				D9EC1931114F903F39C91D9B /* SwiftPackageProductDependency */,
 			);
 			productName = SampleiOSArchitecture;
 			productReference = DC258B0A044ABFCE531CE358 /* SampleiOSArchitecture.app */;
@@ -682,6 +683,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 713156F96FF2760CC6C0DD56 /* Build configuration list for PBXProject "SampleiOSArchitecture" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -693,7 +696,7 @@
 			);
 			mainGroup = 6C52C0C4D71F0705172D75A6;
 			packageReferences = (
-				CD0EB3436756FFA54F9B530E /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				CD0EB3436756FFA54F9B530E /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = FCB347B440AE861AB6DE9D91 /* Products */;
 			projectDirPath = "";
@@ -746,7 +749,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: Mintがインストールされていません。こちらからダウンロードしてください https://github.com/yonaskolb/Mint\"\nfi";
 		};
-		40C511761A9914ED4250DB2B /* [CP] Check Pods Manifest.lock */ = {
+		1A18457A7C6694A40370ADE8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -768,6 +771,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		86447C6015005A80974E3A3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D2DB8CF9A09930BDDFD86CE0 /* Run Script(Swiftformat) */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -786,23 +806,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if which mint >/dev/null; then\n  git diff --name-only | grep .swift | while read filename; do\n    mint run swiftformat \"$filename\" --swiftversion 5\n  done\nelse\n  echo \"warning: Mintがインストールされていません。こちらからダウンロードしてください https://github.com/yonaskolb/Mint\"\nfi\n";
 		};
-		E46B33537C6F680F83F461F4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -810,6 +813,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D808F23F37B6D818CC3F0810 /* ActivityIndicatorView.swift in Sources */,
 				2F18C55B099369226C83EA6C /* AppDelegate.swift in Sources */,
 				81ACE1DCC8F96413D351AE68 /* GithubAPI+Combine.swift in Sources */,
 				40FB13CE23633FB52712C5F4 /* GithubAPI+Rx.swift in Sources */,
@@ -817,27 +821,26 @@
 				95209C9F97620D1729E91F7D /* GithubModel.swift in Sources */,
 				86979ABA382D6043B36097BA /* GithubSearchMVC01ViewController.swift in Sources */,
 				90F145AB7406B47DB5E2B770 /* GithubSearchMVPViewController.swift in Sources */,
-				B6AF9A2D262B2922006A829C /* GithubSearchVIPER02Store.swift in Sources */,
 				0AFA79DD68C2D5A177D03569 /* GithubSearchMVVM01ViewController.swift in Sources */,
 				D6C87ADBDB05E8164200F2E3 /* GithubSearchMVVM01ViewModel.swift in Sources */,
 				883A92B88B21758A72B6AB71 /* GithubSearchMVVM02ViewController.swift in Sources */,
 				36A53B81B1835166A9AA36E6 /* GithubSearchMVVM02ViewModel.swift in Sources */,
 				81A2D8E03B9E0CEBCDC822A5 /* GithubSearchMVVM03ViewController.swift in Sources */,
-				B6AF9A29262B1F9A006A829C /* ActivityIndicatorView.swift in Sources */,
 				C3D353C59C917C744B536E9D /* GithubSearchMVVM03ViewModel.swift in Sources */,
 				48823EC50616A2171A619450 /* GithubSearchPresenter.swift in Sources */,
+				5B581753815A9FD48D10D689 /* GithubSearchVIPER02Cell.swift in Sources */,
 				0A85F77497044EDA17D347E5 /* GithubSearchVIPER02Entity.swift in Sources */,
 				78ED581507447DF9956D98B0 /* GithubSearchVIPER02Interactor.swift in Sources */,
 				C21FC22B0A2F739932B31B1B /* GithubSearchVIPER02Presenter.swift in Sources */,
 				735B006AD3400C301F203703 /* GithubSearchVIPER02Router.swift in Sources */,
+				2771E90FBC1C3CAFE6AA88FE /* GithubSearchVIPER02View.swift in Sources */,
+				7A16EFB1CD043B8D2DDC4332 /* GithubSearchVIPER02ViewHelper.swift in Sources */,
 				C4E5A65EA2BF63125BD9314B /* GithubSearchVIPEREntity.swift in Sources */,
 				3FBB7B61B57FAEA914204463 /* GithubSearchVIPERInteractor.swift in Sources */,
-				B6AF9A1D262AD749006A829C /* GithubSearchVIPER02View.swift in Sources */,
 				9FD2455B0AA3A3D2BF16B734 /* GithubSearchVIPERPresenter.swift in Sources */,
 				BE769FFB88C98D2636DF3B55 /* GithubSearchVIPERRouter.swift in Sources */,
 				EF46D7A1E2D33362150FD37D /* GithubSearchVIPERViewController.swift in Sources */,
 				DE7425557B6547AE5A0C8BBE /* GithubTableViewCell.swift in Sources */,
-				B6AF9A24262AF359006A829C /* GithubSearchVIPER02Cell.swift in Sources */,
 				6DE5EBEF50445F1993C0F40A /* RootViewController.swift in Sources */,
 				8588E593C791BA4B5C43EA20 /* Router.swift in Sources */,
 				F78C9D92608B5F7A86DA9CF1 /* Storyboard+.swift in Sources */,
@@ -871,11 +874,10 @@
 /* Begin XCBuildConfiguration section */
 		00444B30366141674715EF76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62DB0CDD5B8BA26580BC9D69 /* Pods-SampleiOSArchitecture.debug.xcconfig */;
+			baseConfigurationReference = 19D9EBC21930A5C3BD3E9B99 /* Pods-SampleiOSArchitecture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4295L2DWK5;
 				INFOPLIST_FILE = SampleiOSArchitecture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -889,11 +891,10 @@
 		};
 		6554B4E03D9CAF0DB46E9F02 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B94DA01F7047A39751FA6283 /* Pods-SampleiOSArchitecture.release.xcconfig */;
+			baseConfigurationReference = A0DC208BE9E649DBCFCE1CDC /* Pods-SampleiOSArchitecture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4295L2DWK5;
 				INFOPLIST_FILE = SampleiOSArchitecture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1048,7 +1049,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD0EB3436756FFA54F9B530E /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+		CD0EB3436756FFA54F9B530E /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
 			requirement = {
@@ -1059,9 +1060,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D9EC1931114F903F39C91D9B /* CombineCocoa */ = {
+		D9EC1931114F903F39C91D9B /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD0EB3436756FFA54F9B530E /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			package = CD0EB3436756FFA54F9B530E /* RemoteSwiftPackageReference */;
 			productName = CombineCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
