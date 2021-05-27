@@ -51,7 +51,8 @@ private extension GithubSearchMVVM01ViewController {
       .bind(to: Binder(self) { vc, loading in
         vc.tableView.isHidden = loading
         vc.indicator.isHidden = !loading
-      }).disposed(by: rx.disposeBag)
+      })
+      .disposed(by: rx.disposeBag)
 
     viewModel.selectGithubModelObservable
       .bind(to: Binder(self) { vc, githubModel in

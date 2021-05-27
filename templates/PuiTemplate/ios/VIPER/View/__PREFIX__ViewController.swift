@@ -7,15 +7,17 @@
 
 import UIKit
 
-protocol __PREFIX__View: AnyObject {
-}
+protocol __PREFIX__View: AnyObject {}
 
 final class __PREFIX__ViewController: UIViewController {
-  var presenter: __PREFIX__Presentation!
-
   static func makeFromStoryboard() -> __PREFIX__ViewController {
     let vc = UIStoryboard.load__PREFIX__()
     return vc
+  }
+
+  private var presenter: __PREFIX__Presentation!
+  func inject(presenter: __PREFIX__Presentation) {
+    self.presenter = presenter
   }
 
   override func viewDidLoad() {
@@ -24,5 +26,4 @@ final class __PREFIX__ViewController: UIViewController {
   }
 }
 
-extension __PREFIX__ViewController: __PREFIX__View {
-}
+extension __PREFIX__ViewController: __PREFIX__View {}

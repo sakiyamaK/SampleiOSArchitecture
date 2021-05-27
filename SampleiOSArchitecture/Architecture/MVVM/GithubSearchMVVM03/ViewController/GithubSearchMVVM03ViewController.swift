@@ -5,12 +5,11 @@
 //  Created by  on 2021/4/13.
 //
 
-import UIKit
 import Combine
 import CombineCocoa
+import UIKit
 
 final class GithubSearchMVVM03ViewController: UIViewController {
-
   private let dependency: GithubSearchMVVM03ViewModelDependency = GithubSearchMVVM03ViewModelDependencyImpl()
   private var input: GithubSearchMVVM03ViewModelInput = GithubSearchMVVM03ViewModelInputImpl()
   private var output: GithubSearchMVVM03ViewModelOutput!
@@ -28,9 +27,10 @@ final class GithubSearchMVVM03ViewController: UIViewController {
 
   static func makeFromStoryboard() -> GithubSearchMVVM03ViewController {
     let vc = UIStoryboard.githubSearchMVVM03ViewController
-    vc.output = GithubSearchMVVM03ViewModelOutputImpl.init(input: vc.input, dependency: vc.dependency)
+    vc.output = GithubSearchMVVM03ViewModelOutputImpl(input: vc.input, dependency: vc.dependency)
     return vc
   }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.isHidden = true
@@ -41,7 +41,6 @@ final class GithubSearchMVVM03ViewController: UIViewController {
 
 private extension GithubSearchMVVM03ViewController {
   func setupViewModel() {
-
     searchButton.tapPublisher
       .compactMap { self.urlTextField.text }
       .sink(receiveValue: { [weak self] text in self?.input.searchText = text })

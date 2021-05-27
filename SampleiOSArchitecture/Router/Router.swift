@@ -79,4 +79,8 @@ extension Router {
   static func showVIPER02(from: UIViewController) {
     from.show(next: GithubSearchVIPER02Router.assembleModulesUIKit())
   }
+
+  static func showShareDataVIPER(from: UIViewController) {
+    from.show(next: ShareDataTabVIPERRRouter.assembleModules())
+  }
 }

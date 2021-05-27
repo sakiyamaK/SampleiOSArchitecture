@@ -9,7 +9,7 @@ import UIKit
 
 final class RootViewController: UIViewController {
   enum SegueButton: String, CaseIterable {
-    case mvc, mvp, mvvm01, mvvm02, mvvm03, viper01, viper02
+    case mvc, mvp, mvvm01, mvvm02, mvvm03, viper01, viper02, shareDataViper
 
     var button: UIButton {
       let button = UIButton()
@@ -35,6 +35,8 @@ final class RootViewController: UIViewController {
         Router.showVIPER(from: from)
       case SegueButton.viper02:
         Router.showVIPER02(from: from)
+      case SegueButton.shareDataViper:
+        Router.showShareDataVIPER(from: from)
       }
     }
   }
@@ -49,10 +51,10 @@ final class RootViewController: UIViewController {
     view.addSubview(stackView)
 
     stackView.translatesAutoresizingMaskIntoConstraints = false
-    stackView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-    stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-    view.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
-    view.bottomAnchor.constraint(equalTo: stackView.bottomAnchor).isActive = true
+    stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+    stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+    view.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
+    view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: stackView.bottomAnchor).isActive = true
 
     SegueButton.allCases.map { $0.button }.forEach { button in
       stackView.addArrangedSubview(button)
@@ -64,21 +66,5 @@ private extension RootViewController {
   @objc func tapButton(_ sender: UIButton) {
     guard let text = sender.titleLabel?.text else { return }
     SegueButton(rawValue: text)?.segue(from: self)
-//    switch sender {
-//    case mvcButton:
-//      Router.showMVC(from: self)
-//    case mvpButton:
-//      Router.showMVP(from: self)
-//    case mvvm01Button:
-//      Router.showMVVM01(from: self)
-//    case mvvm02Button:
-//      Router.showMVVM02(from: self)
-//    case mvvm03Button:
-//      Router.showMVVM03(from: self)
-//    case viperButton:
-//      Router.showVIPER(from: self)
-//    default:
-//      break
-//    }
   }
 }
