@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import RxSwift
 import NSObject_Rx
+import RxSwift
 
 protocol ShareDataVIPER02Presentation: AnyObject {
   func viewDidLoad()
@@ -17,7 +17,6 @@ protocol ShareDataVIPER02Presentation: AnyObject {
 }
 
 final class ShareDataVIPER02Presenter {
-
   private weak var view: ShareDataVIPER02View?
   private let router: ShareDataVIPER02Wireframe
   private let interactor: ShareDataVIPER02Usecase
@@ -32,7 +31,7 @@ final class ShareDataVIPER02Presenter {
     self.view = view
     self.interactor = interactor
     self.router = router
-    self.bind()
+    bind()
   }
 }
 
@@ -40,7 +39,7 @@ private extension ShareDataVIPER02Presenter {
   func bind() {
     guard let view = view else { return }
     let disposes: [Disposable] = [
-      interactor.itemsObservable.bind(to: view.itemsSubject)
+      interactor.itemsObservable.bind(to: view.itemsRelay)
     ]
 
     disposeBag.insert(disposes)

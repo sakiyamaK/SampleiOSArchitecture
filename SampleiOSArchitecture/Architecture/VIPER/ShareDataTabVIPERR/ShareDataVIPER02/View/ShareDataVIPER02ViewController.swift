@@ -5,20 +5,19 @@
 //  Created by  on 2021/5/27.
 //
 
-import UIKit
-import RxSwift
 import RxCocoa
 import RxOptional
+import RxSwift
+import UIKit
 
 protocol ShareDataVIPER02View: AnyObject {
-  var itemsSubject: PublishSubject<[User2]> { get }
+  var itemsRelay: PublishRelay<[User2]> { get }
 }
 
 final class ShareDataVIPER02ViewController: UIViewController, ShareDataVIPER02View {
-
   deinit { DLog() }
 
-  @IBOutlet private weak var collectionView: UICollectionView! {
+  @IBOutlet private var collectionView: UICollectionView! {
     didSet {
       collectionView.collectionViewLayout = layout
       collectionView.register(UserCollectionViewCell.nib, forCellWithReuseIdentifier: UserCollectionViewCell.reuseIdentifier)
@@ -53,7 +52,7 @@ final class ShareDataVIPER02ViewController: UIViewController, ShareDataVIPER02Vi
     return layout
   }
 
-  let itemsSubject: PublishSubject<[User2]> = .init()
+  let itemsRelay: PublishRelay<[User2]> = .init()
 
   static func makeFromStoryboard() -> ShareDataVIPER02ViewController {
     let vc = UIStoryboard.loadShareDataVIPER02()
@@ -74,14 +73,13 @@ final class ShareDataVIPER02ViewController: UIViewController, ShareDataVIPER02Vi
 }
 
 private extension ShareDataVIPER02ViewController {
-
   func setup() {
     view.backgroundColor = .systemBlue
   }
 
   func bind() {
     let disposes: [Disposable] = [
-      itemsSubject.bind(to: Binder(self) {(vc, _) in
+      itemsRelay.bind(to: Binder(self) { vc, _ in
         vc.collectionView.reloadData()
       })
     ]
@@ -99,13 +97,14 @@ extension ShareDataVIPER02ViewController: UICollectionViewDelegate {
 
 extension ShareDataVIPER02ViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return presenter.items.count
+    presenter.items.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCollectionViewCell.reuseIdentifier, for: indexPath) as? UserCollectionViewCell,
-      let item = presenter.items[safe: indexPath.item] else {
+      let item = presenter.items[safe: indexPath.item]
+    else {
       fatalError()
     }
     cell.configure(user: item)

@@ -2,20 +2,19 @@
 //  ShareDataVIPER03View.swift
 //  SampleiOSArchitecture
 
-import UIKit
-import RxSwift
 import RxCocoa
 import RxOptional
+import RxSwift
+import UIKit
 
 protocol ShareDataVIPER03View: AnyObject {
-  var itemsSubject: PublishSubject<[User]> { get }
+  var itemsRelay: PublishRelay<[User]> { get }
 }
 
 final class ShareDataVIPER03ViewController: UIViewController, ShareDataVIPER03View {
-
   deinit { DLog() }
 
-  @IBOutlet private weak var collectionView: UICollectionView! {
+  @IBOutlet private var collectionView: UICollectionView! {
     didSet {
       collectionView.collectionViewLayout = layout
       collectionView.register(UserCollectionViewCell.nib, forCellWithReuseIdentifier: UserCollectionViewCell.reuseIdentifier)
@@ -50,7 +49,7 @@ final class ShareDataVIPER03ViewController: UIViewController, ShareDataVIPER03Vi
     return layout
   }
 
-  let itemsSubject: PublishSubject<[User]> = .init()
+  let itemsRelay: PublishRelay<[User]> = .init()
 
   static func makeFromStoryboard() -> ShareDataVIPER03ViewController {
     let vc = UIStoryboard.loadShareDataVIPER03()
@@ -77,7 +76,7 @@ private extension ShareDataVIPER03ViewController {
 
   func bind() {
     let disposes: [Disposable] = [
-      itemsSubject.bind(to: Binder(self) {(vc, _) in
+      itemsRelay.bind(to: Binder(self) { vc, _ in
         vc.collectionView.reloadData()
       })
     ]
@@ -95,13 +94,14 @@ extension ShareDataVIPER03ViewController: UICollectionViewDelegate {
 
 extension ShareDataVIPER03ViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return presenter.items.count
+    presenter.items.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCollectionViewCell.reuseIdentifier, for: indexPath) as? UserCollectionViewCell,
-      let item = presenter.items[safe: indexPath.item] else {
+      let item = presenter.items[safe: indexPath.item]
+    else {
       fatalError()
     }
     cell.configure(user: item)

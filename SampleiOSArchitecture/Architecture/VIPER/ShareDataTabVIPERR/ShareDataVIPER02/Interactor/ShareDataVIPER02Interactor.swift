@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import RxSwift
+import NSObject_Rx
 import RxCocoa
 import RxOptional
-import NSObject_Rx
+import RxSwift
 
 protocol ShareDataVIPER02Usecase {
   var fetchRelay: PublishRelay<Void> { get }
@@ -20,7 +20,6 @@ protocol ShareDataVIPER02Usecase {
 }
 
 final class ShareDataVIPER02Interactor: ShareDataVIPER02Usecase, HasDisposeBag {
-
   var fetchRelay: PublishRelay<Void> = .init()
   var didSelectRelay: PublishRelay<Int> = .init()
 
@@ -31,15 +30,14 @@ final class ShareDataVIPER02Interactor: ShareDataVIPER02Usecase, HasDisposeBag {
   deinit { DLog() }
 
   init(shareData: ShareData = ShareDataImpl.shared) {
-
     let inputDisposes: [Disposable] = [
       fetchRelay.asObservable().map { _ -> [User2] in User2.testData }.bind(to: _items),
-      didSelectRelay.asObservable().bind(to: Binder(self) { (interactor, idx) in
+      didSelectRelay.asObservable().bind(to: Binder(self) { interactor, idx in
         guard var item = interactor.items[safe: idx] else { return }
         item.hasLike.toggle()
         shareData.userRelay.accept(item)
       }),
-      shareData.userRelay.bind(to: Binder(self) { (interactor, user) in
+      shareData.userRelay.asObservable().bind(to: Binder(self) { interactor, user in
         var items = interactor.items
         items = items.map {
           if $0.id == user.id {
@@ -55,6 +53,5 @@ final class ShareDataVIPER02Interactor: ShareDataVIPER02Usecase, HasDisposeBag {
     ]
 
     disposeBag.insert(inputDisposes)
-
   }
 }

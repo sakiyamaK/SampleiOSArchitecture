@@ -6,99 +6,82 @@
 //
 
 import Foundation
-import RxSwift
 import RxCocoa
+import RxSwift
 
-protocol ShareData {
-  var userRelay: PublishRelay<UserProtocol> { get }
-}
-
-final class ShareDataImpl: ShareData {
-  private var disposeBag = DisposeBag()
-  var userRelay: PublishRelay<UserProtocol> = .init()
-
-  private init() {}
-  static let shared: ShareDataImpl = .init()
-}
-
-protocol UserProtocol {
-  var id: Int { get }
-  var name: String { get }
-  var hasLike: Bool { get }
-}
-
-struct User: Decodable, UserProtocol {
+struct User: Decodable, UserProtocol, Equatable {
   let id: Int
   var name: String
   var hasLike: Bool
 }
 
-struct User2: Decodable, UserProtocol {
+struct User2: Decodable, UserProtocol, Equatable {
   let id: Int
   var name: String
   var hasLike: Bool
+}
+
+private var jsonStr: String {
+  """
+  [
+  {
+  "id": 1,
+  "name": "No.1",
+  "hasLike": false
+  },
+  {
+  "id": 2,
+  "name": "No.2",
+  "hasLike": true
+  },
+  {
+  "id": 3,
+  "name": "No.3",
+  "hasLike": false
+  },
+  {
+  "id": 4,
+  "name": "No.4",
+  "hasLike": true
+  },
+  {
+  "id": 5,
+  "name": "No.5",
+  "hasLike": false
+  },
+  {
+  "id": 6,
+  "name": "No.6",
+  "hasLike": true
+  },
+  {
+  "id": 7,
+  "name": "No.7",
+  "hasLike": false
+  },
+  {
+  "id": 8,
+  "name": "No.8",
+  "hasLike": true
+  }
+  ]
+  """
 }
 
 extension User {
-  private static var jsonStr: String {
-    """
-    [
-    {
-    "id": 1,
-    "name": "No.1",
-    "hasLike": false
-    },
-    {
-    "id": 2,
-    "name": "No.2",
-    "hasLike": true
-    },
-    {
-    "id": 3,
-    "name": "No.3",
-    "hasLike": false
-    }
-    ]
-    """
-  }
-
   static var testData: [User] {
     try! JSONDecoder().decode(
       [User].self,
-      from:
-        User.jsonStr.data(using: .utf8)!
+      from: jsonStr.data(using: .utf8)!
     )
   }
 }
 
 extension User2 {
-  private static var jsonStr: String {
-    """
-    [
-    {
-    "id": 1,
-    "name": "No.1",
-    "hasLike": false
-    },
-    {
-    "id": 2,
-    "name": "No.2",
-    "hasLike": true
-    },
-    {
-    "id": 3,
-    "name": "No.3",
-    "hasLike": false
-    }
-    ]
-    """
-  }
-
   static var testData: [User2] {
     try! JSONDecoder().decode(
       [User2].self,
-      from:
-        User2.jsonStr.data(using: .utf8)!
+      from: jsonStr.data(using: .utf8)!
     )
   }
 }

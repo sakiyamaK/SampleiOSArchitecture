@@ -71,6 +71,7 @@
 		B67BE557265EB5CF0009FC89 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BE556265EB5CF0009FC89 /* UICollectionViewCell+.swift */; };
 		B67BE559265F4C040009FC89 /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BE558265F4C040009FC89 /* Collection+.swift */; };
 		B67BE55B265F6BE30009FC89 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BE55A265F6BE30009FC89 /* DebugLog.swift */; };
+		B67BE55E265FE7EC0009FC89 /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BE55D265FE7EC0009FC89 /* ShareData.swift */; };
 		B938353A6730A30698AC7D5A /* ShareDataVIPER03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED9B6992C7A133D207B06E /* ShareDataVIPER03ViewController.swift */; };
 		B9B3C9D4EB4452F852BC091D /* ShareDataTabVIPERRRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A9C21B2C8CB2DDBB976B2 /* ShareDataTabVIPERRRouter.swift */; };
 		BE769FFB88C98D2636DF3B55 /* GithubSearchVIPERRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274A59D112CCC39F185AC55 /* GithubSearchVIPERRouter.swift */; };
@@ -158,6 +159,7 @@
 		B67BE556265EB5CF0009FC89 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		B67BE558265F4C040009FC89 /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
 		B67BE55A265F6BE30009FC89 /* DebugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
+		B67BE55D265FE7EC0009FC89 /* ShareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
 		B68FD8FA3C181985715749E2 /* GithubSearchMVVM03.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVVM03.storyboard; sourceTree = "<group>"; };
 		B7D3089DC71B7A75E014B9B7 /* GithubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubModel.swift; sourceTree = "<group>"; };
 		C1F637902A03BE659C5CCCF8 /* GithubSearchMVVM02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM02ViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		1D976C8DF674CB1C643A4016 /* ShareDataTabVIPERR */ = {
 			isa = PBXGroup;
 			children = (
+				B67BE55C265FE7DB0009FC89 /* ShareData */,
 				5313BC54C829B7CBBB237FE6 /* ShareDataTabVIPERR */,
 				C738824C3D9AA5418C1D86E4 /* ShareDataVIPER01 */,
 				6B01ED509BF6B2FDEFDE3D6C /* ShareDataVIPER02 */,
@@ -738,6 +741,14 @@
 			path = UserCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		B67BE55C265FE7DB0009FC89 /* ShareData */ = {
+			isa = PBXGroup;
+			children = (
+				B67BE55D265FE7EC0009FC89 /* ShareData.swift */,
+			);
+			path = ShareData;
+			sourceTree = "<group>";
+		};
 		BB5D58146171E66536BB5403 /* GithubSearchVIPER02 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1135,6 +1146,7 @@
 				EF46D7A1E2D33362150FD37D /* GithubSearchVIPERViewController.swift in Sources */,
 				DE7425557B6547AE5A0C8BBE /* GithubTableViewCell.swift in Sources */,
 				6DE5EBEF50445F1993C0F40A /* RootViewController.swift in Sources */,
+				B67BE55E265FE7EC0009FC89 /* ShareData.swift in Sources */,
 				8588E593C791BA4B5C43EA20 /* Router.swift in Sources */,
 				2BFBB12E2994A8E72DB2486A /* ShareDataTabVIPERREntity.swift in Sources */,
 				B32067C919E7D882AE748991 /* ShareDataTabVIPERRInteractor.swift in Sources */,

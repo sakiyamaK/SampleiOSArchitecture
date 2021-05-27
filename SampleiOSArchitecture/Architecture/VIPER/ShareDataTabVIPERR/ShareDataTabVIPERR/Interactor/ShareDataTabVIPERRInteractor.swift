@@ -7,14 +7,10 @@
 
 import Foundation
 
-protocol ShareDataTabVIPERRUsecase {
-  
-}
+protocol ShareDataTabVIPERRUsecase {}
 
 final class ShareDataTabVIPERRInteractor {
-  init() {
-  }
+  init() {}
 }
 
-extension ShareDataTabVIPERRInteractor: ShareDataTabVIPERRUsecase {
-}
+extension ShareDataTabVIPERRInteractor: ShareDataTabVIPERRUsecase {}

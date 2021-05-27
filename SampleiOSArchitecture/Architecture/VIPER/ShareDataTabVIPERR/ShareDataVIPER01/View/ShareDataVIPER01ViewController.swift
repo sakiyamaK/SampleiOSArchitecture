@@ -5,20 +5,19 @@
 //  Created by  on 2021/5/27.
 //
 
-import UIKit
-import RxSwift
 import RxCocoa
 import RxOptional
+import RxSwift
+import UIKit
 
 protocol ShareDataVIPER01View: AnyObject {
-  var itemsSubject: PublishSubject<[User]> { get }
+  var itemsRelay: PublishRelay<[User]> { get }
 }
 
 final class ShareDataVIPER01ViewController: UIViewController, ShareDataVIPER01View {
-
   deinit { DLog() }
 
-  @IBOutlet private weak var collectionView: UICollectionView! {
+  @IBOutlet private var collectionView: UICollectionView! {
     didSet {
       collectionView.collectionViewLayout = layout
       collectionView.register(UserCollectionViewCell.nib, forCellWithReuseIdentifier: UserCollectionViewCell.reuseIdentifier)
@@ -40,7 +39,7 @@ final class ShareDataVIPER01ViewController: UIViewController, ShareDataVIPER01Vi
     // グループサイズの横幅をコレクションビューの横幅と同じ、高さを44にる
     let groupSize = NSCollectionLayoutSize(
       widthDimension: .fractionalWidth(1.0),
-      heightDimension: .absolute(100)
+      heightDimension: .absolute(300)
     )
     // グループの水平設定に大きさとアイテムの種類を登録する
     let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
@@ -53,7 +52,7 @@ final class ShareDataVIPER01ViewController: UIViewController, ShareDataVIPER01Vi
     return layout
   }
 
-  let itemsSubject: PublishSubject<[User]> = .init()
+  let itemsRelay: PublishRelay<[User]> = .init()
 
   static func makeFromStoryboard() -> ShareDataVIPER01ViewController {
     let vc = UIStoryboard.loadShareDataVIPER01()
@@ -74,16 +73,15 @@ final class ShareDataVIPER01ViewController: UIViewController, ShareDataVIPER01Vi
 }
 
 private extension ShareDataVIPER01ViewController {
-
   func setup() {
     view.backgroundColor = .systemRed
     let buttonItem = UIBarButtonItem(title: "次へ", style: .done, target: self, action: #selector(tapBarButton(_:)))
-    self.navigationItem.rightBarButtonItems = [buttonItem]
+    navigationItem.rightBarButtonItems = [buttonItem]
   }
 
   func bind() {
     let disposes: [Disposable] = [
-      itemsSubject.bind(to: Binder(self) {(vc, _) in
+      itemsRelay.bind(to: Binder(self) { vc, _ in
         vc.collectionView.reloadData()
       })
     ]
@@ -107,13 +105,14 @@ extension ShareDataVIPER01ViewController: UICollectionViewDelegate {
 
 extension ShareDataVIPER01ViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return presenter.items.count
+    presenter.items.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCollectionViewCell.reuseIdentifier, for: indexPath) as? UserCollectionViewCell,
-      let item = presenter.items[safe: indexPath.item] else {
+      let item = presenter.items[safe: indexPath.item]
+    else {
       fatalError()
     }
     cell.configure(user: item)
