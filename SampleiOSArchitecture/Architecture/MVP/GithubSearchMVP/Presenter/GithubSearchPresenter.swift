@@ -7,7 +7,7 @@
 
 import Foundation
 
-//入力に関するprotocol
+// 入力に関するprotocol
 protocol GithubSearchPresenterInput {
   var numberOfItems: Int { get }
   func item(index: Int) -> GithubModel
@@ -15,7 +15,7 @@ protocol GithubSearchPresenterInput {
   func didSelect(index: Int)
 }
 
-//出力に関するprotocol
+// 出力に関するprotocol
 protocol GithubSearchPresenterOutput: AnyObject {
   func update(loading: Bool)
   func update(githubModels: [GithubModel])
@@ -24,21 +24,20 @@ protocol GithubSearchPresenterOutput: AnyObject {
 }
 
 final class GithubSearchPresenter {
-
   private weak var output: GithubSearchPresenterOutput!
   private var api: GithubAPIProtocol!
-  //状態をここで持ってる
+  // 状態をここで持ってる
   private var githubModels: [GithubModel]
 
-  //このoutputがViewControllerのこと
+  // このoutputがViewControllerのこと
   init(output: GithubSearchPresenterOutput, api: GithubAPIProtocol = GithubAPI.shared) {
     self.output = output
     self.api = api
-    self.githubModels = []
+    githubModels = []
   }
 }
 
-//PresenterはInputのprotocolに準拠する
+// PresenterはInputのprotocolに準拠する
 extension GithubSearchPresenter: GithubSearchPresenterInput {
   var numberOfItems: Int { githubModels.count }
 
@@ -50,20 +49,20 @@ extension GithubSearchPresenter: GithubSearchPresenterInput {
 
   func search(parameters: GithubSearchParameters) {
     guard parameters.validation else { return }
-    //output(つまりVC側に何をするか任せる)
+    // output(つまりVC側に何をするか任せる)
     output.update(loading: true)
-    //presenterがやることはapiを叩くのみ
-    self.api.get(parameters: parameters) {[weak self] (result) in
-      //output(つまりVC側に何をするか任せる)
+    // presenterがやることはapiを叩くのみ
+    api.get(parameters: parameters) { [weak self] result in
+      // output(つまりVC側に何をするか任せる)
       self?.output.update(loading: false)
       switch result {
-      case .success(let githubModels):
-        //状態を保持
+      case let .success(githubModels):
+        // 状態を保持
         self?.githubModels = githubModels
-        //output(つまりVC側に何をするか任せる)
+        // output(つまりVC側に何をするか任せる)
         self?.output.update(githubModels: githubModels)
-      case .failure(let error):
-        //output(つまりVC側に何をするか任せる)
+      case let .failure(error):
+        // output(つまりVC側に何をするか任せる)
         self?.output.get(error: error)
       }
     }

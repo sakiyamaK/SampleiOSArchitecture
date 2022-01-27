@@ -9,16 +9,16 @@
 import UIKit
 
 final class GithubSearchMVC01ViewController: UIViewController {
+  @IBOutlet private var indicator: UIActivityIndicatorView!
+  @IBOutlet private var urlTextField: UITextField!
 
-  @IBOutlet private weak var indicator: UIActivityIndicatorView!
-  @IBOutlet private weak var urlTextField: UITextField!
-
-  @IBOutlet private weak var tableView: UITableView! {
+  @IBOutlet private var tableView: UITableView! {
     didSet {
       tableView.register(GithubTableViewCell.nib, forCellReuseIdentifier: GithubTableViewCell.reuseIdentifier)
     }
   }
-  @IBOutlet private weak var searchButton: UIButton! {
+
+  @IBOutlet private var searchButton: UIButton! {
     didSet {
       searchButton.addTarget(self, action: #selector(tapSearchButton(_:)), for: .touchUpInside)
     }
@@ -31,35 +31,37 @@ final class GithubSearchMVC01ViewController: UIViewController {
     indicator.isHidden = true
     tableView.isHidden = true
   }
+}
 
-  @objc func tapSearchButton(_ button: UIButton) {
+@objc private extension GithubSearchMVC01ViewController {
+  func tapSearchButton(_ button: UIButton) {
     guard
       let searchWord = urlTextField.text, searchWord.count > 0
     else { return }
-    //リロード
-    self.reload(searchWord: searchWord)
+    // リロード
+    reload(searchWord: searchWord)
   }
 }
 
 private extension GithubSearchMVC01ViewController {
-  //APIを叩いてテーブルをリロードするメソッド
+  // APIを叩いてテーブルをリロードするメソッド
   func reload(searchWord: String) {
     tableView.isHidden = true
     indicator.isHidden = false
-    let parameters = GithubSearchParameters.init(searchWord: searchWord)
-    GithubAPI.shared.get(parameters: parameters) {[weak self] (result) in
+    let parameters = GithubSearchParameters(searchWord: searchWord)
+    GithubAPI.shared.get(parameters: parameters) { [weak self] result in
       DispatchQueue.main.async {
         switch result {
-        case .success(let models):
-          //APIからのデータを保存
+        case let .success(models):
+          // APIからのデータを保存
           self?.githubModels = models
 
           self?.tableView.isHidden = false
           self?.indicator.isHidden = true
-          //テーブルのリロード
+          // テーブルのリロード
           self?.tableView.reloadData()
 
-        case .failure(let error):
+        case let .failure(error):
           print(error.localizedDescription)
         }
       }

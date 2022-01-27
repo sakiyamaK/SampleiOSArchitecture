@@ -17,12 +17,12 @@ struct GithubSearchParameters {
   }
 
   enum Sort: String {
-    case stars
+    case star
   }
 
   let searchWord: String?
   private var _searchWord: String { searchWord ?? "" }
-  let sort: Sort = .stars
+  let sort: Sort = .star
   let order: Order = .asc
   let perPage: Int = 100
   let page: Int = 0

@@ -7,31 +7,25 @@
 
 import UIKit
 
-//Viewに関すること以外は何も書かない
-//ifやforといった「制御」が入ることがないはず
+// Viewに関すること以外は何も書かない
+// ifやforといった「制御」が入ることがないはず
 final class GithubSearchMVPViewController: UIViewController {
+  @IBOutlet private var indicator: UIActivityIndicatorView!
+  @IBOutlet private var urlTextField: UITextField!
 
-  @IBOutlet private weak var indicator: UIActivityIndicatorView!
-  @IBOutlet private weak var urlTextField: UITextField!
-
-  @IBOutlet private weak var tableView: UITableView! {
+  @IBOutlet private var tableView: UITableView! {
     didSet {
       tableView.register(GithubTableViewCell.nib, forCellReuseIdentifier: GithubTableViewCell.reuseIdentifier)
     }
   }
-  @IBOutlet private weak var searchButton: UIButton! {
+
+  @IBOutlet private var searchButton: UIButton! {
     didSet {
       searchButton.addTarget(self, action: #selector(tapSearchButton(_:)), for: .touchUpInside)
     }
   }
 
-  @objc private func tapSearchButton(_ button: UIButton) {
-    //何をするかはpresenterに任せる
-    let parameters = GithubSearchParameters.init(searchWord: urlTextField.text)
-    self.presenter.search(parameters: parameters)
-  }
-
-  //VCのインスタンス作成後にPresenterInputProtocolに準拠するもの(ここではGithubSearchPresenter)を登録する
+  // VCのインスタンス作成後にPresenterInputProtocolに準拠するもの(ここではGithubSearchPresenter)を登録する
   private var presenter: GithubSearchPresenterInput!
   func inject(presenter: GithubSearchPresenterInput) {
     self.presenter = presenter
@@ -39,12 +33,20 @@ final class GithubSearchMVPViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.tableView.isHidden = true
-    self.indicator.isHidden = true
+    tableView.isHidden = true
+    indicator.isHidden = true
   }
 }
 
-//presenterから送られてくる通知ごとに何をするか記載
+@objc private extension GithubSearchMVPViewController {
+  func tapSearchButton(_ button: UIButton) {
+    // 何をするかはpresenterに任せる
+    let parameters = GithubSearchParameters(searchWord: urlTextField.text)
+    presenter.search(parameters: parameters)
+  }
+}
+
+// presenterから送られてくる通知ごとに何をするか記載
 extension GithubSearchMVPViewController: GithubSearchPresenterOutput {
   func update(loading: Bool) {
     DispatchQueue.main.async {

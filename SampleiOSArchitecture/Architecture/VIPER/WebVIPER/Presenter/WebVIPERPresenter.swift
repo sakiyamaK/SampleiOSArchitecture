@@ -20,7 +20,7 @@ final class WebVIPERPresenter {
     view: WebVIPERView,
     interactor: WebVIPERUsecase,
     router: WebVIPERWireframe
-    ) {
+  ) {
     self.view = view
     self.interactor = interactor
     self.router = router
@@ -28,9 +28,8 @@ final class WebVIPERPresenter {
 }
 
 extension WebVIPERPresenter: WebVIPERPresentation {
-
   func viewDidLoad() {
     guard let url = URL(string: interactor.getInitParameters().entity.urlStr) else { return }
-    self.view?.fetch(url: url)
+    view?.fetch(url: url)
   }
 }
