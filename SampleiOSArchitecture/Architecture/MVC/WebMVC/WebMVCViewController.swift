@@ -9,8 +9,7 @@ import UIKit
 import WebKit
 
 final class WebMVCViewController: UIViewController {
-
-  @IBOutlet private weak var webView: WKWebView!
+  @IBOutlet private var webView: WKWebView!
 
   private var initUrlStr: String?
 

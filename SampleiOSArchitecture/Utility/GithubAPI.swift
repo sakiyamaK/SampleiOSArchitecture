@@ -37,8 +37,10 @@ struct GithubSearchParameters {
 }
 
 protocol GithubAPIProtocol: AnyObject {
-  func get(parameters: GithubSearchParameters,
-           completion: ((Result<[GithubModel], GithubError>) -> Void)?)
+  func get(
+    parameters: GithubSearchParameters,
+    completion: ((Result<[GithubModel], GithubError>) -> Void)?
+  )
 }
 
 final class GithubAPI: GithubAPIProtocol {
@@ -46,9 +48,10 @@ final class GithubAPI: GithubAPIProtocol {
 
   private init() {}
 
-  func get(parameters: GithubSearchParameters,
-           completion: ((Result<[GithubModel], GithubError>) -> Void)? = nil)
-  {
+  func get(
+    parameters: GithubSearchParameters,
+    completion: ((Result<[GithubModel], GithubError>) -> Void)? = nil
+  ) {
     guard parameters.validation else {
       completion?(.failure(.error))
       return

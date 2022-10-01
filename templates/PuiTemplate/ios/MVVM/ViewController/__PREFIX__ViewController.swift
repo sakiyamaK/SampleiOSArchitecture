@@ -5,12 +5,11 @@
 //  Created by __USERNAME__ on __YEAR__/__MONTH__/__DAY__.
 //
 
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 final class __PREFIX__ViewController: UIViewController {
-
   private var viewModel: __PREFIX__ViewModel!
   private let disposeBag = DisposeBag()
 

@@ -28,6 +28,5 @@ final class __PREFIX__Presenter {
 }
 
 extension __PREFIX__Presenter: __PREFIX__Presentation {
-  func viewDidLoad() {
-  }
+  func viewDidLoad() {}
 }

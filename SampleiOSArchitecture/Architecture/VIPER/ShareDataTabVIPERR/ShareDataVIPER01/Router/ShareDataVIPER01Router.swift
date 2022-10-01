@@ -45,6 +45,6 @@ extension ShareDataVIPER01Router: ShareDataVIPER01Wireframe {
 
 extension UIStoryboard {
   static func loadShareDataVIPER01() -> ShareDataVIPER01ViewController {
-    UIStoryboard(name: "ShareDataVIPER01", bundle: nil).instantiateInitialViewController() as! ShareDataVIPER01ViewController 
+    UIStoryboard(name: "ShareDataVIPER01", bundle: nil).instantiateInitialViewController() as! ShareDataVIPER01ViewController
   }
 }

@@ -7,13 +7,10 @@
 
 import Foundation
 
-protocol __PREFIX__Usecase {
-}
+protocol __PREFIX__Usecase {}
 
 final class __PREFIX__Interactor {
-  init() {
-  }
+  init() {}
 }
 
-extension __PREFIX__Interactor: __PREFIX__Usecase {
-}
+extension __PREFIX__Interactor: __PREFIX__Usecase {}

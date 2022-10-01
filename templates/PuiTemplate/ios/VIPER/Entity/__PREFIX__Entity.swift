@@ -7,5 +7,4 @@
 
 import Foundation
 
-struct __PREFIX__Entity: Decodable {
-}
+struct __PREFIX__Entity: Decodable {}

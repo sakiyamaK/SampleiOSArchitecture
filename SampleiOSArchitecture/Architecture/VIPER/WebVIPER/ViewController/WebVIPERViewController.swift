@@ -13,8 +13,7 @@ protocol WebVIPERView: AnyObject {
 }
 
 final class WebVIPERViewController: UIViewController {
-
-  @IBOutlet private weak var WebVIPERView: WKWebView!
+  @IBOutlet private var WebVIPERView: WKWebView!
 
   private var presenter: WebVIPERPresentation!
   func inject(presenter: WebVIPERPresentation) {
@@ -29,6 +28,6 @@ final class WebVIPERViewController: UIViewController {
 
 extension WebVIPERViewController: WebVIPERView {
   func fetch(url: URL) {
-    self.WebVIPERView.load(URLRequest(url: url))
+    WebVIPERView.load(URLRequest(url: url))
   }
 }

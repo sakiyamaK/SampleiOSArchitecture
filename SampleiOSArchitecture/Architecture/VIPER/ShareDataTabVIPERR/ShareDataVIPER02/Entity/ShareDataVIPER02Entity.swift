@@ -7,4 +7,4 @@
 
 import Foundation
 
-struct ShareDataVIPER02Entity: Decodable { }
+struct ShareDataVIPER02Entity: Decodable {}

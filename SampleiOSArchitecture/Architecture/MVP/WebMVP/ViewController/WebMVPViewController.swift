@@ -9,11 +9,10 @@ import UIKit
 import WebKit
 
 final class WebMVPViewController: UIViewController {
-
   private var presenter: WebMVPPresenterInput!
 
-  @IBOutlet private weak var webView: WKWebView!
-
+  @IBOutlet private var webView: WKWebView!
+    
   func inject(presenter: WebMVPPresenterInput) {
     self.presenter = presenter
   }
@@ -26,6 +25,6 @@ final class WebMVPViewController: UIViewController {
 
 extension WebMVPViewController: WebMVPPresenterOutput {
   func load(request: URLRequest) {
-    self.webView.load(request)
+    webView.load(request)
   }
 }

@@ -7,8 +7,7 @@
 
 import UIKit
 
-protocol __PREFIX__Wireframe: AnyObject {
-}
+protocol __PREFIX__Wireframe: AnyObject {}
 
 final class __PREFIX__Router {
   private unowned let viewController: UIViewController
@@ -33,11 +32,10 @@ final class __PREFIX__Router {
   }
 }
 
-extension __PREFIX__Router: __PREFIX__Wireframe {
-}
+extension __PREFIX__Router: __PREFIX__Wireframe {}
 
 extension UIStoryboard {
   static func load__PREFIX__() -> __PREFIX__ViewController {
-    UIStoryboard(name: "__PREFIX__", bundle: nil).instantiateInitialViewController() as! __PREFIX__ViewController 
+    UIStoryboard(name: "__PREFIX__", bundle: nil).instantiateInitialViewController() as! __PREFIX__ViewController
   }
 }

@@ -7,8 +7,7 @@
 
 import UIKit
 
-protocol ShareDataVIPER02Wireframe: AnyObject {
-}
+protocol ShareDataVIPER02Wireframe: AnyObject {}
 
 final class ShareDataVIPER02Router {
   private unowned let viewController: UIViewController
@@ -35,11 +34,10 @@ final class ShareDataVIPER02Router {
   }
 }
 
-extension ShareDataVIPER02Router: ShareDataVIPER02Wireframe {
-}
+extension ShareDataVIPER02Router: ShareDataVIPER02Wireframe {}
 
 extension UIStoryboard {
   static func loadShareDataVIPER02() -> ShareDataVIPER02ViewController {
-    UIStoryboard(name: "ShareDataVIPER02", bundle: nil).instantiateInitialViewController() as! ShareDataVIPER02ViewController 
+    UIStoryboard(name: "ShareDataVIPER02", bundle: nil).instantiateInitialViewController() as! ShareDataVIPER02ViewController
   }
 }

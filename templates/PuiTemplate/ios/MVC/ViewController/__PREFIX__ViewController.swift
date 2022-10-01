@@ -7,5 +7,4 @@
 
 import UIKit
 
-final class __PREFIX__ViewController: UIViewController {
-}
+final class __PREFIX__ViewController: UIViewController {}

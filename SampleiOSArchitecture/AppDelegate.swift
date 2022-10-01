@@ -7,6 +7,24 @@
 
 import UIKit
 
+final class TestGithubSearchPresenterOutput: GithubSearchPresenterOutput {
+  func update(loading: Bool) {
+    print(loading)
+  }
+
+  func update(githubModels: [GithubModel]) {
+    print(githubModels)
+  }
+
+  func get(error: Error) {
+    print(error)
+  }
+
+  func showWeb(githubModel: GithubModel) {
+    print(githubModel)
+  }
+}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?

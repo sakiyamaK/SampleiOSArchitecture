@@ -1,17 +1,12 @@
-import RxSwift
 import RxCocoa
-
+import RxSwift
 
 final class __PREFIX__ViewModel {
+  struct Input {}
 
-  struct Input {
-  }
-
-  struct Dependency {
-  }
+  struct Dependency {}
 
   private let disposeBag = DisposeBag()
 
-  init(input: Input, dependency: Dependency) {
-  }
+  init(input: Input, dependency: Dependency) {}
 }

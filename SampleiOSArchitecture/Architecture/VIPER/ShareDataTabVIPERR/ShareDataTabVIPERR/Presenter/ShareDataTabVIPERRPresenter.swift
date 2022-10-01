@@ -28,6 +28,5 @@ final class ShareDataTabVIPERRPresenter {
 }
 
 extension ShareDataTabVIPERRPresenter: ShareDataTabVIPERRPresentation {
-  func viewWillAppear() {
-  }
+  func viewWillAppear() {}
 }

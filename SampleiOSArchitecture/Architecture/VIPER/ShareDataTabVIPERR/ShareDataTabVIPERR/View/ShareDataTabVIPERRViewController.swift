@@ -7,11 +7,9 @@
 
 import UIKit
 
-protocol ShareDataTabVIPERRView: AnyObject {
-}
+protocol ShareDataTabVIPERRView: AnyObject {}
 
 final class ShareDataTabVIPERRViewController: UITabBarController {
-
   static func make() -> ShareDataTabVIPERRViewController {
     let vc = ShareDataTabVIPERRViewController()
     return vc
@@ -24,18 +22,16 @@ final class ShareDataTabVIPERRViewController: UITabBarController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    self.navigationController?.setNavigationBarHidden(true, animated: false)
+    navigationController?.setNavigationBarHidden(true, animated: false)
     presenter.viewWillAppear()
   }
 
   override func viewDidDisappear(_ animated: Bool) {
-    self.navigationController?.setNavigationBarHidden(false, animated: false)
+    navigationController?.setNavigationBarHidden(false, animated: false)
     super.viewDidDisappear(animated)
   }
 }
 
-extension ShareDataTabVIPERRViewController: UITabBarControllerDelegate {
-}
+extension ShareDataTabVIPERRViewController: UITabBarControllerDelegate {}
 
-extension ShareDataTabVIPERRViewController: ShareDataTabVIPERRView {
-}
+extension ShareDataTabVIPERRViewController: ShareDataTabVIPERRView {}

@@ -7,8 +7,7 @@
 
 import UIKit
 
-protocol ShareDataTabVIPERRWireframe: AnyObject {
-}
+protocol ShareDataTabVIPERRWireframe: AnyObject {}
 
 final class ShareDataTabVIPERRRouter {
   private unowned let tabBarController: UITabBarController
@@ -44,5 +43,4 @@ final class ShareDataTabVIPERRRouter {
   }
 }
 
-extension ShareDataTabVIPERRRouter: ShareDataTabVIPERRWireframe {
-}
+extension ShareDataTabVIPERRRouter: ShareDataTabVIPERRWireframe {}

@@ -16,7 +16,6 @@ protocol WebVIPERUsecase {
 }
 
 final class WebVIPERInteractor {
-
   private var initParameters: WebVIPERUsecaseInitParameters!
 
   init(initParameters: WebVIPERUsecaseInitParameters) {
@@ -25,5 +24,5 @@ final class WebVIPERInteractor {
 }
 
 extension WebVIPERInteractor: WebVIPERUsecase {
-  func getInitParameters() -> WebVIPERUsecaseInitParameters { self.initParameters }
+  func getInitParameters() -> WebVIPERUsecaseInitParameters { initParameters }
 }
