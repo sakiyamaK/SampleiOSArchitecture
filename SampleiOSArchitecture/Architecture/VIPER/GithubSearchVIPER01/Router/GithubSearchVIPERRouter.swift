@@ -30,7 +30,7 @@ final class GithubSearchVIPERRouter {
     // 他の部品と繋ぐ必要がない
     let interactor = GithubSearchVIPERInteractor()
 
-    // UIKitの画面遷移の仕組み上,viewを知らないと次の画面に遷移できないためRouterと繋ぐ
+//        // UIKitの画面遷移の仕組み上,viewを知らないと次の画面に遷移できないためRouterと繋ぐ
     let router = GithubSearchVIPERRouter(viewController: view)
 
     // presenterが中継役なので全部と繋がる
@@ -52,7 +52,10 @@ final class GithubSearchVIPERRouter {
 extension GithubSearchVIPERRouter: GithubSearchVIPERWireframe {
   func showAlert(error: Error) {
     // アラート画面のRouterを呼ぶ
-    print(error.localizedDescription)
+    let alert = UIAlertController(title: "error", message: error.localizedDescription, preferredStyle: .alert)
+    let button = UIAlertAction(title: "OK", style: .default)
+    alert.addAction(button)
+    viewController.present(alert, animated: true)
   }
 
   func showWeb(initParameters: WebVIPERUsecaseInitParameters) {

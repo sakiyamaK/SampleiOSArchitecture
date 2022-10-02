@@ -12,7 +12,7 @@ final class WebMVPViewController: UIViewController {
   private var presenter: WebMVPPresenterInput!
 
   @IBOutlet private var webView: WKWebView!
-    
+
   func inject(presenter: WebMVPPresenterInput) {
     self.presenter = presenter
   }

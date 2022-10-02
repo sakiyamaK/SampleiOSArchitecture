@@ -61,5 +61,7 @@ extension GithubSearchVIPERPresenter: GithubSearchVIPERPresentation {
     router.showWeb(initParameters: initParameters)
   }
 
-  func getSearchedItems() -> [GithubSearchVIPEREntity] { interactor.getSearchedItems() }
+  func getSearchedItems() -> [GithubSearchVIPEREntity] {
+    interactor.getSearchedItems()
+  }
 }

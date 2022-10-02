@@ -7,8 +7,8 @@
 //
 
 import RxCocoa
-import RxSwift
 import RxOptional
+import RxSwift
 import UIKit
 
 final class GithubSearchMVVM01ViewController: UIViewController {
@@ -24,9 +24,9 @@ final class GithubSearchMVVM01ViewController: UIViewController {
 
   // セルを選択したときに送るストリーム
   // 本来はこんな変数用意したくないが、delegateまみれのUIKitとRxSwiftがどうも相性よく書けない...
-  private let didSelectRelay: PublishRelay<Int> = .init()    
+  private let didSelectRelay: PublishRelay<Int> = .init()
   private var viewModel: GithubSearchMVVM01ViewModel!
-    
+
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.isHidden = true
@@ -45,7 +45,7 @@ private extension GithubSearchMVVM01ViewController {
     viewModel.updateGithubModelsObservable.bind(to: Binder(self) { vc, _ in
       vc.tableView.reloadData()
     })
-    .disposed(by: rx.disposeBag)
+      .disposed(by: rx.disposeBag)
 
     viewModel.loadingObservable
       .debug()
