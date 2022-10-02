@@ -32,32 +32,32 @@ final class GithubSearchMVVM01ViewModel: GithubSearchMVVM01ViewModelOutput, HasD
     // 出力側の定型文的な書き方
     private let _loading: PublishRelay<Bool> = .init()
     lazy var loadingObservable: Observable<Bool> = _loading.asObservable()
-    
+
     private let _updateGithubModels: BehaviorRelay<[GithubModel]> = .init(value: [])
     lazy var updateGithubModelsObservable = _updateGithubModels.asObservable()
-    
+
     private let _selectGithubModel: PublishRelay<GithubModel> = .init()
     lazy var selectGithubModelObservable: Observable<GithubModel> = _selectGithubModel.asObservable()
-    
+
     private(set) var githubModels: [GithubModel]
-    
+
     // 初期化時にストリームを決める
     init(input: GithubSearchMVVM01ViewModelInput, api: GithubAPIProtocol = GithubAPI.shared) {
         githubModels = []
-        
+
         input.didSelectObservable
             .filter { $0 < self.githubModels.count - 1 }
             .map { self.githubModels[$0] }
             .bind(to: _selectGithubModel).disposed(by: disposeBag)
-        
+
         let searchTextObservable = input.searchTextObservable
             .filterNil()
             .filter { $0.count > 0 }
             .distinctUntilChanged()
-        
+
         // loadingをtrueにする
         searchTextObservable.map { _ in true }.bind(to: _loading).disposed(by: disposeBag)
-        
+
         searchTextObservable
             .map { GithubSearchParameters(searchWord: $0) }
             .flatMapLatest { parameters -> Observable<[GithubModel]> in

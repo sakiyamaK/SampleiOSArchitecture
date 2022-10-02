@@ -12,25 +12,25 @@ import UIKit
 final class GithubSearchMVPViewController: UIViewController {
     @IBOutlet private var indicator: UIActivityIndicatorView!
     @IBOutlet private var urlTextField: UITextField!
-    
+
     @IBOutlet private var tableView: UITableView! {
         didSet {
             tableView.register(GithubTableViewCell.nib, forCellReuseIdentifier: GithubTableViewCell.reuseIdentifier)
         }
     }
-    
+
     @IBOutlet private var searchButton: UIButton! {
         didSet {
             searchButton.addTarget(self, action: #selector(tapSearchButton(_:)), for: .touchUpInside)
         }
     }
-    
+
     // VCのインスタンス作成後にPresenterInputProtocolに準拠するもの(ここではGithubSearchPresenter)を登録する
     private var presenter: GithubSearchPresenterInput!
     func inject(presenter: GithubSearchPresenterInput) {
         self.presenter = presenter
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.isHidden = true
@@ -54,19 +54,19 @@ extension GithubSearchMVPViewController: GithubSearchPresenterOutput {
             self.indicator.isHidden = !loading
         }
     }
-    
+
     func update(githubModels: [GithubModel]) {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
-    
+
     func get(error: Error) {
         DispatchQueue.main.async {
             print(error.localizedDescription)
         }
     }
-    
+
     func showWeb(githubModel: GithubModel) {
         DispatchQueue.main.async {
             Router.showWebMVP(from: self, githubModel: githubModel)
@@ -85,7 +85,7 @@ extension GithubSearchMVPViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.numberOfItems
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GithubTableViewCell.reuseIdentifier, for: indexPath) as! GithubTableViewCell
         let githubModel = presenter.item(index: indexPath.item)
