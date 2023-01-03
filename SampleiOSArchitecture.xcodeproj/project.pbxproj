@@ -959,7 +959,6 @@
 			buildConfigurationList = 9A3829F26B9EF09595695E67 /* Build configuration list for PBXNativeTarget "SampleiOSArchitecture" */;
 			buildPhases = (
 				E33641B90F1B0F528C6487EF /* [CP] Check Pods Manifest.lock */,
-				D2DB8CF9A09930BDDFD86CE0 /* Run Script(Swiftformat) */,
 				05237B8A32C07C40008BA0F3 /* Run Script(SwiftLint) */,
 				EED9B316F1E18CA731C459E9 /* Sources */,
 				8F3B412F0C3D476D1EA6C33A /* Resources */,
@@ -1051,7 +1050,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: Mintがインストールされていません。こちらからダウンロードしてください https://github.com/yonaskolb/Mint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint --autocorrect\nelse\n  echo \"warning: Mintがインストールされていません。こちらからダウンロードしてください https://github.com/yonaskolb/Mint\"\nfi\n";
 		};
 		86D08DB6D74B6556A9B86776 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1069,24 +1068,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		D2DB8CF9A09930BDDFD86CE0 /* Run Script(Swiftformat) */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script(Swiftformat)";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which mint >/dev/null; then\n  git diff --name-only | grep .swift | while read filename; do\n    mint run swiftformat \"$filename\" --swiftversion 5\n  done\nelse\n  echo \"warning: Mintがインストールされていません。こちらからダウンロードしてください https://github.com/yonaskolb/Mint\"\nfi\n";
 		};
 		E33641B90F1B0F528C6487EF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

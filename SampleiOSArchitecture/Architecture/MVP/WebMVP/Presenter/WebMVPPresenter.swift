@@ -1,26 +1,26 @@
 import Foundation
 
 protocol WebMVPPresenterInput {
-  func viewDidLoad()
+    func viewDidLoad()
 }
 
 protocol WebMVPPresenterOutput: AnyObject {
-  func load(request: URLRequest)
+    func load(request: URLRequest)
 }
 
 final class WebMVPPresenter {
-  private weak var output: WebMVPPresenterOutput!
-  private var githubModel: GithubModel
+    private weak var output: WebMVPPresenterOutput!
+    private var githubModel: GithubModel
 
-  init(output: WebMVPPresenterOutput, githubModel: GithubModel) {
-    self.output = output
-    self.githubModel = githubModel
-  }
+    init(output: WebMVPPresenterOutput, githubModel: GithubModel) {
+        self.output = output
+        self.githubModel = githubModel
+    }
 }
 
 extension WebMVPPresenter: WebMVPPresenterInput {
-  func viewDidLoad() {
-    guard let url = URL(string: githubModel.urlStr) else { return }
-    output.load(request: URLRequest(url: url))
-  }
+    func viewDidLoad() {
+        guard let url = URL(string: githubModel.urlStr) else { return }
+        output.load(request: URLRequest(url: url))
+    }
 }

@@ -36,7 +36,7 @@ final class GithubSearchMVC01ViewController: UIViewController {
 @objc private extension GithubSearchMVC01ViewController {
   func tapSearchButton(_ button: UIButton) {
     guard
-      let searchWord = urlTextField.text, searchWord.count > 0
+      let searchWord = urlTextField.text, !searchWord.isEmpty
     else { return }
     // リロード
     reload(searchWord: searchWord)

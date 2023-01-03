@@ -10,16 +10,16 @@ import UIKit
 // Viewに関すること以外は何も書かない
 // ifやforといった「制御」が入ることがないはず
 final class GithubSearchMVPViewController: UIViewController {
-    @IBOutlet private var indicator: UIActivityIndicatorView!
-    @IBOutlet private var urlTextField: UITextField!
+    @IBOutlet private weak var indicator: UIActivityIndicatorView!
+    @IBOutlet private weak var urlTextField: UITextField!
 
-    @IBOutlet private var tableView: UITableView! {
+    @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.register(GithubTableViewCell.nib, forCellReuseIdentifier: GithubTableViewCell.reuseIdentifier)
         }
     }
 
-    @IBOutlet private var searchButton: UIButton! {
+    @IBOutlet private weak var searchButton: UIButton! {
         didSet {
             searchButton.addTarget(self, action: #selector(tapSearchButton(_:)), for: .touchUpInside)
         }
