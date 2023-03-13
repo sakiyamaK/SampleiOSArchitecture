@@ -8,7 +8,7 @@
 import UIKit
 
 final class GithubTableViewCell: UITableViewCell {
-  @IBOutlet var titleLabel: UILabel!
+  @IBOutlet private var titleLabel: UILabel!
   @IBOutlet private var urlLabel: UILabel!
 
   func configure(githubModel: GithubModel) {
