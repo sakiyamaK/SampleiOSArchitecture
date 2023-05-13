@@ -1,5 +1,5 @@
 //
-//  GithubSearchVIPER02Store.swift
+//  GithubSearchVIPER99Store.swift
 //  SampleiOSArchitecture
 //
 //  Created by sakiyamaK on 2021/04/17.
@@ -8,13 +8,15 @@
 import Combine
 import UIKit
 
-final class GithubSearchVIPER02ViewHelper: ObservableObject {
+typealias GithubSearchVIPER99View = GithubSearchVIPER01View
+
+final class GithubSearchVIPER99ViewHelper: ObservableObject {
   @Published var loading: Bool = false
-  @Published var items: [GithubSearchVIPER02Entity] = []
+  @Published var items: [GithubSearchVIPER99Entity] = []
   @Published var word: String = ""
 
-  private var presenter: GithubSearchVIPER02Presentation!
-  func inject(presenter: GithubSearchVIPER02Presentation) {
+  private var presenter: GithubSearchVIPER99Presentation!
+  func inject(presenter: GithubSearchVIPER99Presentation) {
     self.presenter = presenter
   }
 
@@ -27,7 +29,7 @@ final class GithubSearchVIPER02ViewHelper: ObservableObject {
   }
 }
 
-extension GithubSearchVIPER02ViewHelper: GithubSearchVIPERView {
+extension GithubSearchVIPER99ViewHelper: GithubSearchVIPER99View {
   func initView() {}
 
   func startLoading() {
@@ -42,7 +44,7 @@ extension GithubSearchVIPER02ViewHelper: GithubSearchVIPERView {
     }
   }
 
-  func reloadTable(items: [GithubSearchVIPEREntity]) {
+  func reloadTable(items: [GithubSearchVIPER99Entity]) {
     DispatchQueue.main.async {
       self.items = items
     }

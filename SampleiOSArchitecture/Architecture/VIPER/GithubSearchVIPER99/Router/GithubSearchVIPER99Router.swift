@@ -1,5 +1,5 @@
 //
-//  GithubSearchVIPER02Router.swift
+//  GithubSearchVIPER99Router.swift
 //  SampleiOSArchitecture
 //
 //  Created by  on 2021/4/17.
@@ -8,7 +8,9 @@
 import SwiftUI
 import UIKit
 
-final class GithubSearchVIPER02Router {
+typealias GithubSearchVIPER99Wireframe = GithubSearchVIPER01Wireframe
+
+final class GithubSearchVIPER99Router {
   private unowned let viewController: UIViewController
 
   init(viewController: UIViewController) {
@@ -16,13 +18,13 @@ final class GithubSearchVIPER02Router {
   }
 
   // SwiftUIとUIKitのどちらにも対応できるようにするための処理
-  private static func assembleModulesShare() -> (GithubSearchVIPER02View, UIViewController) {
-    let interactor = GithubSearchVIPER02Interactor()
-    let viewHelper = GithubSearchVIPER02ViewHelper()
-    let view = GithubSearchVIPER02View(viewHelper: viewHelper)
+  private static func assembleModulesShare() -> (some View, UIViewController) {
+    let interactor = GithubSearchVIPER99Interactor()
+    let viewHelper = GithubSearchVIPER99ViewHelper()
+    let view = GithubSearchVIPER99ViewSwiftUI(viewHelper: viewHelper)
     let viewController = UIHostingController(rootView: view)
-    let router = GithubSearchVIPER02Router(viewController: viewController)
-    let presenter = GithubSearchVIPER02Presenter(
+    let router = GithubSearchVIPER99Router(viewController: viewController)
+    let presenter = GithubSearchVIPER99Presenter(
       view: viewHelper,
       interactor: interactor,
       router: router
@@ -33,16 +35,16 @@ final class GithubSearchVIPER02Router {
 
   // SwiftUI用
   static func assembleModules() -> some View {
-    GithubSearchVIPER02Router.assembleModulesShare().0
+    GithubSearchVIPER99Router.assembleModulesShare().0
   }
 
   // UIKit用
   static func assembleModulesUIKit() -> UIViewController {
-    GithubSearchVIPER02Router.assembleModulesShare().1
+    GithubSearchVIPER99Router.assembleModulesShare().1
   }
 }
 
-extension GithubSearchVIPER02Router: GithubSearchVIPERWireframe {
+extension GithubSearchVIPER99Router: GithubSearchVIPER99Wireframe {
   func showAlert(error: Error) {
     print(error.localizedDescription)
   }

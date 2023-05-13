@@ -1,5 +1,5 @@
 //
-//  GithubSearchVIPER02.swift
+//  GithubSearchVIPER99.swift
 //  SampleiOSArchitecture
 //
 //  Created by sakiyamaK on 2021/04/17.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct GithubSearchVIPER02View: View {
-  @ObservedObject var viewHelper: GithubSearchVIPER02ViewHelper
+struct GithubSearchVIPER99ViewSwiftUI: View {
+  @ObservedObject var viewHelper: GithubSearchVIPER99ViewHelper
 
   var body: some View {
     VStack {
@@ -24,13 +24,13 @@ struct GithubSearchVIPER02View: View {
       .padding(.init(top: 8, leading: 16, bottom: 8, trailing: 16))
       if viewHelper.loading {
         ActivityIndicatorView(isAnimating: .constant(true), style: .medium)
-      } else if !viewHelper.items.isEmpty {
+      } else if !$viewHelper.items.isEmpty {
         ScrollView {
           ForEach(Array(viewHelper.items.enumerated()), id: \.offset) { offset, element in
             Button(action: {
               viewHelper.tapCell(indexPath: IndexPath(item: offset, section: 0))
             }, label: {
-              GithubSearchVIPER02Cell(githubModel: element)
+              GithubSearchVIPER99Cell(githubModel: element)
             })
           }
         }
@@ -42,8 +42,8 @@ struct GithubSearchVIPER02View: View {
   }
 }
 
-struct GithubSearchVIPER02View_Previews: PreviewProvider {
+struct GithubSearchVIPER99View_Previews: PreviewProvider {
   static var previews: some View {
-    return GithubSearchVIPER02Router.assembleModules()
+    return GithubSearchVIPER99Router.assembleModules()
   }
 }

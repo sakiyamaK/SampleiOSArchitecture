@@ -1,5 +1,5 @@
 //
-//  GithubSearchVIPERRouter.swift
+//  GithubSearchVIPER01Router.swift
 //  SampleiOSArchitecture
 //
 //  Created by  on 2021/2/24.
@@ -8,12 +8,12 @@
 import UIKit
 
 // protocolを必ず用意
-protocol GithubSearchVIPERWireframe: AnyObject {
+protocol GithubSearchVIPER01Wireframe: AnyObject {
   func showWeb(initParameters: WebVIPERUsecaseInitParameters)
   func showAlert(error: Error)
 }
 
-final class GithubSearchVIPERRouter {
+final class GithubSearchVIPER01Router {
   private unowned let viewController: UIViewController
 
   private init(viewController: UIViewController) {
@@ -25,16 +25,16 @@ final class GithubSearchVIPERRouter {
   // View-Interactor-Presenter-Entity-Routerのどこに書いてもいいが
   // VIPERの設計上Routerが遷移を管理しているのでここに書いている
   static func assembleModules() -> UIViewController {
-    let view = UIStoryboard.githubSearchVIPERViewController
+    let view = UIStoryboard.GithubSearchVIPER01ViewController
 
     // 他の部品と繋ぐ必要がない
-    let interactor = GithubSearchVIPERInteractor()
+    let interactor = GithubSearchVIPER01Interactor()
 
 //        // UIKitの画面遷移の仕組み上,viewを知らないと次の画面に遷移できないためRouterと繋ぐ
-    let router = GithubSearchVIPERRouter(viewController: view)
+    let router = GithubSearchVIPER01Router(viewController: view)
 
     // presenterが中継役なので全部と繋がる
-    let presenter = GithubSearchVIPERPresenter(
+    let presenter = GithubSearchVIPER01Presenter(
       view: view,
       interactor: interactor,
       router: router
@@ -49,7 +49,7 @@ final class GithubSearchVIPERRouter {
 }
 
 // 用意したprotocolに準拠させる
-extension GithubSearchVIPERRouter: GithubSearchVIPERWireframe {
+extension GithubSearchVIPER01Router: GithubSearchVIPER01Wireframe {
   func showAlert(error: Error) {
     // アラート画面のRouterを呼ぶ
     let alert = UIAlertController(title: "error", message: error.localizedDescription, preferredStyle: .alert)
@@ -66,7 +66,7 @@ extension GithubSearchVIPERRouter: GithubSearchVIPERWireframe {
 
 // VIPERは個別にRouterの設定があるためここでUIStoryboardのextensionも用意してる
 extension UIStoryboard {
-  static var githubSearchVIPERViewController: GithubSearchVIPERViewController {
-    UIStoryboard(name: "GithubSearchVIPER", bundle: nil).instantiateInitialViewController() as! GithubSearchVIPERViewController
+  static var GithubSearchVIPER01ViewController: GithubSearchVIPER01ViewController {
+    UIStoryboard(name: "GithubSearchVIPER01", bundle: nil).instantiateInitialViewController() as! GithubSearchVIPER01ViewController
   }
 }
