@@ -1,5 +1,5 @@
 //
-//  GithubSearchVIPER02Cell.swift
+//  GithubSearchVIPER99Cell.swift
 //  SampleiOSArchitecture
 //
 //  Created by sakiyamaK on 2021/04/17.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GithubSearchVIPER02Cell: View {
+struct GithubSearchVIPER99Cell: View {
   var githubModel: GithubModel
 
   var body: some View {
@@ -24,9 +24,9 @@ struct GithubSearchVIPER02Cell: View {
   }
 }
 
-struct GithubSearchVIPER02Cell_Previews: PreviewProvider {
+struct GithubSearchVIPER99Cell_Previews: PreviewProvider {
   static var previews: some View {
-    GithubSearchVIPER02Cell(githubModel: GithubModel.testData)
+    GithubSearchVIPER99Cell(githubModel: GithubModel.testData)
       .previewLayout(.fixed(width: 500, height: 100.0))
   }
 }

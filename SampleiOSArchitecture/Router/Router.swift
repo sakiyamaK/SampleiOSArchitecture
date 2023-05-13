@@ -73,12 +73,20 @@ extension Router {
 // 本来はこんな書き方しないが起動時にVIPERの記述になっていないためしかたなく
 // 逆にいうとこうして他のアーキテクチャからVIPERに切り替えることもできる
 extension Router {
-    static func showVIPER(from: UIViewController) {
-        from.show(next: GithubSearchVIPERRouter.assembleModules())
+    static func showVIPER01(from: UIViewController) {
+        from.show(next: GithubSearchVIPER01Router.assembleModules())
     }
 
-    static func showVIPER02(from: UIViewController) {
-        from.show(next: GithubSearchVIPER02Router.assembleModulesUIKit())
+    static func showVIPER02(from: UIViewController, depedency: GithubSearchVIPER02Interactor.Dependency) {
+        from.show(next: GithubSearchVIPER02Router.assembleModules(dependency: depedency))
+    }
+
+    static func showVIPER03(from: UIViewController, dependencies: GithubSearchVIPER03Router.Dependencies) {
+        from.show(next: GithubSearchVIPER03Router.assembleModules(dependencies: dependencies))
+    }
+
+    static func showVIPER99(from: UIViewController) {
+        from.show(next: GithubSearchVIPER99Router.assembleModulesUIKit())
     }
 
     static func showShareDataVIPER(from: UIViewController) {

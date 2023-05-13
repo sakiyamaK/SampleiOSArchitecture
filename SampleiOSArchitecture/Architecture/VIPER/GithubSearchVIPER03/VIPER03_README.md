@@ -1,0 +1,15 @@
+# 複数のinteractorをとりれたVIPER
+
+## アプリとしての機能
+githubのapiとqiitaのapiを叩いてセルとして画面に表示
+
+
+## メリット
+複数のinteractorに分かれているのでそれぞれのファイルが肥大化することがない
+さらに処理が増えても、その処理に対応したinteractorを用意すればいいのでMainInteractor以外の既存のinteractorに修正がいらない
+GihtubInteractorやQiitaInteractorは処理がデータ取得だけなので別の画面でも利用しやすい
+GihtubInteractorやQiitaInteractorは似通っているためテストコードやバグがあった時の改修も共通処理でやれる
+MainInteractorは状態を保持して処理をするだけなので通信周りやエラーハンドリングなどはいらない
+
+Viewはレイアウトに関することだけが変更されてロジックは無関係
+ > 今回の場合だとレイアウトすらほぼ変わらないため、GithubSearchVIPER02ViewControllerとかとソースがほぼ同じ

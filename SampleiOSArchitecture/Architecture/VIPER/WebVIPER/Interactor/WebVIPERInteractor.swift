@@ -7,22 +7,21 @@
 
 import Foundation
 
-struct WebVIPERUsecaseInitParameters {
-  var entity: GithubSearchVIPEREntity
-}
-
 protocol WebVIPERUsecase {
-  func getInitParameters() -> WebVIPERUsecaseInitParameters
+    var url: URL? { get }
 }
 
 final class WebVIPERInteractor {
-  private var initParameters: WebVIPERUsecaseInitParameters!
+    struct Dependency {
+        var entity: WebVIPEREntity
+    }
 
-  init(initParameters: WebVIPERUsecaseInitParameters) {
-    self.initParameters = initParameters
-  }
+    let dependency: Dependency!
+    init(dependency: Dependency) {
+        self.dependency = dependency
+    }
 }
 
 extension WebVIPERInteractor: WebVIPERUsecase {
-  func getInitParameters() -> WebVIPERUsecaseInitParameters { initParameters }
+    var url: URL? { dependency.entity.url }
 }

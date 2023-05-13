@@ -8,28 +8,28 @@
 import Foundation
 
 protocol WebVIPERPresentation: AnyObject {
-  func viewDidLoad()
+    func viewDidLoad()
 }
 
 final class WebVIPERPresenter {
-  private weak var view: WebVIPERView?
-  private let router: WebVIPERWireframe
-  private let interactor: WebVIPERUsecase
+    private weak var view: WebVIPERView?
+    private let router: WebVIPERWireframe
+    private let interactor: WebVIPERUsecase
 
-  init(
-    view: WebVIPERView,
-    interactor: WebVIPERUsecase,
-    router: WebVIPERWireframe
-  ) {
-    self.view = view
-    self.interactor = interactor
-    self.router = router
-  }
+    init(
+        view: WebVIPERView,
+        interactor: WebVIPERUsecase,
+        router: WebVIPERWireframe
+    ) {
+        self.view = view
+        self.interactor = interactor
+        self.router = router
+    }
 }
 
 extension WebVIPERPresenter: WebVIPERPresentation {
-  func viewDidLoad() {
-    guard let url = URL(string: interactor.getInitParameters().entity.urlStr) else { return }
-    view?.fetch(url: url)
-  }
+    func viewDidLoad() {
+        guard let url = interactor.url else { return }
+        view?.fetch(url: url)
+    }
 }

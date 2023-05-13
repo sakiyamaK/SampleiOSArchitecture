@@ -8,41 +8,41 @@
 import UIKit
 
 protocol WebVIPERWireframe: AnyObject {
-  func showAlert(error: Error)
+    func showAlert(error: Error)
 }
 
 final class WebVIPERRouter {
-  private unowned let viewController: UIViewController
+    private unowned let viewController: UIViewController
 
-  private init(viewController: UIViewController) {
-    self.viewController = viewController
-  }
+    private init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
 
-  static func assembleModules(initParameters: WebVIPERUsecaseInitParameters) -> UIViewController {
-    let view = UIStoryboard.webVIPERViewController
-    let interactor = WebVIPERInteractor(initParameters: initParameters)
-    let router = WebVIPERRouter(viewController: view)
-    let presenter = WebVIPERPresenter(
-      view: view,
-      interactor: interactor,
-      router: router
-    )
+    static func assembleModules(dependency: WebVIPERInteractor.Dependency) -> UIViewController {
+        let view = UIStoryboard.webVIPERViewController
+        let interactor = WebVIPERInteractor(dependency: dependency)
+        let router = WebVIPERRouter(viewController: view)
+        let presenter = WebVIPERPresenter(
+            view: view,
+            interactor: interactor,
+            router: router
+        )
 
-    view.inject(presenter: presenter)
+        view.inject(presenter: presenter)
 
-    return view
-  }
+        return view
+    }
 }
 
 extension WebVIPERRouter: WebVIPERWireframe {
-  func showAlert(error: Error) {
-    // アラート画面のRouterを呼ぶ
-    print(error.localizedDescription)
-  }
+    func showAlert(error: Error) {
+        // アラート画面のRouterを呼ぶ
+        print(error.localizedDescription)
+    }
 }
 
 extension UIStoryboard {
-  static var webVIPERViewController: WebVIPERViewController {
-    return UIStoryboard(name: "WebVIPER", bundle: nil).instantiateInitialViewController() as! WebVIPERViewController
-  }
+    static var webVIPERViewController: WebVIPERViewController {
+        return UIStoryboard(name: "WebVIPER", bundle: nil).instantiateInitialViewController() as! WebVIPERViewController
+    }
 }

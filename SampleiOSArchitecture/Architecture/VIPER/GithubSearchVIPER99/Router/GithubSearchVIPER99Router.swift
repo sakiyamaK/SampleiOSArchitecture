@@ -49,8 +49,8 @@ extension GithubSearchVIPER99Router: GithubSearchVIPER99Wireframe {
     print(error.localizedDescription)
   }
 
-  func showWeb(initParameters: WebVIPERUsecaseInitParameters) {
-    let next = WebVIPERRouter.assembleModules(initParameters: initParameters)
+  func showWeb(dependency: WebVIPERInteractor.Dependency) {
+    let next = WebVIPERRouter.assembleModules(dependency: dependency)
     viewController.show(next: next)
   }
 }
