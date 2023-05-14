@@ -56,7 +56,6 @@ extension GithubSearchVIPER03Presenter: GithubSearchVIPER03Presentation {
 
         // 同時にふたつのAPIを叩く
 
-
         // ローディングの状態を更新する
         view?.startLoading()
         mainInteractor.setGithub(loading: true)
@@ -80,7 +79,7 @@ extension GithubSearchVIPER03Presenter: GithubSearchVIPER03Presentation {
             }
         }
 
-        //qiitaInteractorでapiを叩く
+        // qiitaInteractorでapiを叩く
         qiitaInteractor.get(parameters: QiitaSearchParameters(searchWord: word)) { [weak self] result in
             guard let self = self else { return }
 
