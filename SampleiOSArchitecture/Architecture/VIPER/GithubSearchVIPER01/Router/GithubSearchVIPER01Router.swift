@@ -25,8 +25,9 @@ final class GithubSearchVIPER01Router {
     // View-Interactor-Presenter-Entity-Routerのどこに書いてもいいが
     // VIPERの設計上Routerが遷移を管理しているのでここに書いている
     static func assembleModules() -> UIViewController {
-        let view = UIStoryboard.GithubSearchVIPER01ViewController
 
+        let view = UIStoryboard.githubSearchVIPER01ViewController
+        
         // 他の部品と繋ぐ必要がない
         let interactor = GithubSearchVIPER01Interactor()
 
@@ -66,7 +67,7 @@ extension GithubSearchVIPER01Router: GithubSearchVIPER01Wireframe {
 
 // VIPERは個別にRouterの設定があるためここでUIStoryboardのextensionも用意してる
 extension UIStoryboard {
-    static var GithubSearchVIPER01ViewController: GithubSearchVIPER01ViewController {
+    static var githubSearchVIPER01ViewController: GithubSearchVIPER01ViewController {
         UIStoryboard(name: "GithubSearchVIPER01", bundle: nil).instantiateInitialViewController() as! GithubSearchVIPER01ViewController
     }
 }

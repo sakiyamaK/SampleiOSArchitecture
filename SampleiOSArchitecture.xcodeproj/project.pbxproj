@@ -796,10 +796,10 @@
 			isa = PBXGroup;
 			children = (
 				B67C2FE62A0F5EC7008DD0C9 /* Entity */,
-				B67C2FE82A0F5EC7008DD0C9 /* Presenter */,
-				B67C2FEA2A0F5EC7008DD0C9 /* ViewController */,
 				B67C2FED2A0F5EC7008DD0C9 /* Interactor */,
+				B67C2FE82A0F5EC7008DD0C9 /* Presenter */,
 				B67C2FEF2A0F5EC7008DD0C9 /* Router */,
+				B67C2FEA2A0F5EC7008DD0C9 /* ViewController */,
 				B67C2FF72A0F5EE0008DD0C9 /* VIPER02_README.md */,
 			);
 			path = GithubSearchVIPER02;

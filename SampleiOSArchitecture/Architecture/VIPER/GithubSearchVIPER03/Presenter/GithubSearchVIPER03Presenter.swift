@@ -7,7 +7,6 @@
 
 import Foundation
 
-import Foundation
 
 protocol GithubSearchVIPER03Presentation: AnyObject {
     func viewDidLoad()
@@ -58,6 +57,7 @@ extension GithubSearchVIPER03Presenter: GithubSearchVIPER03Presentation {
 
         // ローディングの状態を更新する
         view?.startLoading()
+        
         mainInteractor.setGithub(loading: true)
         mainInteractor.setQiita(loading: true)
 
