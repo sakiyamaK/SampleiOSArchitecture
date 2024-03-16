@@ -8,20 +8,20 @@
 import Foundation
 
 protocol WebVIPERUsecase {
-    var url: URL? { get }
+  var url: URL? { get }
 }
 
 final class WebVIPERInteractor {
-    struct Dependency {
-        var entity: WebVIPEREntity
-    }
+  struct Dependency {
+    var entity: WebVIPEREntity
+  }
 
-    let dependency: Dependency!
-    init(dependency: Dependency) {
-        self.dependency = dependency
-    }
+  let dependency: Dependency!
+  init(dependency: Dependency) {
+    self.dependency = dependency
+  }
 }
 
 extension WebVIPERInteractor: WebVIPERUsecase {
-    var url: URL? { dependency.entity.url }
+  var url: URL? { dependency.entity.url }
 }

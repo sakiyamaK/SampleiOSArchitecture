@@ -8,5 +8,6 @@ target 'SampleiOSArchitecture' do
   pod 'RxCocoa'
   pod 'NSObject+Rx'
   pod 'RxOptional'
+  pod 'Action'
 
 end

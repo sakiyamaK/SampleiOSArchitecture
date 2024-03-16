@@ -3,24 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A85F77497044EDA17D347E5 /* GithubSearchVIPER99Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DE0612EB833FD54E6CA63 /* GithubSearchVIPER99Entity.swift */; };
+		087D422A0059573156714C59 /* GithubSearchVIPER02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC7AE70883B1E31CAE0B48C /* GithubSearchVIPER02ViewController.swift */; };
+		0A85F77497044EDA17D347E5 /* GithubSearchVIPER02Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DE0612EB833FD54E6CA63 /* GithubSearchVIPER02Entity.swift */; };
 		0AFA79DD68C2D5A177D03569 /* GithubSearchMVVM01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C249C6164C11801FC93949 /* GithubSearchMVVM01ViewController.swift */; };
+		0CFFD3CC0B9A63857428D5E0 /* GithubSearchVIPER03GithubInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E0B3890E3B806953BFC63 /* GithubSearchVIPER03GithubInteractor.swift */; };
 		0E8B294514CA4AC64B64720B /* WebVIPER.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F18264CB63E228BFCC4D646 /* WebVIPER.storyboard */; };
 		10179DDD9A905A12004FCAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E69CE9ABE02873CAF26464 /* Assets.xcassets */; };
-		14144DBCD82783F2720A494E /* GithubSearchVIPER01.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31440491620CA04F93A54AB4 /* GithubSearchVIPER01.storyboard */; };
+		12163841C311E34B448A1FFD /* GithubSearchVIPER03Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23556B172230F8BA43BFF9C1 /* GithubSearchVIPER03Presenter.swift */; };
 		19D0098E260D83A105837447 /* ShareDataVIPER03Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0371D88276779CDD474405 /* ShareDataVIPER03Presenter.swift */; };
-		2771E90FBC1C3CAFE6AA88FE /* GithubSearchVIPER99ViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D4AF66DFDCC5F63ACF23E2 /* GithubSearchVIPER99ViewSwiftUI.swift */; };
+		1A2D59BDAD4EBBB376D2FC1D /* GithubSearchVIPER03Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDE31BD545D05BAAE32B99A /* GithubSearchVIPER03Entity.swift */; };
+		26A31ACC41B84EF58914E55C /* GithubSearchVIPER01Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C348717499482D41F50776A6 /* GithubSearchVIPER01Router.swift */; };
 		2BFBB12E2994A8E72DB2486A /* ShareDataTabVIPERREntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95431F7D4398175DE032E880 /* ShareDataTabVIPERREntity.swift */; };
+		2C87FFB013BA363FB06BBD8D /* GithubSearchVIPER03.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C3E768A38E87ABD63447A08 /* GithubSearchVIPER03.storyboard */; };
 		2F18C55B099369226C83EA6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B8F3310AD4859FE5B068AC /* AppDelegate.swift */; };
+		325893937AFC1742BDA6C4E9 /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CFAF1E0D650358ED197E8 /* ShareData.swift */; };
 		36A53B81B1835166A9AA36E6 /* GithubSearchMVVM02ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F6742FC2E01B47FE3F3E51 /* GithubSearchMVVM02ViewModel.swift */; };
 		3BCA5DD7DBDB66F58593094F /* ShareDataTabVIPERRPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7300056E18CC0127EBF588 /* ShareDataTabVIPERRPresenter.swift */; };
 		3C1A252346944B88E0CAE31B /* WebVIPERRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAE9CB4D7FD9184F597EDD /* WebVIPERRouter.swift */; };
 		3F4BE5035549FC981C0AF5BE /* GithubSearchMVVM02.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4851FC2E74B2C50CD3C436 /* GithubSearchMVVM02.storyboard */; };
-		3FBB7B61B57FAEA914204463 /* GithubSearchVIPER01Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA351F5B16942B1C651F91A /* GithubSearchVIPER01Interactor.swift */; };
+		3F7E4C181A5ECFC79BDCBA5B /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AFCF42014157D7E182FCCE /* UserCollectionViewCell.xib */; };
 		3FE4DBE5D06B1311CE9A5CD7 /* ShareDataVIPER02.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C2E1E40D56C50C2F358067 /* ShareDataVIPER02.storyboard */; };
 		40AD6C420A723E302FFF36B1 /* ShareDataVIPER03Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BF6FB6DC8B928FF439108 /* ShareDataVIPER03Interactor.swift */; };
 		40FB13CE23633FB52712C5F4 /* GithubAPI+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA0DB5228893E68337D368F /* GithubAPI+Rx.swift */; };
@@ -29,117 +34,126 @@
 		48823EC50616A2171A619450 /* GithubSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C5557D0AD80F7A139B2C7 /* GithubSearchPresenter.swift */; };
 		49EAD13368A31040F060812A /* ShareDataVIPER01Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD2617EF5DBB6F2C07DBD3D /* ShareDataVIPER01Presenter.swift */; };
 		4A8A7B0EEC25F4F0167D880A /* ShareDataVIPER02Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504678937FFF879917495DD /* ShareDataVIPER02Presenter.swift */; };
+		4B3BC4E99D2A372A8CB0C9D9 /* GithubSearchVIPER99Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DE26F9E8EB1A757537B0D /* GithubSearchVIPER99Interactor.swift */; };
 		4CB0526A515EBEE22155140E /* WebVIPERInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84B4B429D116EE69E19D51 /* WebVIPERInteractor.swift */; };
 		4F71771932D0485D88CD78E2 /* WebMVPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C749505C3DE8C408AA3BC /* WebMVPPresenter.swift */; };
 		5144642C300FCDA3FA843105 /* WebVIPERViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA90EC6237DA793A81B4593A /* WebVIPERViewController.swift */; };
+		534F4E1DE12D69F78D0DE5A1 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685FE89D33A43D438B86B38C /* UICollectionViewCell+.swift */; };
 		56E302E6E7926ABDD4A83371 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503D5CD97E6ED8D1B745F08 /* UIViewController+.swift */; };
 		58C547CFFC111DB26AEA30AD /* GithubSearchMVVM01.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD4411685020BFC35F6E2A6 /* GithubSearchMVVM01.storyboard */; };
 		5E2A265DC52C26E5619A1894 /* WebVIPERPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABA7831038E1E3F9C1D9219 /* WebVIPERPresenter.swift */; };
+		5E9CDBAF3BD5847D418073B9 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB699F01A9D51B2AC5EA37E /* UserCollectionViewCell.swift */; };
 		6020C33F5F3DDCA7162CD056 /* ShareDataVIPER02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7930678E6064746ACE11DC29 /* ShareDataVIPER02ViewController.swift */; };
 		61B550EE374E53DCC573A835 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D9EC1931114F903F39C91D9B /* CombineCocoa */; };
+		623AA7167D83B1A05D1CA2A2 /* GithubSearchVIPER03Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CCE08AA10718301CAA250D /* GithubSearchVIPER03Router.swift */; };
 		65216A06CF6FDDA4D24370E1 /* ShareDataVIPER03Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB60D06A38981522A150C6A /* ShareDataVIPER03Router.swift */; };
+		66FE7202DFD26DE262CF6C3B /* VIPER01_README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8951190ABB968BC18FD17694 /* VIPER01_README.md */; };
+		6A3F33B4328B3AA067A553CC /* Pods_SampleiOSArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2926D83781D7E37D2F4E6F7F /* Pods_SampleiOSArchitecture.framework */; };
 		6DE5EBEF50445F1993C0F40A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC27F8796DC7465898E0B /* RootViewController.swift */; };
-		735B006AD3400C301F203703 /* GithubSearchVIPER99Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3463FE1E8113ECE133B233 /* GithubSearchVIPER99Router.swift */; };
-		78ED581507447DF9956D98B0 /* GithubSearchVIPER99Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7407A6B6B4FC76E8DFDC196 /* GithubSearchVIPER99Interactor.swift */; };
-		7A16EFB1CD043B8D2DDC4332 /* GithubSearchVIPER99ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909C25806B743E778C2C9F06 /* GithubSearchVIPER99ViewHelper.swift */; };
+		735B006AD3400C301F203703 /* GithubSearchVIPER02Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3463FE1E8113ECE133B233 /* GithubSearchVIPER02Router.swift */; };
+		78ED581507447DF9956D98B0 /* GithubSearchVIPER02Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7407A6B6B4FC76E8DFDC196 /* GithubSearchVIPER02Interactor.swift */; };
 		7ABEBC71C9BDAA9F749DD426 /* WebMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DE20B517E3D994E3F25131 /* WebMVCViewController.swift */; };
+		7DCC32BEABE53B4317CB2F3E /* GithubSearchVIPER99ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22250BFF2484B292F14F74B4 /* GithubSearchVIPER99ViewHelper.swift */; };
 		7F14959253A6A8BF5D0D81B7 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC9430E69C2223D89C48ED5 /* GithubAPI.swift */; };
 		81A2D8E03B9E0CEBCDC822A5 /* GithubSearchMVVM03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D3EA4791EE8C3F0527797D /* GithubSearchMVVM03ViewController.swift */; };
 		81ACE1DCC8F96413D351AE68 /* GithubAPI+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0289AFF4EAE38DB49B337A7 /* GithubAPI+Combine.swift */; };
 		81C45D100EAEC0E4ABDC21F6 /* ShareDataVIPER01Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD0657A64130B288C82B4C /* ShareDataVIPER01Entity.swift */; };
+		8253CBF44EF5E490FECCEBEA /* QiitaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C7A2C4FD4EB02F8CFA7FA /* QiitaModel.swift */; };
 		8588E593C791BA4B5C43EA20 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D74AC0216B041100AB3392 /* Router.swift */; };
 		86979ABA382D6043B36097BA /* GithubSearchMVC01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6402AE953E386D7B4AC3C /* GithubSearchMVC01ViewController.swift */; };
 		88345FB759263F69D1B39D27 /* WebMVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8D7BB0E64F75104C81911 /* WebMVVMViewModel.swift */; };
 		883A92B88B21758A72B6AB71 /* GithubSearchMVVM02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F637902A03BE659C5CCCF8 /* GithubSearchMVVM02ViewController.swift */; };
 		89B109945A4A245A6D119997 /* WebMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB8D0AB85E479072BC904E5 /* WebMVVMViewController.swift */; };
 		8A0263DF7E946ADF00F3E1BD /* GithubSearchMVVM03.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68FD8FA3C181985715749E2 /* GithubSearchMVVM03.storyboard */; };
+		8BF9519881C21E9133DEB3E7 /* VIPER02_README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5B75F2C384080540D2773650 /* VIPER02_README.md */; };
 		8C381A52B29884C7CFAC3DAC /* GithubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23623BA69CC1F37ABF060A4 /* GithubTableViewCell.xib */; };
 		8F6ABDA05CE731F4749A6CA6 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F898868ADA66618BC5B716 /* UITableViewCell+.swift */; };
+		90C5AA1001FDEA261061BC62 /* GithubSearchVIPER03QiitaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A6B049D003745A5A53D913 /* GithubSearchVIPER03QiitaInteractor.swift */; };
 		90F145AB7406B47DB5E2B770 /* GithubSearchMVPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228D82B2C1131DEB2681ED18 /* GithubSearchMVPViewController.swift */; };
+		94306553030F4DBD2539D76A /* GithubSearchVIPER03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B489BD4B8E306423F5F883 /* GithubSearchVIPER03ViewController.swift */; };
 		94DDBEEB2B108871706E33A6 /* GithubSearchMVC01.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF1AC4B4EE8D9EE4282B6C0 /* GithubSearchMVC01.storyboard */; };
 		95209C9F97620D1729E91F7D /* GithubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D3089DC71B7A75E014B9B7 /* GithubModel.swift */; };
 		969BE4F20BD3067F387B1EE5 /* WebMVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB4A6AB3B0932BE0018EBA1 /* WebMVC.storyboard */; };
 		9863472F1C4FB4745C27DE3E /* ShareDataVIPER01Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90CB143DC008DD8E53291A /* ShareDataVIPER01Router.swift */; };
-		9FD2455B0AA3A3D2BF16B734 /* GithubSearchVIPER01Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C216BED43AA4F75F88DC9 /* GithubSearchVIPER01Presenter.swift */; };
 		A4B31609D4E9CE8F53034E86 /* WebMVPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B87DAFF25C31793A297D15 /* WebMVPViewController.swift */; };
+		A4F1E5DE962685578C4430C5 /* VIPER03_README.md in Resources */ = {isa = PBXBuildFile; fileRef = DEF30C1A366B3548BBBC369C /* VIPER03_README.md */; };
+		A96A396810AEB0F255F43EC7 /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406D186D46FF0A7259FBB7AB /* Collection+.swift */; };
 		ABFC89C45FA6B29E3EAF9500 /* ShareDataVIPER01.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 760224F2867626C6B1EEC0DE /* ShareDataVIPER01.storyboard */; };
 		ACC2581E42672622106F08ED /* ShareDataVIPER02Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FDDC44F512F1F1D1488F8D /* ShareDataVIPER02Interactor.swift */; };
+		B03C8C33F3F01147019ED26D /* GithubSearchVIPER99ViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF577DFA97E28C814B1FBA1B /* GithubSearchVIPER99ViewSwiftUI.swift */; };
 		B051DD45BB3C83B4FD357843 /* GithubSearchVIPER02Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F680246188D473815F4C2F6 /* GithubSearchVIPER02Cell.swift */; };
 		B32067C919E7D882AE748991 /* ShareDataTabVIPERRInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9654CBB530EE8285B175B /* ShareDataTabVIPERRInteractor.swift */; };
-		B67BE552265EB4610009FC89 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BE551265EB4610009FC89 /* UserCollectionViewCell.swift */; };
-		B67BE555265EB48F0009FC89 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B67BE554265EB48F0009FC89 /* UserCollectionViewCell.xib */; };
-		B67BE557265EB5CF0009FC89 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BE556265EB5CF0009FC89 /* UICollectionViewCell+.swift */; };
-		B67BE559265F4C040009FC89 /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BE558265F4C040009FC89 /* Collection+.swift */; };
-		B67BE55B265F6BE30009FC89 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BE55A265F6BE30009FC89 /* DebugLog.swift */; };
-		B67BE55E265FE7EC0009FC89 /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BE55D265FE7EC0009FC89 /* ShareData.swift */; };
-		B67C2FE42A0F54CD008DD0C9 /* VIPER01_README.md in Resources */ = {isa = PBXBuildFile; fileRef = B67C2FE32A0F54CD008DD0C9 /* VIPER01_README.md */; };
-		B67C2FF12A0F5EC7008DD0C9 /* GithubSearchVIPER02Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C2FE72A0F5EC7008DD0C9 /* GithubSearchVIPER02Entity.swift */; };
-		B67C2FF22A0F5EC7008DD0C9 /* GithubSearchVIPER02Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C2FE92A0F5EC7008DD0C9 /* GithubSearchVIPER02Presenter.swift */; };
-		B67C2FF32A0F5EC7008DD0C9 /* GithubSearchVIPER02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C2FEB2A0F5EC7008DD0C9 /* GithubSearchVIPER02ViewController.swift */; };
-		B67C2FF42A0F5EC7008DD0C9 /* GithubSearchVIPER02.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67C2FEC2A0F5EC7008DD0C9 /* GithubSearchVIPER02.storyboard */; };
-		B67C2FF52A0F5EC7008DD0C9 /* GithubSearchVIPER02Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C2FEE2A0F5EC7008DD0C9 /* GithubSearchVIPER02Interactor.swift */; };
-		B67C2FF62A0F5EC7008DD0C9 /* GithubSearchVIPER02Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C2FF02A0F5EC7008DD0C9 /* GithubSearchVIPER02Router.swift */; };
-		B67C2FF82A0F5EE0008DD0C9 /* VIPER02_README.md in Resources */ = {isa = PBXBuildFile; fileRef = B67C2FF72A0F5EE0008DD0C9 /* VIPER02_README.md */; };
-		B67C30052A0F6A14008DD0C9 /* GithubSearchVIPER03Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C2FFB2A0F6A13008DD0C9 /* GithubSearchVIPER03Entity.swift */; };
-		B67C30062A0F6A14008DD0C9 /* GithubSearchVIPER03Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C2FFD2A0F6A13008DD0C9 /* GithubSearchVIPER03Presenter.swift */; };
-		B67C30072A0F6A14008DD0C9 /* GithubSearchVIPER03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C2FFF2A0F6A13008DD0C9 /* GithubSearchVIPER03ViewController.swift */; };
-		B67C30082A0F6A14008DD0C9 /* GithubSearchVIPER03.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67C30002A0F6A13008DD0C9 /* GithubSearchVIPER03.storyboard */; };
-		B67C30092A0F6A14008DD0C9 /* GithubSearchVIPER03GithubInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C30022A0F6A13008DD0C9 /* GithubSearchVIPER03GithubInteractor.swift */; };
-		B67C300A2A0F6A14008DD0C9 /* GithubSearchVIPER03Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C30042A0F6A13008DD0C9 /* GithubSearchVIPER03Router.swift */; };
-		B67C300C2A0F6CC0008DD0C9 /* VIPER03_README.md in Resources */ = {isa = PBXBuildFile; fileRef = B67C300B2A0F6CC0008DD0C9 /* VIPER03_README.md */; };
-		B67C300E2A0F6DEE008DD0C9 /* QiitaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C300D2A0F6DEE008DD0C9 /* QiitaModel.swift */; };
-		B67C30112A0F6ECF008DD0C9 /* GithubSearchVIPER03QiitaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C300F2A0F6ECF008DD0C9 /* GithubSearchVIPER03QiitaInteractor.swift */; };
-		B67C30122A0F6ECF008DD0C9 /* GithubSearchVIPER03Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C30102A0F6ECF008DD0C9 /* GithubSearchVIPER03Interactor.swift */; };
-		B67C30152A0F81A6008DD0C9 /* WebVIPEREntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C30142A0F81A6008DD0C9 /* WebVIPEREntity.swift */; };
+		B6EBA9D2BF3FFFBE47AD7077 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D545F67FFCA997D98C7CA /* DebugLog.swift */; };
 		B938353A6730A30698AC7D5A /* ShareDataVIPER03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED9B6992C7A133D207B06E /* ShareDataVIPER03ViewController.swift */; };
 		B9B3C9D4EB4452F852BC091D /* ShareDataTabVIPERRRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A9C21B2C8CB2DDBB976B2 /* ShareDataTabVIPERRRouter.swift */; };
-		BE769FFB88C98D2636DF3B55 /* GithubSearchVIPER01Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274A59D112CCC39F185AC55 /* GithubSearchVIPER01Router.swift */; };
+		BAD6812BF8097CB0B29066D6 /* GithubSearchVIPER99Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7577E37611B8F67D5FF825 /* GithubSearchVIPER99Entity.swift */; };
 		BF0B2981F917210EAA253351 /* ShareDataVIPER01Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D5F137B81755A3038584C1 /* ShareDataVIPER01Interactor.swift */; };
 		C21CD42E661F7A98865B512F /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60F857C0276E53F5EEB879F /* ActivityIndicatorView.swift */; };
-		C21FC22B0A2F739932B31B1B /* GithubSearchVIPER99Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E6A183044C6BF9938E209 /* GithubSearchVIPER99Presenter.swift */; };
+		C21FC22B0A2F739932B31B1B /* GithubSearchVIPER02Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E6A183044C6BF9938E209 /* GithubSearchVIPER02Presenter.swift */; };
 		C26C32C7EA835CB45AA6D366 /* WebMVVM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3904DDF40A0F720597C114F /* WebMVVM.storyboard */; };
-		C31DD572D9E26739FD592C0D /* Pods_SampleiOSArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D54151E41C706247F53DE99 /* Pods_SampleiOSArchitecture.framework */; };
 		C3D353C59C917C744B536E9D /* GithubSearchMVVM03ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3F7FF80ADEC7C6EB11A3D /* GithubSearchMVVM03ViewModel.swift */; };
-		C4E5A65EA2BF63125BD9314B /* GithubSearchVIPER01Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5058FB3315C8BD81D6DCA2EA /* GithubSearchVIPER01Entity.swift */; };
+		C4AE65D3545E35F99C99194F /* WebVIPEREntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA0E4B11144E91FE31E4D54 /* WebVIPEREntity.swift */; };
 		C82A73B119FB6A1EE8AE5A40 /* ShareDataVIPER03Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADDD1D140B65186BDB5CE /* ShareDataVIPER03Entity.swift */; };
+		C97442FD4E08E96CE4F04756 /* GithubSearchVIPER01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E8111E008936B8CB1D0F95 /* GithubSearchVIPER01ViewController.swift */; };
+		CDDB7633D3DBCCADD06BAAAB /* GithubSearchVIPER01Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C660FA9209EC4E7FEFA2788 /* GithubSearchVIPER01Interactor.swift */; };
 		CF4F29BFCFF7922964D05DDA /* ShareDataTabVIPERRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06180697E13969D347F37252 /* ShareDataTabVIPERRViewController.swift */; };
+		D1113298F3057A3D08C4C54D /* GithubSearchVIPER01Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D786CBA614E86EC4BB563F3 /* GithubSearchVIPER01Entity.swift */; };
+		D156CC3AD01D56088B60CCED /* GithubSearchVIPER99Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC9DEFC182EDA2DE2AD5D0 /* GithubSearchVIPER99Router.swift */; };
 		D39536E0264ED61990C58FF1 /* GithubSearchMVP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393E01127790472157B259AA /* GithubSearchMVP.storyboard */; };
+		D4B56464FB2B9A3583E41C23 /* GithubSearchVIPER01.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7E00057FBCEE91D504F23D /* GithubSearchVIPER01.storyboard */; };
+		D613BC2804A0A0E59D7E8F69 /* GithubSearchVIPER01Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC50DA0A81D7747ADF4E700 /* GithubSearchVIPER01Presenter.swift */; };
 		D6C87ADBDB05E8164200F2E3 /* GithubSearchMVVM01ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E6FE6FBEF9DD1F176CBEF /* GithubSearchMVVM01ViewModel.swift */; };
 		D9998B49CE97EE6B04E1559B /* ShareDataVIPER02Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08EB13EEA6CB1BE8EDCB371 /* ShareDataVIPER02Router.swift */; };
+		DE1D24B9753790D13B0968B3 /* GithubSearchVIPER02.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E602925A34841E2C47527D /* GithubSearchVIPER02.storyboard */; };
 		DE7425557B6547AE5A0C8BBE /* GithubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130EBD6D0DD6EDD9324A6AA /* GithubTableViewCell.swift */; };
 		DF918CD2EBA8E9FECD62323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8126924E39401AF5F6263D0F /* LaunchScreen.storyboard */; };
+		E2AEE2C39D3D283277C86F27 /* GithubSearchVIPER03Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06698BC792F716A1BE3B159E /* GithubSearchVIPER03Interactor.swift */; };
 		E48AA7015735B016F50CE6E8 /* ShareDataVIPER03.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443F2654525B972D7B6FF722 /* ShareDataVIPER03.storyboard */; };
 		E5B2A574593DD9102C788539 /* ShareDataVIPER01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D684158E8BE53808A169C79B /* ShareDataVIPER01ViewController.swift */; };
-		EF46D7A1E2D33362150FD37D /* GithubSearchVIPER01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE001E1648BA19D88DBAC81 /* GithubSearchVIPER01ViewController.swift */; };
+		EEAB8A4F754C4B608CCC3626 /* GithubSearchVIPER99Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F14BF2BFFAA343D1BB9213 /* GithubSearchVIPER99Presenter.swift */; };
 		F78C9D92608B5F7A86DA9CF1 /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E45FBED5E8286784719FE83 /* Storyboard+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03AC9DEFC182EDA2DE2AD5D0 /* GithubSearchVIPER99Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99Router.swift; sourceTree = "<group>"; };
 		03B87DAFF25C31793A297D15 /* WebMVPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMVPViewController.swift; sourceTree = "<group>"; };
 		04ED9B6992C7A133D207B06E /* ShareDataVIPER03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER03ViewController.swift; sourceTree = "<group>"; };
 		06180697E13969D347F37252 /* ShareDataTabVIPERRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataTabVIPERRViewController.swift; sourceTree = "<group>"; };
+		06698BC792F716A1BE3B159E /* GithubSearchVIPER03Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03Interactor.swift; sourceTree = "<group>"; };
 		0AA3F7FF80ADEC7C6EB11A3D /* GithubSearchMVVM03ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM03ViewModel.swift; sourceTree = "<group>"; };
-		0AE001E1648BA19D88DBAC81 /* GithubSearchVIPER01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER01ViewController.swift; sourceTree = "<group>"; };
 		0BA0DB5228893E68337D368F /* GithubAPI+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubAPI+Rx.swift"; sourceTree = "<group>"; };
+		0C660FA9209EC4E7FEFA2788 /* GithubSearchVIPER01Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER01Interactor.swift; sourceTree = "<group>"; };
+		10B489BD4B8E306423F5F883 /* GithubSearchVIPER03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03ViewController.swift; sourceTree = "<group>"; };
+		1A4DE26F9E8EB1A757537B0D /* GithubSearchVIPER99Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99Interactor.swift; sourceTree = "<group>"; };
+		1AB699F01A9D51B2AC5EA37E /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		1F18264CB63E228BFCC4D646 /* WebVIPER.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebVIPER.storyboard; sourceTree = "<group>"; };
+		22250BFF2484B292F14F74B4 /* GithubSearchVIPER99ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99ViewHelper.swift; sourceTree = "<group>"; };
 		228D82B2C1131DEB2681ED18 /* GithubSearchMVPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVPViewController.swift; sourceTree = "<group>"; };
-		268DE0612EB833FD54E6CA63 /* GithubSearchVIPER99Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99Entity.swift; sourceTree = "<group>"; };
+		23556B172230F8BA43BFF9C1 /* GithubSearchVIPER03Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03Presenter.swift; sourceTree = "<group>"; };
+		268DE0612EB833FD54E6CA63 /* GithubSearchVIPER02Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Entity.swift; sourceTree = "<group>"; };
+		2926D83781D7E37D2F4E6F7F /* Pods_SampleiOSArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleiOSArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2962CB7EDA789C7092FAA35B /* Pods-SampleiOSArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleiOSArchitecture.release.xcconfig"; path = "Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture.release.xcconfig"; sourceTree = "<group>"; };
+		29AFCF42014157D7E182FCCE /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
 		2E138F787C1D48CD47AE493C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		31440491620CA04F93A54AB4 /* GithubSearchVIPER01.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchVIPER01.storyboard; sourceTree = "<group>"; };
-		3274A59D112CCC39F185AC55 /* GithubSearchVIPER01Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER01Router.swift; sourceTree = "<group>"; };
 		34C249C6164C11801FC93949 /* GithubSearchMVVM01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM01ViewController.swift; sourceTree = "<group>"; };
 		393E01127790472157B259AA /* GithubSearchMVP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVP.storyboard; sourceTree = "<group>"; };
 		3AFD0657A64130B288C82B4C /* ShareDataVIPER01Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER01Entity.swift; sourceTree = "<group>"; };
-		3D54151E41C706247F53DE99 /* Pods_SampleiOSArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleiOSArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C3E768A38E87ABD63447A08 /* GithubSearchVIPER03.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchVIPER03.storyboard; sourceTree = "<group>"; };
+		406D186D46FF0A7259FBB7AB /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
+		42A6B049D003745A5A53D913 /* GithubSearchVIPER03QiitaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03QiitaInteractor.swift; sourceTree = "<group>"; };
 		443F2654525B972D7B6FF722 /* ShareDataVIPER03.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareDataVIPER03.storyboard; sourceTree = "<group>"; };
+		44F14BF2BFFAA343D1BB9213 /* GithubSearchVIPER99Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99Presenter.swift; sourceTree = "<group>"; };
 		4503D5CD97E6ED8D1B745F08 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		4DF1AC4B4EE8D9EE4282B6C0 /* GithubSearchMVC01.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVC01.storyboard; sourceTree = "<group>"; };
 		4E9A9C21B2C8CB2DDBB976B2 /* ShareDataTabVIPERRRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataTabVIPERRRouter.swift; sourceTree = "<group>"; };
-		5058FB3315C8BD81D6DCA2EA /* GithubSearchVIPER01Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER01Entity.swift; sourceTree = "<group>"; };
 		528ADDD1D140B65186BDB5CE /* ShareDataVIPER03Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER03Entity.swift; sourceTree = "<group>"; };
-		598E6A183044C6BF9938E209 /* GithubSearchVIPER99Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99Presenter.swift; sourceTree = "<group>"; };
+		598E6A183044C6BF9938E209 /* GithubSearchVIPER02Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Presenter.swift; sourceTree = "<group>"; };
+		5A4A7E935169F15C37882A8F /* Pods-SampleiOSArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleiOSArchitecture.debug.xcconfig"; path = "Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
+		5B75F2C384080540D2773650 /* VIPER02_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VIPER02_README.md; sourceTree = "<group>"; };
 		5BBAE9CB4D7FD9184F597EDD /* WebVIPERRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVIPERRouter.swift; sourceTree = "<group>"; };
-		5FA351F5B16942B1C651F91A /* GithubSearchVIPER01Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER01Interactor.swift; sourceTree = "<group>"; };
+		5D786CBA614E86EC4BB563F3 /* GithubSearchVIPER01Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER01Entity.swift; sourceTree = "<group>"; };
+		62CCE08AA10718301CAA250D /* GithubSearchVIPER03Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03Router.swift; sourceTree = "<group>"; };
+		685FE89D33A43D438B86B38C /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		6AD2617EF5DBB6F2C07DBD3D /* ShareDataVIPER01Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER01Presenter.swift; sourceTree = "<group>"; };
 		6D0371D88276779CDD474405 /* ShareDataVIPER03Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER03Presenter.swift; sourceTree = "<group>"; };
 		750BF6FB6DC8B928FF439108 /* ShareDataVIPER03Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER03Interactor.swift; sourceTree = "<group>"; };
@@ -147,61 +161,46 @@
 		760224F2867626C6B1EEC0DE /* ShareDataVIPER01.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareDataVIPER01.storyboard; sourceTree = "<group>"; };
 		7930678E6064746ACE11DC29 /* ShareDataVIPER02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER02ViewController.swift; sourceTree = "<group>"; };
 		7A90CB143DC008DD8E53291A /* ShareDataVIPER01Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER01Router.swift; sourceTree = "<group>"; };
+		7CC50DA0A81D7747ADF4E700 /* GithubSearchVIPER01Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER01Presenter.swift; sourceTree = "<group>"; };
 		7D4851FC2E74B2C50CD3C436 /* GithubSearchMVVM02.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVVM02.storyboard; sourceTree = "<group>"; };
 		7FC9430E69C2223D89C48ED5 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
-		821138A1AE027CD84D85A3A6 /* Pods-SampleiOSArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleiOSArchitecture.debug.xcconfig"; path = "Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
 		83B6402AE953E386D7B4AC3C /* GithubSearchMVC01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVC01ViewController.swift; sourceTree = "<group>"; };
 		84C8D7BB0E64F75104C81911 /* WebMVVMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMVVMViewModel.swift; sourceTree = "<group>"; };
+		85E602925A34841E2C47527D /* GithubSearchVIPER02.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchVIPER02.storyboard; sourceTree = "<group>"; };
 		875BC601700C984E092A5B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		88E69CE9ABE02873CAF26464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8951190ABB968BC18FD17694 /* VIPER01_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VIPER01_README.md; sourceTree = "<group>"; };
 		89C01EE23BAA64BE0AEDC3F3 /* ShareDataVIPER02Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER02Entity.swift; sourceTree = "<group>"; };
+		8A8C7A2C4FD4EB02F8CFA7FA /* QiitaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaModel.swift; sourceTree = "<group>"; };
 		8BD4411685020BFC35F6E2A6 /* GithubSearchMVVM01.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVVM01.storyboard; sourceTree = "<group>"; };
-		8D3463FE1E8113ECE133B233 /* GithubSearchVIPER99Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99Router.swift; sourceTree = "<group>"; };
+		8D3463FE1E8113ECE133B233 /* GithubSearchVIPER02Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Router.swift; sourceTree = "<group>"; };
 		8F680246188D473815F4C2F6 /* GithubSearchVIPER02Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Cell.swift; sourceTree = "<group>"; };
-		909C25806B743E778C2C9F06 /* GithubSearchVIPER99ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99ViewHelper.swift; sourceTree = "<group>"; };
 		94D5F137B81755A3038584C1 /* ShareDataVIPER01Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER01Interactor.swift; sourceTree = "<group>"; };
 		95431F7D4398175DE032E880 /* ShareDataTabVIPERREntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataTabVIPERREntity.swift; sourceTree = "<group>"; };
 		96F898868ADA66618BC5B716 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		9A3BC27F8796DC7465898E0B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		9D7577E37611B8F67D5FF825 /* GithubSearchVIPER99Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99Entity.swift; sourceTree = "<group>"; };
 		9DB4A6AB3B0932BE0018EBA1 /* WebMVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebMVC.storyboard; sourceTree = "<group>"; };
 		9E45FBED5E8286784719FE83 /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		A9611E52F0219A4D2763DEF4 /* WebMVP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebMVP.storyboard; sourceTree = "<group>"; };
 		AA1C5557D0AD80F7A139B2C7 /* GithubSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchPresenter.swift; sourceTree = "<group>"; };
+		ABDE31BD545D05BAAE32B99A /* GithubSearchVIPER03Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03Entity.swift; sourceTree = "<group>"; };
 		AEB8D0AB85E479072BC904E5 /* WebMVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMVVMViewController.swift; sourceTree = "<group>"; };
+		AFA0E4B11144E91FE31E4D54 /* WebVIPEREntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVIPEREntity.swift; sourceTree = "<group>"; };
 		B0289AFF4EAE38DB49B337A7 /* GithubAPI+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubAPI+Combine.swift"; sourceTree = "<group>"; };
+		B13CFAF1E0D650358ED197E8 /* ShareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
 		B1B8F3310AD4859FE5B068AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B30760D036A33B2BD0A96DA6 /* Pods-SampleiOSArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleiOSArchitecture.release.xcconfig"; path = "Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 		B3904DDF40A0F720597C114F /* WebMVVM.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebMVVM.storyboard; sourceTree = "<group>"; };
 		B3DE20B517E3D994E3F25131 /* WebMVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMVCViewController.swift; sourceTree = "<group>"; };
-		B67BE551265EB4610009FC89 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
-		B67BE554265EB48F0009FC89 /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
-		B67BE556265EB5CF0009FC89 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
-		B67BE558265F4C040009FC89 /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
-		B67BE55A265F6BE30009FC89 /* DebugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
-		B67BE55D265FE7EC0009FC89 /* ShareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
-		B67C2FE32A0F54CD008DD0C9 /* VIPER01_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VIPER01_README.md; sourceTree = "<group>"; };
-		B67C2FE72A0F5EC7008DD0C9 /* GithubSearchVIPER02Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Entity.swift; sourceTree = "<group>"; };
-		B67C2FE92A0F5EC7008DD0C9 /* GithubSearchVIPER02Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Presenter.swift; sourceTree = "<group>"; };
-		B67C2FEB2A0F5EC7008DD0C9 /* GithubSearchVIPER02ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02ViewController.swift; sourceTree = "<group>"; };
-		B67C2FEC2A0F5EC7008DD0C9 /* GithubSearchVIPER02.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GithubSearchVIPER02.storyboard; sourceTree = "<group>"; };
-		B67C2FEE2A0F5EC7008DD0C9 /* GithubSearchVIPER02Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Interactor.swift; sourceTree = "<group>"; };
-		B67C2FF02A0F5EC7008DD0C9 /* GithubSearchVIPER02Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Router.swift; sourceTree = "<group>"; };
-		B67C2FF72A0F5EE0008DD0C9 /* VIPER02_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VIPER02_README.md; sourceTree = "<group>"; };
-		B67C2FFB2A0F6A13008DD0C9 /* GithubSearchVIPER03Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03Entity.swift; sourceTree = "<group>"; };
-		B67C2FFD2A0F6A13008DD0C9 /* GithubSearchVIPER03Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03Presenter.swift; sourceTree = "<group>"; };
-		B67C2FFF2A0F6A13008DD0C9 /* GithubSearchVIPER03ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03ViewController.swift; sourceTree = "<group>"; };
-		B67C30002A0F6A13008DD0C9 /* GithubSearchVIPER03.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GithubSearchVIPER03.storyboard; sourceTree = "<group>"; };
-		B67C30022A0F6A13008DD0C9 /* GithubSearchVIPER03GithubInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03GithubInteractor.swift; sourceTree = "<group>"; };
-		B67C30042A0F6A13008DD0C9 /* GithubSearchVIPER03Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03Router.swift; sourceTree = "<group>"; };
-		B67C300B2A0F6CC0008DD0C9 /* VIPER03_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VIPER03_README.md; sourceTree = "<group>"; };
-		B67C300D2A0F6DEE008DD0C9 /* QiitaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaModel.swift; sourceTree = "<group>"; };
-		B67C300F2A0F6ECF008DD0C9 /* GithubSearchVIPER03QiitaInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03QiitaInteractor.swift; sourceTree = "<group>"; };
-		B67C30102A0F6ECF008DD0C9 /* GithubSearchVIPER03Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03Interactor.swift; sourceTree = "<group>"; };
-		B67C30142A0F81A6008DD0C9 /* WebVIPEREntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVIPEREntity.swift; sourceTree = "<group>"; };
 		B68FD8FA3C181985715749E2 /* GithubSearchMVVM03.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchMVVM03.storyboard; sourceTree = "<group>"; };
 		B7D3089DC71B7A75E014B9B7 /* GithubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubModel.swift; sourceTree = "<group>"; };
+		BD7E00057FBCEE91D504F23D /* GithubSearchVIPER01.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchVIPER01.storyboard; sourceTree = "<group>"; };
+		BDC7AE70883B1E31CAE0B48C /* GithubSearchVIPER02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02ViewController.swift; sourceTree = "<group>"; };
+		BF577DFA97E28C814B1FBA1B /* GithubSearchVIPER99ViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99ViewSwiftUI.swift; sourceTree = "<group>"; };
+		C10D545F67FFCA997D98C7CA /* DebugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
 		C1F637902A03BE659C5CCCF8 /* GithubSearchMVVM02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM02ViewController.swift; sourceTree = "<group>"; };
-		C5D4AF66DFDCC5F63ACF23E2 /* GithubSearchVIPER99ViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99ViewSwiftUI.swift; sourceTree = "<group>"; };
+		C2E8111E008936B8CB1D0F95 /* GithubSearchVIPER01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER01ViewController.swift; sourceTree = "<group>"; };
+		C348717499482D41F50776A6 /* GithubSearchVIPER01Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER01Router.swift; sourceTree = "<group>"; };
 		C7D3EA4791EE8C3F0527797D /* GithubSearchMVVM03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM03ViewController.swift; sourceTree = "<group>"; };
 		CA90EC6237DA793A81B4593A /* WebVIPERViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVIPERViewController.swift; sourceTree = "<group>"; };
 		CF7300056E18CC0127EBF588 /* ShareDataTabVIPERRPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataTabVIPERRPresenter.swift; sourceTree = "<group>"; };
@@ -210,19 +209,20 @@
 		D684158E8BE53808A169C79B /* ShareDataVIPER01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER01ViewController.swift; sourceTree = "<group>"; };
 		D6F6742FC2E01B47FE3F3E51 /* GithubSearchMVVM02ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM02ViewModel.swift; sourceTree = "<group>"; };
 		D6FDDC44F512F1F1D1488F8D /* ShareDataVIPER02Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER02Interactor.swift; sourceTree = "<group>"; };
-		D7407A6B6B4FC76E8DFDC196 /* GithubSearchVIPER99Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER99Interactor.swift; sourceTree = "<group>"; };
+		D7407A6B6B4FC76E8DFDC196 /* GithubSearchVIPER02Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER02Interactor.swift; sourceTree = "<group>"; };
 		D9D74AC0216B041100AB3392 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DABA7831038E1E3F9C1D9219 /* WebVIPERPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVIPERPresenter.swift; sourceTree = "<group>"; };
 		DC258B0A044ABFCE531CE358 /* SampleiOSArchitecture.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SampleiOSArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0E6FE6FBEF9DD1F176CBEF /* GithubSearchMVVM01ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchMVVM01ViewModel.swift; sourceTree = "<group>"; };
+		DEF30C1A366B3548BBBC369C /* VIPER03_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VIPER03_README.md; sourceTree = "<group>"; };
 		E08EB13EEA6CB1BE8EDCB371 /* ShareDataVIPER02Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER02Router.swift; sourceTree = "<group>"; };
 		E504678937FFF879917495DD /* ShareDataVIPER02Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataVIPER02Presenter.swift; sourceTree = "<group>"; };
 		E5E9654CBB530EE8285B175B /* ShareDataTabVIPERRInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataTabVIPERRInteractor.swift; sourceTree = "<group>"; };
 		E76C749505C3DE8C408AA3BC /* WebMVPPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMVPPresenter.swift; sourceTree = "<group>"; };
+		EB7E0B3890E3B806953BFC63 /* GithubSearchVIPER03GithubInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER03GithubInteractor.swift; sourceTree = "<group>"; };
 		EC84B4B429D116EE69E19D51 /* WebVIPERInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVIPERInteractor.swift; sourceTree = "<group>"; };
 		F130EBD6D0DD6EDD9324A6AA /* GithubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTableViewCell.swift; sourceTree = "<group>"; };
 		F60F857C0276E53F5EEB879F /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
-		FA7C216BED43AA4F75F88DC9 /* GithubSearchVIPER01Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchVIPER01Presenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,7 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61B550EE374E53DCC573A835 /* CombineCocoa in Frameworks */,
-				C31DD572D9E26739FD592C0D /* Pods_SampleiOSArchitecture.framework in Frameworks */,
+				6A3F33B4328B3AA067A553CC /* Pods_SampleiOSArchitecture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,12 +263,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		0881316DFB03FBF12A8E031A /* ViewHelper */ = {
+		07797DF135FC06C3FEA99C22 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				909C25806B743E778C2C9F06 /* GithubSearchVIPER99ViewHelper.swift */,
+				85E602925A34841E2C47527D /* GithubSearchVIPER02.storyboard */,
+				BDC7AE70883B1E31CAE0B48C /* GithubSearchVIPER02ViewController.swift */,
 			);
-			path = ViewHelper;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0986992E5257AFF0A7697E21 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				23556B172230F8BA43BFF9C1 /* GithubSearchVIPER03Presenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		0E1A3FE9D26F9E5A816D3C5D /* ViewModel */ = {
@@ -279,10 +288,51 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1232AE24A195E7AEFB14E3E6 /* GithubSearchVIPER03 */ = {
+			isa = PBXGroup;
+			children = (
+				DEF30C1A366B3548BBBC369C /* VIPER03_README.md */,
+				5E825DC6E9A2E17D8B401B77 /* Entity */,
+				1D01074D3EBE32809252B4C0 /* Interactor */,
+				0986992E5257AFF0A7697E21 /* Presenter */,
+				5F556C2D7274577FD81FA3B5 /* Router */,
+				E3B04C3CE969A32E063E89E8 /* View */,
+			);
+			path = GithubSearchVIPER03;
+			sourceTree = "<group>";
+		};
+		13B9E2746B2B14530C7D4284 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A4A7E935169F15C37882A8F /* Pods-SampleiOSArchitecture.debug.xcconfig */,
+				2962CB7EDA789C7092FAA35B /* Pods-SampleiOSArchitecture.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		16B327B40D2360B99BA7D577 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9D7577E37611B8F67D5FF825 /* GithubSearchVIPER99Entity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		1D01074D3EBE32809252B4C0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EB7E0B3890E3B806953BFC63 /* GithubSearchVIPER03GithubInteractor.swift */,
+				06698BC792F716A1BE3B159E /* GithubSearchVIPER03Interactor.swift */,
+				42A6B049D003745A5A53D913 /* GithubSearchVIPER03QiitaInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		1D976C8DF674CB1C643A4016 /* ShareDataTabVIPERR */ = {
 			isa = PBXGroup;
 			children = (
-				B67BE55C265FE7DB0009FC89 /* ShareData */,
+				5D0C600D25EF2E272CB2C24C /* ShareData */,
 				5313BC54C829B7CBBB237FE6 /* ShareDataTabVIPERR */,
 				C738824C3D9AA5418C1D86E4 /* ShareDataVIPER01 */,
 				6B01ED509BF6B2FDEFDE3D6C /* ShareDataVIPER02 */,
@@ -312,7 +362,7 @@
 		2D69156226BD2105372864D3 /* GithubSearchVIPER01 */ = {
 			isa = PBXGroup;
 			children = (
-				B67C2FE32A0F54CD008DD0C9 /* VIPER01_README.md */,
+				8951190ABB968BC18FD17694 /* VIPER01_README.md */,
 				D80047255A2CC49A6EDD8CDA /* Entity */,
 				32AF554D736BBE7BA5B0E7D3 /* Interactor */,
 				A8199B03535054D87EDA512C /* Presenter */,
@@ -335,7 +385,7 @@
 		32AF554D736BBE7BA5B0E7D3 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				5FA351F5B16942B1C651F91A /* GithubSearchVIPER01Interactor.swift */,
+				0C660FA9209EC4E7FEFA2788 /* GithubSearchVIPER01Interactor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -348,12 +398,12 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		3B93801DB74D804D6E8575FE /* Frameworks */ = {
+		3A72F1AC72FA257FC0E46AF5 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				3D54151E41C706247F53DE99 /* Pods_SampleiOSArchitecture.framework */,
+				03AC9DEFC182EDA2DE2AD5D0 /* GithubSearchVIPER99Router.swift */,
 			);
-			name = Frameworks;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		3EDACAAB848A9237B4C2F278 /* View */ = {
@@ -362,6 +412,14 @@
 				06180697E13969D347F37252 /* ShareDataTabVIPERRViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		406CBE1027AB4520210BFF91 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AFA0E4B11144E91FE31E4D54 /* WebVIPEREntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		40EE3AFDB57FB80A785C2DC7 /* MVC */ = {
@@ -384,7 +442,7 @@
 		447826B58FF1F74BD02A45C3 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				D7407A6B6B4FC76E8DFDC196 /* GithubSearchVIPER99Interactor.swift */,
+				D7407A6B6B4FC76E8DFDC196 /* GithubSearchVIPER02Interactor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -422,6 +480,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		51312DABDF55E35E287D364C /* UserCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1AB699F01A9D51B2AC5EA37E /* UserCollectionViewCell.swift */,
+				29AFCF42014157D7E182FCCE /* UserCollectionViewCell.xib */,
+			);
+			path = UserCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		5313BC54C829B7CBBB237FE6 /* ShareDataTabVIPERR */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,7 +504,7 @@
 		5470D21407800338B9328D8D /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				8D3463FE1E8113ECE133B233 /* GithubSearchVIPER99Router.swift */,
+				8D3463FE1E8113ECE133B233 /* GithubSearchVIPER02Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -455,9 +522,49 @@
 			isa = PBXGroup;
 			children = (
 				B7D3089DC71B7A75E014B9B7 /* GithubModel.swift */,
-				B67C300D2A0F6DEE008DD0C9 /* QiitaModel.swift */,
+				8A8C7A2C4FD4EB02F8CFA7FA /* QiitaModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5A8DA6F735BFA3FB68F3DF62 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1A4DE26F9E8EB1A757537B0D /* GithubSearchVIPER99Interactor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5CF8694B4A6AE7980E759063 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2926D83781D7E37D2F4E6F7F /* Pods_SampleiOSArchitecture.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D0C600D25EF2E272CB2C24C /* ShareData */ = {
+			isa = PBXGroup;
+			children = (
+				B13CFAF1E0D650358ED197E8 /* ShareData.swift */,
+			);
+			path = ShareData;
+			sourceTree = "<group>";
+		};
+		5E825DC6E9A2E17D8B401B77 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				ABDE31BD545D05BAAE32B99A /* GithubSearchVIPER03Entity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5F556C2D7274577FD81FA3B5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				62CCE08AA10718301CAA250D /* GithubSearchVIPER03Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		5FACF21E72C1683C8ED8E7B4 /* Architecture */ = {
@@ -507,17 +614,9 @@
 			children = (
 				CB7DCFB8975B36D69F9686F8 /* SampleiOSArchitecture */,
 				FCB347B440AE861AB6DE9D91 /* Products */,
-				A1694830DD49A8B7D1B649CA /* Pods */,
-				3B93801DB74D804D6E8575FE /* Frameworks */,
+				13B9E2746B2B14530C7D4284 /* Pods */,
+				5CF8694B4A6AE7980E759063 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		6E1B55E8A20E6EA75D851AEC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C5D4AF66DFDCC5F63ACF23E2 /* GithubSearchVIPER99ViewSwiftUI.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		7026EFDE075AA5B161925EA3 /* Interactor */ = {
@@ -547,13 +646,26 @@
 		7A7174FE4ED5A0056BE8EADA /* WebVIPER */ = {
 			isa = PBXGroup;
 			children = (
-				B67C30132A0F8190008DD0C9 /* Entity */,
+				406CBE1027AB4520210BFF91 /* Entity */,
 				950E9590EFA88948AE28D671 /* Interactor */,
 				C9CE81D09A2F5194CBAB8FF8 /* Presenter */,
 				76B96C58033F83EE15918FB2 /* Router */,
 				E3954FCF16DBED771BF3834B /* ViewController */,
 			);
 			path = WebVIPER;
+			sourceTree = "<group>";
+		};
+		819A26E1B1DC0692ACE30795 /* GithubSearchVIPER99 */ = {
+			isa = PBXGroup;
+			children = (
+				16B327B40D2360B99BA7D577 /* Entity */,
+				5A8DA6F735BFA3FB68F3DF62 /* Interactor */,
+				E0E9AB76B257D85F88E0B024 /* Presenter */,
+				3A72F1AC72FA257FC0E46AF5 /* Router */,
+				AB2C241574E966ADF307EB0D /* View */,
+				EBC209BB76D85FB956D9D480 /* ViewHelper */,
+			);
+			path = GithubSearchVIPER99;
 			sourceTree = "<group>";
 		};
 		82152AE8C6D4C86466D73C61 /* Interactor */ = {
@@ -608,8 +720,8 @@
 		956A6B8265C2DB3775BF450C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				31440491620CA04F93A54AB4 /* GithubSearchVIPER01.storyboard */,
-				0AE001E1648BA19D88DBAC81 /* GithubSearchVIPER01ViewController.swift */,
+				BD7E00057FBCEE91D504F23D /* GithubSearchVIPER01.storyboard */,
+				C2E8111E008936B8CB1D0F95 /* GithubSearchVIPER01ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -618,9 +730,9 @@
 			isa = PBXGroup;
 			children = (
 				2D69156226BD2105372864D3 /* GithubSearchVIPER01 */,
-				B67C2FE52A0F5EC7008DD0C9 /* GithubSearchVIPER02 */,
-				B67C2FF92A0F6A13008DD0C9 /* GithubSearchVIPER03 */,
-				BB5D58146171E66536BB5403 /* GithubSearchVIPER99 */,
+				BB5D58146171E66536BB5403 /* GithubSearchVIPER02 */,
+				1232AE24A195E7AEFB14E3E6 /* GithubSearchVIPER03 */,
+				819A26E1B1DC0692ACE30795 /* GithubSearchVIPER99 */,
 				1D976C8DF674CB1C643A4016 /* ShareDataTabVIPERR */,
 				7A7174FE4ED5A0056BE8EADA /* WebVIPER */,
 			);
@@ -644,15 +756,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		A1694830DD49A8B7D1B649CA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				821138A1AE027CD84D85A3A6 /* Pods-SampleiOSArchitecture.debug.xcconfig */,
-				B30760D036A33B2BD0A96DA6 /* Pods-SampleiOSArchitecture.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		A370F68EE9AC2A47843CAE9E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -664,7 +767,7 @@
 		A43C16481D13015FE77925F8 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				268DE0612EB833FD54E6CA63 /* GithubSearchVIPER99Entity.swift */,
+				268DE0612EB833FD54E6CA63 /* GithubSearchVIPER02Entity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -690,7 +793,7 @@
 		A8199B03535054D87EDA512C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				FA7C216BED43AA4F75F88DC9 /* GithubSearchVIPER01Presenter.swift */,
+				7CC50DA0A81D7747ADF4E700 /* GithubSearchVIPER01Presenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -727,10 +830,18 @@
 		AB075CCBF19115E8C29397CA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B67BE550265EB42F0009FC89 /* UserCollectionViewCell */,
 				F60F857C0276E53F5EEB879F /* ActivityIndicatorView.swift */,
 				8F680246188D473815F4C2F6 /* GithubSearchVIPER02Cell.swift */,
 				4AE7FB6CD5F889274B999628 /* GithubTableViewCell */,
+				51312DABDF55E35E287D364C /* UserCollectionViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB2C241574E966ADF307EB0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF577DFA97E28C814B1FBA1B /* GithubSearchVIPER99ViewSwiftUI.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -762,7 +873,7 @@
 		B3C2BD51394560EDA0E8CA21 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				598E6A183044C6BF9938E209 /* GithubSearchVIPER99Presenter.swift */,
+				598E6A183044C6BF9938E209 /* GithubSearchVIPER02Presenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -775,152 +886,17 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		B67BE550265EB42F0009FC89 /* UserCollectionViewCell */ = {
+		BB5D58146171E66536BB5403 /* GithubSearchVIPER02 */ = {
 			isa = PBXGroup;
 			children = (
-				B67BE551265EB4610009FC89 /* UserCollectionViewCell.swift */,
-				B67BE554265EB48F0009FC89 /* UserCollectionViewCell.xib */,
-			);
-			path = UserCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		B67BE55C265FE7DB0009FC89 /* ShareData */ = {
-			isa = PBXGroup;
-			children = (
-				B67BE55D265FE7EC0009FC89 /* ShareData.swift */,
-			);
-			path = ShareData;
-			sourceTree = "<group>";
-		};
-		B67C2FE52A0F5EC7008DD0C9 /* GithubSearchVIPER02 */ = {
-			isa = PBXGroup;
-			children = (
-				B67C2FE62A0F5EC7008DD0C9 /* Entity */,
-				B67C2FED2A0F5EC7008DD0C9 /* Interactor */,
-				B67C2FE82A0F5EC7008DD0C9 /* Presenter */,
-				B67C2FEF2A0F5EC7008DD0C9 /* Router */,
-				B67C2FEA2A0F5EC7008DD0C9 /* ViewController */,
-				B67C2FF72A0F5EE0008DD0C9 /* VIPER02_README.md */,
-			);
-			path = GithubSearchVIPER02;
-			sourceTree = "<group>";
-		};
-		B67C2FE62A0F5EC7008DD0C9 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				B67C2FE72A0F5EC7008DD0C9 /* GithubSearchVIPER02Entity.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		B67C2FE82A0F5EC7008DD0C9 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				B67C2FE92A0F5EC7008DD0C9 /* GithubSearchVIPER02Presenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		B67C2FEA2A0F5EC7008DD0C9 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B67C2FEB2A0F5EC7008DD0C9 /* GithubSearchVIPER02ViewController.swift */,
-				B67C2FEC2A0F5EC7008DD0C9 /* GithubSearchVIPER02.storyboard */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		B67C2FED2A0F5EC7008DD0C9 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				B67C2FEE2A0F5EC7008DD0C9 /* GithubSearchVIPER02Interactor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		B67C2FEF2A0F5EC7008DD0C9 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				B67C2FF02A0F5EC7008DD0C9 /* GithubSearchVIPER02Router.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		B67C2FF92A0F6A13008DD0C9 /* GithubSearchVIPER03 */ = {
-			isa = PBXGroup;
-			children = (
-				B67C2FFA2A0F6A13008DD0C9 /* Entity */,
-				B67C2FFC2A0F6A13008DD0C9 /* Presenter */,
-				B67C2FFE2A0F6A13008DD0C9 /* View */,
-				B67C30012A0F6A13008DD0C9 /* Interactor */,
-				B67C30032A0F6A13008DD0C9 /* Router */,
-				B67C300B2A0F6CC0008DD0C9 /* VIPER03_README.md */,
-			);
-			path = GithubSearchVIPER03;
-			sourceTree = "<group>";
-		};
-		B67C2FFA2A0F6A13008DD0C9 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				B67C2FFB2A0F6A13008DD0C9 /* GithubSearchVIPER03Entity.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		B67C2FFC2A0F6A13008DD0C9 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				B67C2FFD2A0F6A13008DD0C9 /* GithubSearchVIPER03Presenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		B67C2FFE2A0F6A13008DD0C9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B67C2FFF2A0F6A13008DD0C9 /* GithubSearchVIPER03ViewController.swift */,
-				B67C30002A0F6A13008DD0C9 /* GithubSearchVIPER03.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B67C30012A0F6A13008DD0C9 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				B67C30102A0F6ECF008DD0C9 /* GithubSearchVIPER03Interactor.swift */,
-				B67C300F2A0F6ECF008DD0C9 /* GithubSearchVIPER03QiitaInteractor.swift */,
-				B67C30022A0F6A13008DD0C9 /* GithubSearchVIPER03GithubInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		B67C30032A0F6A13008DD0C9 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				B67C30042A0F6A13008DD0C9 /* GithubSearchVIPER03Router.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		B67C30132A0F8190008DD0C9 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				B67C30142A0F81A6008DD0C9 /* WebVIPEREntity.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		BB5D58146171E66536BB5403 /* GithubSearchVIPER99 */ = {
-			isa = PBXGroup;
-			children = (
+				5B75F2C384080540D2773650 /* VIPER02_README.md */,
 				A43C16481D13015FE77925F8 /* Entity */,
 				447826B58FF1F74BD02A45C3 /* Interactor */,
 				B3C2BD51394560EDA0E8CA21 /* Presenter */,
 				5470D21407800338B9328D8D /* Router */,
-				6E1B55E8A20E6EA75D851AEC /* View */,
-				0881316DFB03FBF12A8E031A /* ViewHelper */,
+				07797DF135FC06C3FEA99C22 /* ViewController */,
 			);
-			path = GithubSearchVIPER99;
+			path = GithubSearchVIPER02;
 			sourceTree = "<group>";
 		};
 		C1CED8B33B80AAB21E7927BF /* Interactor */ = {
@@ -946,7 +922,7 @@
 		C77FF2A584326383D85B64CE /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				3274A59D112CCC39F185AC55 /* GithubSearchVIPER01Router.swift */,
+				C348717499482D41F50776A6 /* GithubSearchVIPER01Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1007,7 +983,7 @@
 		D80047255A2CC49A6EDD8CDA /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				5058FB3315C8BD81D6DCA2EA /* GithubSearchVIPER01Entity.swift */,
+				5D786CBA614E86EC4BB563F3 /* GithubSearchVIPER01Entity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1032,6 +1008,14 @@
 			path = MVVM;
 			sourceTree = "<group>";
 		};
+		E0E9AB76B257D85F88E0B024 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				44F14BF2BFFAA343D1BB9213 /* GithubSearchVIPER99Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		E3954FCF16DBED771BF3834B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1039,6 +1023,15 @@
 				CA90EC6237DA793A81B4593A /* WebVIPERViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E3B04C3CE969A32E063E89E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C3E768A38E87ABD63447A08 /* GithubSearchVIPER03.storyboard */,
+				10B489BD4B8E306423F5F883 /* GithubSearchVIPER03ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E4BA23E3DBEA3ABE99E65BA6 /* GithubSearchMVP */ = {
@@ -1069,10 +1062,18 @@
 		E83FA23361EE09E541393910 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C10D545F67FFCA997D98C7CA /* DebugLog.swift */,
 				7FC9430E69C2223D89C48ED5 /* GithubAPI.swift */,
-				B67BE55A265F6BE30009FC89 /* DebugLog.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		EBC209BB76D85FB956D9D480 /* ViewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				22250BFF2484B292F14F74B4 /* GithubSearchVIPER99ViewHelper.swift */,
+			);
+			path = ViewHelper;
 			sourceTree = "<group>";
 		};
 		EE04A2A59C0BE634621CB461 /* WebMVP */ = {
@@ -1087,11 +1088,11 @@
 		F5771F94927A3C72FFF18AA1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				406D186D46FF0A7259FBB7AB /* Collection+.swift */,
 				9E45FBED5E8286784719FE83 /* Storyboard+.swift */,
+				685FE89D33A43D438B86B38C /* UICollectionViewCell+.swift */,
 				96F898868ADA66618BC5B716 /* UITableViewCell+.swift */,
 				4503D5CD97E6ED8D1B745F08 /* UIViewController+.swift */,
-				B67BE556265EB5CF0009FC89 /* UICollectionViewCell+.swift */,
-				B67BE558265F4C040009FC89 /* Collection+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1119,12 +1120,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A3829F26B9EF09595695E67 /* Build configuration list for PBXNativeTarget "SampleiOSArchitecture" */;
 			buildPhases = (
-				E33641B90F1B0F528C6487EF /* [CP] Check Pods Manifest.lock */,
+				CE1D6E8A6EF96B4268295EA8 /* [CP] Check Pods Manifest.lock */,
+				D2DB8CF9A09930BDDFD86CE0 /* Run Script(Swiftformat) */,
 				05237B8A32C07C40008BA0F3 /* Run Script(SwiftLint) */,
 				EED9B316F1E18CA731C459E9 /* Sources */,
 				8F3B412F0C3D476D1EA6C33A /* Resources */,
 				3EE0764CE2AD6E66E4E2EA66 /* Frameworks */,
-				86D08DB6D74B6556A9B86776 /* [CP] Embed Pods Frameworks */,
+				E05816B5B232B391DC8ECF75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1145,6 +1147,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 713156F96FF2760CC6C0DD56 /* Build configuration list for PBXProject "SampleiOSArchitecture" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1172,25 +1176,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67C30082A0F6A14008DD0C9 /* GithubSearchVIPER03.storyboard in Resources */,
 				10179DDD9A905A12004FCAF2 /* Assets.xcassets in Resources */,
-				B67C300C2A0F6CC0008DD0C9 /* VIPER03_README.md in Resources */,
-				B67C2FF82A0F5EE0008DD0C9 /* VIPER02_README.md in Resources */,
 				94DDBEEB2B108871706E33A6 /* GithubSearchMVC01.storyboard in Resources */,
 				D39536E0264ED61990C58FF1 /* GithubSearchMVP.storyboard in Resources */,
-				B67C2FE42A0F54CD008DD0C9 /* VIPER01_README.md in Resources */,
 				58C547CFFC111DB26AEA30AD /* GithubSearchMVVM01.storyboard in Resources */,
 				3F4BE5035549FC981C0AF5BE /* GithubSearchMVVM02.storyboard in Resources */,
 				8A0263DF7E946ADF00F3E1BD /* GithubSearchMVVM03.storyboard in Resources */,
-				14144DBCD82783F2720A494E /* GithubSearchVIPER01.storyboard in Resources */,
+				D4B56464FB2B9A3583E41C23 /* GithubSearchVIPER01.storyboard in Resources */,
+				DE1D24B9753790D13B0968B3 /* GithubSearchVIPER02.storyboard in Resources */,
+				2C87FFB013BA363FB06BBD8D /* GithubSearchVIPER03.storyboard in Resources */,
 				8C381A52B29884C7CFAC3DAC /* GithubTableViewCell.xib in Resources */,
 				DF918CD2EBA8E9FECD62323B /* LaunchScreen.storyboard in Resources */,
 				ABFC89C45FA6B29E3EAF9500 /* ShareDataVIPER01.storyboard in Resources */,
 				3FE4DBE5D06B1311CE9A5CD7 /* ShareDataVIPER02.storyboard in Resources */,
 				E48AA7015735B016F50CE6E8 /* ShareDataVIPER03.storyboard in Resources */,
+				3F7E4C181A5ECFC79BDCBA5B /* UserCollectionViewCell.xib in Resources */,
+				66FE7202DFD26DE262CF6C3B /* VIPER01_README.md in Resources */,
+				8BF9519881C21E9133DEB3E7 /* VIPER02_README.md in Resources */,
+				A4F1E5DE962685578C4430C5 /* VIPER03_README.md in Resources */,
 				969BE4F20BD3067F387B1EE5 /* WebMVC.storyboard in Resources */,
-				B67C2FF42A0F5EC7008DD0C9 /* GithubSearchVIPER02.storyboard in Resources */,
-				B67BE555265EB48F0009FC89 /* UserCollectionViewCell.xib in Resources */,
 				44C52B120CCEA62D188D51E0 /* WebMVP.storyboard in Resources */,
 				C26C32C7EA835CB45AA6D366 /* WebMVVM.storyboard in Resources */,
 				0E8B294514CA4AC64B64720B /* WebVIPER.storyboard in Resources */,
@@ -1216,26 +1220,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint --autocorrect\nelse\n  echo \"warning: Mintがインストールされていません。こちらからダウンロードしてください https://github.com/yonaskolb/Mint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: Mintがインストールされていません。こちらからダウンロードしてください https://github.com/yonaskolb/Mint\"\nfi";
 		};
-		86D08DB6D74B6556A9B86776 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E33641B90F1B0F528C6487EF /* [CP] Check Pods Manifest.lock */ = {
+		CE1D6E8A6EF96B4268295EA8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1257,6 +1244,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D2DB8CF9A09930BDDFD86CE0 /* Run Script(Swiftformat) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script(Swiftformat)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which mint >/dev/null; then\n  git diff --name-only | grep .swift | while read filename; do\n    mint run swiftformat \"$filename\" --swiftversion 5\n  done\nelse\n  echo \"warning: Mintがインストールされていません。こちらからダウンロードしてください https://github.com/yonaskolb/Mint\"\nfi\n";
+		};
+		E05816B5B232B391DC8ECF75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleiOSArchitecture/Pods-SampleiOSArchitecture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1264,15 +1286,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67C30112A0F6ECF008DD0C9 /* GithubSearchVIPER03QiitaInteractor.swift in Sources */,
 				C21CD42E661F7A98865B512F /* ActivityIndicatorView.swift in Sources */,
 				2F18C55B099369226C83EA6C /* AppDelegate.swift in Sources */,
+				A96A396810AEB0F255F43EC7 /* Collection+.swift in Sources */,
+				B6EBA9D2BF3FFFBE47AD7077 /* DebugLog.swift in Sources */,
 				81ACE1DCC8F96413D351AE68 /* GithubAPI+Combine.swift in Sources */,
 				40FB13CE23633FB52712C5F4 /* GithubAPI+Rx.swift in Sources */,
 				7F14959253A6A8BF5D0D81B7 /* GithubAPI.swift in Sources */,
 				95209C9F97620D1729E91F7D /* GithubModel.swift in Sources */,
 				86979ABA382D6043B36097BA /* GithubSearchMVC01ViewController.swift in Sources */,
-				B67C30092A0F6A14008DD0C9 /* GithubSearchVIPER03GithubInteractor.swift in Sources */,
 				90F145AB7406B47DB5E2B770 /* GithubSearchMVPViewController.swift in Sources */,
 				0AFA79DD68C2D5A177D03569 /* GithubSearchMVVM01ViewController.swift in Sources */,
 				D6C87ADBDB05E8164200F2E3 /* GithubSearchMVVM01ViewModel.swift in Sources */,
@@ -1281,68 +1303,68 @@
 				81A2D8E03B9E0CEBCDC822A5 /* GithubSearchMVVM03ViewController.swift in Sources */,
 				C3D353C59C917C744B536E9D /* GithubSearchMVVM03ViewModel.swift in Sources */,
 				48823EC50616A2171A619450 /* GithubSearchPresenter.swift in Sources */,
+				D1113298F3057A3D08C4C54D /* GithubSearchVIPER01Entity.swift in Sources */,
+				CDDB7633D3DBCCADD06BAAAB /* GithubSearchVIPER01Interactor.swift in Sources */,
+				D613BC2804A0A0E59D7E8F69 /* GithubSearchVIPER01Presenter.swift in Sources */,
+				26A31ACC41B84EF58914E55C /* GithubSearchVIPER01Router.swift in Sources */,
+				C97442FD4E08E96CE4F04756 /* GithubSearchVIPER01ViewController.swift in Sources */,
 				B051DD45BB3C83B4FD357843 /* GithubSearchVIPER02Cell.swift in Sources */,
-				0A85F77497044EDA17D347E5 /* GithubSearchVIPER99Entity.swift in Sources */,
-				B67C30062A0F6A14008DD0C9 /* GithubSearchVIPER03Presenter.swift in Sources */,
-				78ED581507447DF9956D98B0 /* GithubSearchVIPER99Interactor.swift in Sources */,
-				B67C300A2A0F6A14008DD0C9 /* GithubSearchVIPER03Router.swift in Sources */,
-				B67C30152A0F81A6008DD0C9 /* WebVIPEREntity.swift in Sources */,
-				C21FC22B0A2F739932B31B1B /* GithubSearchVIPER99Presenter.swift in Sources */,
-				735B006AD3400C301F203703 /* GithubSearchVIPER99Router.swift in Sources */,
-				2771E90FBC1C3CAFE6AA88FE /* GithubSearchVIPER99ViewSwiftUI.swift in Sources */,
-				7A16EFB1CD043B8D2DDC4332 /* GithubSearchVIPER99ViewHelper.swift in Sources */,
-				C4E5A65EA2BF63125BD9314B /* GithubSearchVIPER01Entity.swift in Sources */,
-				3FBB7B61B57FAEA914204463 /* GithubSearchVIPER01Interactor.swift in Sources */,
-				B67C30072A0F6A14008DD0C9 /* GithubSearchVIPER03ViewController.swift in Sources */,
-				9FD2455B0AA3A3D2BF16B734 /* GithubSearchVIPER01Presenter.swift in Sources */,
-				BE769FFB88C98D2636DF3B55 /* GithubSearchVIPER01Router.swift in Sources */,
-				EF46D7A1E2D33362150FD37D /* GithubSearchVIPER01ViewController.swift in Sources */,
+				0A85F77497044EDA17D347E5 /* GithubSearchVIPER02Entity.swift in Sources */,
+				78ED581507447DF9956D98B0 /* GithubSearchVIPER02Interactor.swift in Sources */,
+				C21FC22B0A2F739932B31B1B /* GithubSearchVIPER02Presenter.swift in Sources */,
+				735B006AD3400C301F203703 /* GithubSearchVIPER02Router.swift in Sources */,
+				087D422A0059573156714C59 /* GithubSearchVIPER02ViewController.swift in Sources */,
+				1A2D59BDAD4EBBB376D2FC1D /* GithubSearchVIPER03Entity.swift in Sources */,
+				0CFFD3CC0B9A63857428D5E0 /* GithubSearchVIPER03GithubInteractor.swift in Sources */,
+				E2AEE2C39D3D283277C86F27 /* GithubSearchVIPER03Interactor.swift in Sources */,
+				12163841C311E34B448A1FFD /* GithubSearchVIPER03Presenter.swift in Sources */,
+				90C5AA1001FDEA261061BC62 /* GithubSearchVIPER03QiitaInteractor.swift in Sources */,
+				623AA7167D83B1A05D1CA2A2 /* GithubSearchVIPER03Router.swift in Sources */,
+				94306553030F4DBD2539D76A /* GithubSearchVIPER03ViewController.swift in Sources */,
+				BAD6812BF8097CB0B29066D6 /* GithubSearchVIPER99Entity.swift in Sources */,
+				4B3BC4E99D2A372A8CB0C9D9 /* GithubSearchVIPER99Interactor.swift in Sources */,
+				EEAB8A4F754C4B608CCC3626 /* GithubSearchVIPER99Presenter.swift in Sources */,
+				D156CC3AD01D56088B60CCED /* GithubSearchVIPER99Router.swift in Sources */,
+				7DCC32BEABE53B4317CB2F3E /* GithubSearchVIPER99ViewHelper.swift in Sources */,
+				B03C8C33F3F01147019ED26D /* GithubSearchVIPER99ViewSwiftUI.swift in Sources */,
 				DE7425557B6547AE5A0C8BBE /* GithubTableViewCell.swift in Sources */,
+				8253CBF44EF5E490FECCEBEA /* QiitaModel.swift in Sources */,
 				6DE5EBEF50445F1993C0F40A /* RootViewController.swift in Sources */,
-				B67BE55E265FE7EC0009FC89 /* ShareData.swift in Sources */,
-				B67C30122A0F6ECF008DD0C9 /* GithubSearchVIPER03Interactor.swift in Sources */,
 				8588E593C791BA4B5C43EA20 /* Router.swift in Sources */,
+				325893937AFC1742BDA6C4E9 /* ShareData.swift in Sources */,
 				2BFBB12E2994A8E72DB2486A /* ShareDataTabVIPERREntity.swift in Sources */,
 				B32067C919E7D882AE748991 /* ShareDataTabVIPERRInteractor.swift in Sources */,
-				B67BE552265EB4610009FC89 /* UserCollectionViewCell.swift in Sources */,
-				B67C300E2A0F6DEE008DD0C9 /* QiitaModel.swift in Sources */,
 				3BCA5DD7DBDB66F58593094F /* ShareDataTabVIPERRPresenter.swift in Sources */,
 				B9B3C9D4EB4452F852BC091D /* ShareDataTabVIPERRRouter.swift in Sources */,
 				CF4F29BFCFF7922964D05DDA /* ShareDataTabVIPERRViewController.swift in Sources */,
 				81C45D100EAEC0E4ABDC21F6 /* ShareDataVIPER01Entity.swift in Sources */,
 				BF0B2981F917210EAA253351 /* ShareDataVIPER01Interactor.swift in Sources */,
-				B67BE55B265F6BE30009FC89 /* DebugLog.swift in Sources */,
-				B67C2FF62A0F5EC7008DD0C9 /* GithubSearchVIPER02Router.swift in Sources */,
 				49EAD13368A31040F060812A /* ShareDataVIPER01Presenter.swift in Sources */,
 				9863472F1C4FB4745C27DE3E /* ShareDataVIPER01Router.swift in Sources */,
 				E5B2A574593DD9102C788539 /* ShareDataVIPER01ViewController.swift in Sources */,
 				41F3893A30C6A7439FEB1A35 /* ShareDataVIPER02Entity.swift in Sources */,
-				B67C2FF22A0F5EC7008DD0C9 /* GithubSearchVIPER02Presenter.swift in Sources */,
 				ACC2581E42672622106F08ED /* ShareDataVIPER02Interactor.swift in Sources */,
 				4A8A7B0EEC25F4F0167D880A /* ShareDataVIPER02Presenter.swift in Sources */,
 				D9998B49CE97EE6B04E1559B /* ShareDataVIPER02Router.swift in Sources */,
 				6020C33F5F3DDCA7162CD056 /* ShareDataVIPER02ViewController.swift in Sources */,
-				B67C2FF12A0F5EC7008DD0C9 /* GithubSearchVIPER02Entity.swift in Sources */,
 				C82A73B119FB6A1EE8AE5A40 /* ShareDataVIPER03Entity.swift in Sources */,
 				40AD6C420A723E302FFF36B1 /* ShareDataVIPER03Interactor.swift in Sources */,
 				19D0098E260D83A105837447 /* ShareDataVIPER03Presenter.swift in Sources */,
-				B67BE559265F4C040009FC89 /* Collection+.swift in Sources */,
 				65216A06CF6FDDA4D24370E1 /* ShareDataVIPER03Router.swift in Sources */,
 				B938353A6730A30698AC7D5A /* ShareDataVIPER03ViewController.swift in Sources */,
 				F78C9D92608B5F7A86DA9CF1 /* Storyboard+.swift in Sources */,
+				534F4E1DE12D69F78D0DE5A1 /* UICollectionViewCell+.swift in Sources */,
 				8F6ABDA05CE731F4749A6CA6 /* UITableViewCell+.swift in Sources */,
-				B67C2FF52A0F5EC7008DD0C9 /* GithubSearchVIPER02Interactor.swift in Sources */,
 				56E302E6E7926ABDD4A83371 /* UIViewController+.swift in Sources */,
-				B67BE557265EB5CF0009FC89 /* UICollectionViewCell+.swift in Sources */,
+				5E9CDBAF3BD5847D418073B9 /* UserCollectionViewCell.swift in Sources */,
 				7ABEBC71C9BDAA9F749DD426 /* WebMVCViewController.swift in Sources */,
 				4F71771932D0485D88CD78E2 /* WebMVPPresenter.swift in Sources */,
-				B67C2FF32A0F5EC7008DD0C9 /* GithubSearchVIPER02ViewController.swift in Sources */,
 				A4B31609D4E9CE8F53034E86 /* WebMVPViewController.swift in Sources */,
 				89B109945A4A245A6D119997 /* WebMVVMViewController.swift in Sources */,
 				88345FB759263F69D1B39D27 /* WebMVVMViewModel.swift in Sources */,
+				C4AE65D3545E35F99C99194F /* WebVIPEREntity.swift in Sources */,
 				4CB0526A515EBEE22155140E /* WebVIPERInteractor.swift in Sources */,
 				5E2A265DC52C26E5619A1894 /* WebVIPERPresenter.swift in Sources */,
-				B67C30052A0F6A14008DD0C9 /* GithubSearchVIPER03Entity.swift in Sources */,
 				3C1A252346944B88E0CAE31B /* WebVIPERRouter.swift in Sources */,
 				5144642C300FCDA3FA843105 /* WebVIPERViewController.swift in Sources */,
 			);
@@ -1364,7 +1386,7 @@
 /* Begin XCBuildConfiguration section */
 		00444B30366141674715EF76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 821138A1AE027CD84D85A3A6 /* Pods-SampleiOSArchitecture.debug.xcconfig */;
+			baseConfigurationReference = 5A4A7E935169F15C37882A8F /* Pods-SampleiOSArchitecture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1381,7 +1403,7 @@
 		};
 		6554B4E03D9CAF0DB46E9F02 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B30760D036A33B2BD0A96DA6 /* Pods-SampleiOSArchitecture.release.xcconfig */;
+			baseConfigurationReference = 2962CB7EDA789C7092FAA35B /* Pods-SampleiOSArchitecture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

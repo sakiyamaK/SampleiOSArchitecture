@@ -45,6 +45,8 @@ final class GithubSearchVIPER99Router {
 }
 
 extension GithubSearchVIPER99Router: GithubSearchVIPER99Wireframe {
+  func showWeb(item: GithubSearchVIPER01Entity) {}
+
   func showAlert(error: Error) {
     print(error.localizedDescription)
   }
